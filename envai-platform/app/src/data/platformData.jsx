@@ -1,0 +1,114 @@
+import {
+  FiActivity, FiArchive, FiBell, FiBox, FiBriefcase, FiCloud, FiCpu, FiDatabase,
+  FiDroplet, FiFileText, FiGitBranch, FiGlobe, FiGrid, FiLayers, FiLock, FiMap,
+  FiPieChart, FiRepeat, FiShield, FiShoppingBag, FiSliders, FiTool, FiTrendingUp,
+  FiUsers, FiZap
+} from 'react-icons/fi'
+import { TbLeaf, TbRecycle, TbRobot, TbStack3 } from 'react-icons/tb'
+import { RiBillLine } from 'react-icons/ri'
+
+export const kpiTrend = [
+  { month: 'Oca', carbon: 1280, energy: 920, esg: 64 },
+  { month: 'Şub', carbon: 1190, energy: 980, esg: 67 },
+  { month: 'Mar', carbon: 1148, energy: 940, esg: 69 },
+  { month: 'Nis', carbon: 1088, energy: 900, esg: 72 },
+  { month: 'May', carbon: 1015, energy: 870, esg: 74 },
+  { month: 'Haz', carbon: 965, energy: 830, esg: 78 }
+]
+
+export const mixData = [
+  { name: 'Scope 1', value: 28, color: '#16A34A' },
+  { name: 'Scope 2', value: 34, color: '#3B82F6' },
+  { name: 'Scope 3', value: 38, color: '#F59E0B' }
+]
+
+export const sites = ['Türkiye', 'Almanya', 'Hollanda', 'İtalya', 'Fransa']
+
+export const modules = [
+  { title: 'Dashboard', path: '/', file: 'DashboardPage.jsx', icon: FiGrid, group: 'Command Center', accent: '#16A34A' },
+  { title: 'Company Management', path: '/company-management', file: 'CompanyManagementPage.jsx', icon: FiBriefcase, group: 'Admin', accent: '#0EA5E9' },
+  { title: 'User & Role Management', path: '/user-role-management', file: 'UserRoleManagementPage.jsx', icon: FiUsers, group: 'Admin', accent: '#6366F1' },
+  { title: 'Subscription Management', path: '/subscription-management', file: 'SubscriptionManagementPage.jsx', icon: FiRepeat, group: 'Admin', accent: '#A855F7' },
+  { title: 'Module Marketplace', path: '/module-marketplace', file: 'ModuleMarketplacePage.jsx', icon: FiShoppingBag, group: 'Admin', accent: '#F97316' },
+  { title: 'Billing & Invoicing', path: '/billing-invoicing', file: 'BillingInvoicingPage.jsx', icon: RiBillLine, group: 'Admin', accent: '#14B8A6' },
+  { title: 'Carbon Footprint', path: '/carbon-footprint', file: 'CarbonFootprintPage.jsx', icon: TbLeaf, group: 'Carbon', accent: '#16A34A' },
+  { title: 'ESG Management', path: '/esg-management', file: 'ESGManagementPage.jsx', icon: FiShield, group: 'Compliance', accent: '#22C55E' },
+  { title: 'CSRD Compliance', path: '/csrd-compliance', file: 'CSRDCompliancePage.jsx', icon: FiFileText, group: 'Compliance', accent: '#06B6D4' },
+  { title: 'CBAM Compliance', path: '/cbam-compliance', file: 'CBAMCompliancePage.jsx', icon: FiGlobe, group: 'Compliance', accent: '#10B981' },
+  { title: 'Scope 1 Management', path: '/scope-1-management', file: 'Scope1ManagementPage.jsx', icon: FiActivity, group: 'Carbon', accent: '#EF4444' },
+  { title: 'Scope 2 Management', path: '/scope-2-management', file: 'Scope2ManagementPage.jsx', icon: FiZap, group: 'Carbon', accent: '#3B82F6' },
+  { title: 'Scope 3 Management', path: '/scope-3-management', file: 'Scope3ManagementPage.jsx', icon: FiLayers, group: 'Carbon', accent: '#F59E0B' },
+  { title: 'Supplier Portal', path: '/supplier-portal', file: 'SupplierPortalPage.jsx', icon: FiUsers, group: 'Value Chain', accent: '#84CC16' },
+  { title: 'Energy Monitoring', path: '/energy-monitoring', file: 'EnergyMonitoringPage.jsx', icon: FiZap, group: 'Operations', accent: '#FACC15' },
+  { title: 'Water Monitoring', path: '/water-monitoring', file: 'WaterMonitoringPage.jsx', icon: FiDroplet, group: 'Operations', accent: '#38BDF8' },
+  { title: 'Waste Monitoring', path: '/waste-monitoring', file: 'WasteMonitoringPage.jsx', icon: TbRecycle, group: 'Operations', accent: '#22C55E' },
+  { title: 'IoT Device Management', path: '/iot-device-management', file: 'IoTDeviceManagementPage.jsx', icon: FiCpu, group: 'Operations', accent: '#06B6D4' },
+  { title: 'AI Sustainability Assistant', path: '/ai-sustainability-assistant', file: 'AISustainabilityAssistantPage.jsx', icon: TbRobot, group: 'Intelligence', accent: '#8B5CF6' },
+  { title: 'Digital Twin', path: '/digital-twin', file: 'DigitalTwinPage.jsx', icon: FiMap, group: 'Intelligence', accent: '#0F766E' },
+  { title: 'Audit Management', path: '/audit-management', file: 'AuditManagementPage.jsx', icon: FiTool, group: 'Governance', accent: '#F97316' },
+  { title: 'LCA Management', path: '/lca-management', file: 'LCAManagementPage.jsx', icon: TbStack3, group: 'Product', accent: '#65A30D' },
+  { title: 'Sustainability Projects', path: '/sustainability-projects', file: 'SustainabilityProjectsPage.jsx', icon: FiTrendingUp, group: 'Execution', accent: '#16A34A' },
+  { title: 'Reporting Center', path: '/reporting-center', file: 'ReportingCenterPage.jsx', icon: FiPieChart, group: 'Reporting', accent: '#2563EB' },
+  { title: 'Document Management', path: '/document-management', file: 'DocumentManagementPage.jsx', icon: FiArchive, group: 'Reporting', accent: '#64748B' },
+  { title: 'Notification Center', path: '/notification-center', file: 'NotificationCenterPage.jsx', icon: FiBell, group: 'Execution', accent: '#F43F5E' },
+  { title: 'Workflow Engine', path: '/workflow-engine', file: 'WorkflowEnginePage.jsx', icon: FiGitBranch, group: 'Execution', accent: '#A855F7' },
+  { title: 'API Management', path: '/api-management', file: 'APIManagementPage.jsx', icon: FiLock, group: 'Data Platform', accent: '#0891B2' },
+  { title: 'Integration Center', path: '/integration-center', file: 'IntegrationCenterPage.jsx', icon: FiCloud, group: 'Data Platform', accent: '#0EA5E9' },
+  { title: 'Data Lake', path: '/data-lake', file: 'DataLakePage.jsx', icon: FiDatabase, group: 'Data Platform', accent: '#14B8A6' },
+  { title: 'Master Data Management', path: '/master-data-management', file: 'MasterDataManagementPage.jsx', icon: FiSliders, group: 'Data Platform', accent: '#475569' }
+]
+
+const details = {
+  'Carbon Footprint': ['Emisyon KPI kartları', 'Scope 1/2/3 dağılımı', 'Karbon trend grafikleri', 'Emisyon kaynakları tablosu', 'Lokasyon filtreleri', 'Karbon yoğunluğu analizleri'],
+  'ESG Management': ['ESG skorları', 'Hedef takibi', 'Risk panelleri', 'Performans grafikleri', 'Aksiyon planları'],
+  'CSRD Compliance': ['Uyum matrisi', 'Gereklilik listesi', 'Eksik veri ekranı', 'Görev takip ekranı', 'Uyum yüzdesi göstergeleri'],
+  'CBAM Compliance': ['CBAM ürün ekranı', 'Gömülü emisyon analizleri', 'CBAM raporlama', 'İhracat uyumluluk analizi'],
+  'Supplier Portal': ['Tedarikçi listesi', 'Scope 3 veri toplama', 'Performans kartları', 'ESG skor ekranları'],
+  'Energy Monitoring': ['Enerji dashboardu', 'Tesis görünümü', 'Elektrik sayaçları', 'Tüketim trendleri', 'Maliyet analizleri'],
+  'Water Monitoring': ['Su tüketim ekranları', 'Kaçak analizi', 'Tesis bazlı kullanım', 'Trend analizleri'],
+  'Waste Monitoring': ['Atık yönetimi', 'Geri dönüşüm oranları', 'Atık KPI ekranları', 'Bertaraf kayıtları'],
+  'IoT Device Management': ['ENVAI EDGE POWER', 'ENVAI FLOW', 'ENVAI GAS NODE', 'Sensör ekranları', 'Harita görünümü', 'Alarm merkezi'],
+  'AI Sustainability Assistant': ['AI sohbet ekranı', 'ESG tavsiyeleri', 'Rapor üretimi', 'Veri analizi'],
+  'Digital Twin': ['Dijital tesis görünümü', 'Sensör katmanları', 'Canlı veri panelleri', 'Varlık yönetimi'],
+  'Audit Management': ['Denetim planları', 'Denetim bulguları', 'Düzeltici faaliyetler', 'Takvim görünümü'],
+  'LCA Management': ['Ürün yaşam döngüsü', 'LCA sonuç ekranları', 'Karşılaştırma ekranları'],
+  'Sustainability Projects': ['Proje kartları', 'Gantt görünümü', 'KPI takibi', 'Bütçe ekranları'],
+  'Reporting Center': ['ESG raporları', 'CSRD raporları', 'CBAM raporları', 'PDF export', 'Excel export'],
+  'Document Management': ['Dosya yöneticisi', 'Doküman önizleme', 'Klasör yapısı', 'Versiyon takibi'],
+  'Workflow Engine': ['Drag & Drop workflow builder', 'Süreç tasarım ekranı', 'Onay mekanizmaları'],
+  'API Management': ['API Key yönetimi', 'Endpoint listeleri', 'API kullanım ekranları'],
+  'Integration Center': ['SAP', 'Logo ERP', 'Netsis', 'Microsoft', 'Oracle', 'REST API'],
+  'Data Lake': ['Veri kaynakları', 'ETL ekranları', 'Veri kalite analizleri'],
+  'Master Data Management': ['Veri sözlüğü', 'Veri kalite ekranları', 'Ana veri yönetimi']
+}
+
+export function getModuleConfig(title) {
+  const module = modules.find((item) => item.title === title)
+  const workflows = details[title] || ['Operasyon görünümü', 'Yetki ve görev yönetimi', 'Kurumsal kayıtlar', 'Performans takibi']
+  return {
+    ...module,
+    description: `${title} modülü ENVAI kurumsal sürdürülebilirlik platformunda uçtan uca iş süreci, kontrol, analiz ve karar destek deneyimi sunar.`,
+    workflows,
+    kpis: workflows.slice(0, 4).map((item, index) => ({
+      label: item,
+      value: index === 0 ? `${72 + index * 6}%` : index === 1 ? `${120 + index * 35}` : index === 2 ? `${8 + index}` : `${2 + index}`,
+      delta: index % 2 === 0 ? '+4.8%' : '-1.2%',
+      positive: index !== 1
+    })),
+    table: workflows.concat(['Onay bekliyor', 'Veri doğrulama']).slice(0, 6).map((item, index) => ({
+      id: `ENV-${String(index + 1).padStart(3, '0')}`,
+      name: item,
+      owner: ['Sürdürülebilirlik', 'Finans', 'Operasyon', 'Tedarik', 'Veri Ekibi'][index % 5],
+      status: ['Aktif', 'İncelemede', 'Riskli', 'Tamamlandı'][index % 4],
+      date: `2026-0${(index % 6) + 1}-15`
+    }))
+  }
+}
+
+export const activities = [
+  'CBAM ürün verisi doğrulandı',
+  'Scope 2 elektrik faturası işlendi',
+  'Tedarikçi ESG skoru güncellendi',
+  'CSRD ESRS E1 görevi tamamlandı',
+  'Enerji anomalisi operasyon ekibine atandı'
+]
