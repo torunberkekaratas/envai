@@ -555,6 +555,27 @@
           /* Özellik kart ikonları → beyaz (koyu kart üzerinde) */
           #i2adke-4, #i2adke-4-6, #i2adke-4-7 { filter: brightness(0) invert(1) !important; }
 
+          /* Özellik kart ikon rozetleri → boş beyaz daire yerine görünür Envai yeşili ikon */
+          #ikdqvz, #ikdqvz-2, #ikdqvz-3 {
+            width: 72px !important;
+            height: 72px !important;
+            border-radius: 24px !important;
+            background:
+              radial-gradient(circle at 30% 25%, rgba(255,255,255,0.18), transparent 34px),
+              linear-gradient(135deg, rgba(22,163,74,0.22), rgba(88,129,87,0.08)) !important;
+            border: 1px solid rgba(22,163,74,0.35) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 30px rgba(22,163,74,0.16) !important;
+          }
+          #i2adke-4, #i2adke-4-6, #i2adke-4-7 {
+            width: 34px !important;
+            height: 34px !important;
+            filter: brightness(0) saturate(100%) invert(55%) sepia(31%) saturate(987%) hue-rotate(88deg) brightness(91%) contrast(91%) !important;
+            opacity: 1 !important;
+          }
+
           /* ===== TÜM BÖLÜMLER ŞEFFAF (sabit 3D sahne arkadan görünsün) =====
              3D sahne #ip1j: position:fixed, beyaz zemin + yeşil obje.
              Bölümler şeffaf olunca 3D görsel tüm sayfa boyunca kaydırdıkça görünür. */
