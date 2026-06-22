@@ -744,6 +744,139 @@
           /* Mobil menüdeki beyaz "Giriş Yap" hap → metin koyu, ikon koyu */
           #i1lwz-2-2-2-4-2-2-2 #ispyh-2-3-2-5-2-2-2 { color: #1d1d1f !important; }
           #iet44-3-2-3-4-2-2 { filter: brightness(0) !important; }
+
+
+          /* ===== LOGIN MODAL ===== */
+          .envai-login-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(6, 8, 14, 0.56);
+            -webkit-backdrop-filter: blur(18px) saturate(150%);
+            backdrop-filter: blur(18px) saturate(150%);
+          }
+          body.login-open { overflow: hidden; }
+          body.login-open .envai-login-overlay { display: flex; }
+          .envai-login-card {
+            width: min(100%, 440px);
+            border-radius: 28px;
+            border: 1px solid rgba(255,255,255,0.18);
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,247,250,0.92));
+            box-shadow: 0 28px 90px rgba(0,0,0,0.28);
+            padding: 28px;
+            color: #1d1d1f;
+            font-family: DM Sans, sans-serif;
+          }
+          .envai-login-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 28px;
+          }
+          .envai-login-brand { display: flex; align-items: center; gap: 12px; }
+          .envai-login-brand img { width: 86px; height: auto; filter: none !important; }
+          .envai-login-close {
+            width: 36px;
+            height: 36px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(29,29,31,0.08);
+            color: #1d1d1f;
+            cursor: pointer;
+            font-size: 22px;
+            line-height: 1;
+          }
+          .envai-login-title {
+            margin: 0 0 8px;
+            font-size: 32px;
+            line-height: 1;
+            letter-spacing: -0.06em;
+            font-weight: 500;
+          }
+          .envai-login-text {
+            margin: 0 0 24px;
+            color: #6e6e73;
+            font-size: 15px;
+            line-height: 1.45;
+            letter-spacing: -0.02em;
+          }
+          .envai-login-form { display: flex; flex-direction: column; gap: 14px; }
+          .envai-login-field { display: flex; flex-direction: column; gap: 8px; }
+          .envai-login-field label {
+            color: #424245;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+          }
+          .envai-login-field input {
+            width: 100%;
+            height: 48px;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 14px;
+            background: #ffffff;
+            color: #1d1d1f;
+            padding: 0 14px;
+            font: 500 15px DM Sans, sans-serif;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+          }
+          .envai-login-field input:focus {
+            border-color: rgba(22,163,74,0.55);
+            box-shadow: 0 0 0 4px rgba(22,163,74,0.12);
+          }
+          .envai-login-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            color: #6e6e73;
+            font-size: 13px;
+          }
+          .envai-login-row label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+          .envai-login-row a { color: #16a34a; text-decoration: none; font-weight: 600; }
+          .envai-login-submit {
+            height: 50px;
+            border: 0;
+            border-radius: 999px;
+            background: #16a34a;
+            color: #ffffff;
+            cursor: pointer;
+            font: 600 15px DM Sans, sans-serif;
+            letter-spacing: -0.03em;
+            margin-top: 4px;
+          }
+          .envai-login-footnote {
+            margin: 18px 0 0;
+            color: #86868b;
+            font-size: 13px;
+            line-height: 1.45;
+            text-align: center;
+          }
+          .envai-login-footnote a { color: #16a34a; text-decoration: none; font-weight: 600; }
+          .envai-login-message {
+            display: none;
+            margin-top: 14px;
+            border-radius: 14px;
+            background: rgba(22,163,74,0.1);
+            color: #166534;
+            padding: 12px;
+            font-size: 13px;
+            line-height: 1.35;
+          }
+          .envai-login-message.is-visible { display: block; }
+          @media (max-width: 480px) {
+            .envai-login-overlay { align-items: flex-end; padding: 12px; }
+            .envai-login-card { width: 100%; border-radius: 24px; padding: 22px; }
+            .envai-login-title { font-size: 28px; }
+            .envai-login-row { align-items: flex-start; flex-direction: column; }
+            .envai-login-submit { width: 100%; }
+          }
+
         </style>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
@@ -771,19 +904,47 @@
             var satinAlMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-5-2');
             var girisYapMobil = document.getElementById('i1lwz-2-2-2-4-2-2-2');
             
+            var loginModal = document.getElementById('envai-login-modal');
+            var loginClose = document.getElementById('envai-login-close');
+            var loginForm = document.getElementById('envai-login-form');
+            var loginMessage = document.getElementById('envai-login-message');
+
+            function openLogin(e) {
+              if (e) e.preventDefault();
+              if (e) e.stopPropagation();
+              closeMenu();
+              bodyEl.classList.add('login-open');
+              if (window.location.hash !== '#login') {
+                history.pushState(null, '', '#login');
+              }
+              setTimeout(function() {
+                var emailInput = document.getElementById('envai-login-email');
+                if (emailInput) emailInput.focus();
+              }, 80);
+            }
+
+            function closeLogin(e) {
+              if (e) e.preventDefault();
+              if (e) e.stopPropagation();
+              bodyEl.classList.remove('login-open');
+              if (window.location.hash === '#login') {
+                history.pushState('', document.title, window.location.pathname + window.location.search);
+              }
+            }
+
             // Desktop click handlers
             if (kullanımAlanlari) kullanımAlanlari.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3'); };
             if (ozellikler) ozellikler.onclick = function(e) { e.stopPropagation(); scrollToSection('i3owk-2-4'); };
             if (hakkimizda) hakkimizda.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3-3'); };
             if (satinAl) satinAl.onclick = function(e) { e.stopPropagation(); scrollToSection('ihccyr-2-3'); };
-            if (girisYap) girisYap.onclick = function(e) { e.stopPropagation(); window.location.href = '#login'; };
+            if (girisYap) girisYap.onclick = openLogin;
             
             // Mobil click handlers
             if (kullanımAlanlariMobil) kullanımAlanlariMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3'); };
             if (ozelliklerMobil) ozelliklerMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i3owk-2-4'); };
             if (hakkimizdaMobil) hakkimizdaMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3-3'); };
             if (satinAlMobil) satinAlMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('ihccyr-2-3'); };
-            if (girisYapMobil) girisYapMobil.onclick = function(e) { e.stopPropagation(); window.location.href = '#login'; };
+            if (girisYapMobil) girisYapMobil.onclick = openLogin;
 
             // Mobile menu toggle
             var bodyEl = document.body;
@@ -810,6 +971,27 @@
 
             // Close on Escape
             document.addEventListener('keydown', function(e){ if (e.key === 'Escape') { closeMenu(); } });
+            if (loginClose) loginClose.addEventListener('click', closeLogin);
+            if (loginModal) {
+              loginModal.addEventListener('click', function(e) {
+                if (e.target === loginModal) closeLogin(e);
+              });
+            }
+            document.addEventListener('keydown', function(e){ if (e.key === 'Escape') { closeLogin(e); } });
+            window.addEventListener('hashchange', function() {
+              if (window.location.hash === '#login') {
+                openLogin();
+              } else {
+                bodyEl.classList.remove('login-open');
+              }
+            });
+            if (window.location.hash === '#login') openLogin();
+            if (loginForm) {
+              loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (loginMessage) loginMessage.classList.add('is-visible');
+              });
+            }
             
             // Paketler butonları
             var satinAlButtons = [
@@ -855,6 +1037,34 @@
           </div>
           <div id="i3owk-2-2-2-2" class="pwb-anchor"></div>
         </div>
+
+          <div id="envai-login-modal" class="envai-login-overlay" role="dialog" aria-modal="true" aria-labelledby="envai-login-title">
+            <div class="envai-login-card">
+              <div class="envai-login-header">
+                <div class="envai-login-brand"><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg?v=2" alt="Envai"/></div>
+                <button id="envai-login-close" class="envai-login-close" type="button" aria-label="Giriş ekranını kapat">×</button>
+              </div>
+              <h2 id="envai-login-title" class="envai-login-title">Envai Panel Girişi</h2>
+              <p class="envai-login-text">CBAM hazırlığı, tesis verisi ve enerji performansı analizlerinize erişmek için hesabınızla giriş yapın.</p>
+              <form id="envai-login-form" class="envai-login-form">
+                <div class="envai-login-field">
+                  <label for="envai-login-email">E-posta</label>
+                  <input id="envai-login-email" name="email" type="email" autocomplete="email" placeholder="ornek@firma.com" required />
+                </div>
+                <div class="envai-login-field">
+                  <label for="envai-login-password">Şifre</label>
+                  <input id="envai-login-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+                </div>
+                <div class="envai-login-row">
+                  <label><input type="checkbox" name="remember" /> Beni hatırla</label>
+                  <a href="mailto:info@envai.com?subject=Envai%20panel%20eri%C5%9Fim%20deste%C4%9Fi">Şifremi unuttum</a>
+                </div>
+                <button class="envai-login-submit" type="submit">Giriş Yap</button>
+                <div id="envai-login-message" class="envai-login-message">Panel erişimi aktif edildiğinde bu ekran canlı kimlik doğrulamaya bağlanacaktır. Erişim için Envai ekibiyle iletişime geçebilirsiniz.</div>
+              </form>
+              <p class="envai-login-footnote">Henüz hesabınız yok mu? <a href="/satin-al.html?plan=enterprise">Erişim talep edin</a>.</p>
+            </div>
+          </div>
         <div id="pwb-loading-wrap"><div id="im3p5" class="pwb-flex-grid-wrap"><div id="iw9p8" size="80" progressColor="#FFFFFF" progressWidth="2" backgroundColor="#565656" backgroundWidth="1" class="pwb-loading-bar"><svg id="i1g4c" width="164" xmlns="http://www.w3.org/2000/svg" height="164" version="1.1" viewPort="0 0 164 164"><circle r="80" cx="82" cy="82" id="i8t08" fill="transparent" stroke="#565656" stroke-width="1" stroke-dasharray="502.6548245743669" stroke-dashoffset="0"></circle><circle r="80" cx="82" cy="82" id="ihfw6" fill="transparent" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="502.6548245743669" stroke-dashoffset="502.6548245743669" class="pwb-loading-bar-circle"></circle></svg><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg?v=2" loading="lazy" id="iwpyv7"/><div id="ijg95" class="pwb-loading-bar-text">0%</div></div></div><div id="ieupsz" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/1d564515-32a6-4676-83ed-a8985447b8e3/pw-badge-dark.svg" loading="lazy" id="igqob3"/></div></div>
 
        <!-- Waterfall optimization -->
