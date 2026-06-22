@@ -619,6 +619,278 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: -1;
           }
+
+
+          /* Professional demo request redesign */
+          body, html {
+            background: #f5f7fb !important;
+            color: #102326 !important;
+            scrollbar-width: auto !important;
+          }
+          ::-webkit-scrollbar { display: initial !important; width: 10px; }
+          ::-webkit-scrollbar-thumb { background: rgba(16,35,38,0.18); border-radius: 999px; }
+          #ip1j { opacity: 0.18 !important; }
+          #i84ba {
+            min-height: auto !important;
+            padding: 132px 32px 64px !important;
+            align-items: flex-start !important;
+          }
+          #i1lwz {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1.35fr) minmax(340px, 0.75fr) !important;
+            gap: 24px !important;
+            max-width: 1180px !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            align-items: start !important;
+          }
+          .checkout-form-wrapper,
+          .checkout-summary-wrapper {
+            max-width: none !important;
+            width: 100% !important;
+          }
+          .checkout-summary-wrapper {
+            display: block !important;
+            position: sticky !important;
+            top: 112px !important;
+          }
+          .form-section, .summary-card {
+            background: rgba(255,255,255,0.88) !important;
+            color: #102326 !important;
+            border: 1px solid rgba(16,35,38,0.08) !important;
+            box-shadow: 0 24px 80px rgba(16,35,38,0.10) !important;
+            backdrop-filter: blur(22px) saturate(160%) !important;
+            border-radius: 28px !important;
+            padding: 28px !important;
+          }
+          .request-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(22,163,74,0.10);
+            color: #15803d;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+          }
+          .request-eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #16a34a;
+          }
+          .request-heading {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 0.96;
+            letter-spacing: -0.07em;
+            font-weight: 600;
+            color: #102326;
+          }
+          .request-lead {
+            margin: 16px 0 22px;
+            max-width: 680px;
+            color: #647071;
+            font-size: 16px;
+            line-height: 1.55;
+          }
+          .request-benefits {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+          }
+          .request-benefit {
+            min-height: 112px;
+            padding: 16px;
+            border-radius: 20px;
+            background: #102326;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.10);
+          }
+          .request-benefit span {
+            display: grid;
+            place-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: rgba(22,163,74,0.16);
+            color: #4ade80;
+            margin-bottom: 14px;
+            font-weight: 800;
+          }
+          .request-benefit strong {
+            display: block;
+            font-size: 14px;
+            line-height: 1.2;
+          }
+          .request-benefit small {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255,255,255,0.62);
+            line-height: 1.35;
+          }
+          .form-title { font-size: 24px !important; color: #102326 !important; margin-bottom: 6px !important; }
+          .form-subtitle { color: #647071 !important; opacity: 1 !important; font-size: 14px !important; margin-bottom: 22px !important; line-height: 1.5 !important; }
+          .form-section-title {
+            margin: 24px 0 14px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(16,35,38,0.08);
+            color: #102326;
+            font-size: 16px;
+            font-weight: 800;
+          }
+          .form-group { margin-bottom: 14px !important; }
+          .form-label { color: #334044 !important; font-size: 13px !important; font-weight: 700 !important; }
+          .form-input, .form-select {
+            background: #ffffff !important;
+            border: 1px solid rgba(16,35,38,0.12) !important;
+            color: #102326 !important;
+            border-radius: 14px !important;
+            padding: 13px 14px !important;
+            font-size: 14px !important;
+          }
+          .form-input:focus, .form-select:focus {
+            border-color: rgba(22,163,74,0.55) !important;
+            box-shadow: 0 0 0 4px rgba(22,163,74,0.10) !important;
+            background: #ffffff !important;
+          }
+          .form-input::placeholder { color: #9aa3a5 !important; }
+          .form-select option { background: #ffffff !important; color: #102326 !important; }
+          .form-row { gap: 14px !important; }
+          .card-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+          }
+          .payment-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px;
+          }
+          .payment-method {
+            border: 1px solid rgba(16,35,38,0.10);
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 16px;
+            cursor: pointer;
+            transition: 0.2s ease;
+            color: #102326;
+          }
+          .payment-method.active {
+            border-color: rgba(22,163,74,0.55);
+            background: rgba(22,163,74,0.08);
+            box-shadow: inset 0 0 0 1px rgba(22,163,74,0.18);
+          }
+          .card-icons { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+          .card-icon {
+            padding: 6px 8px;
+            border-radius: 999px;
+            background: rgba(16,35,38,0.06);
+            color: #334044;
+            font-size: 11px;
+            font-weight: 800;
+          }
+          .security-badge {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 14px;
+            padding: 14px;
+            border-radius: 16px;
+            background: rgba(22,163,74,0.08);
+            color: #166534;
+            font-size: 13px;
+            line-height: 1.45;
+          }
+          .submit-button {
+            background: #16a34a !important;
+            color: #ffffff !important;
+            border-radius: 999px !important;
+            padding: 15px !important;
+            font-size: 15px !important;
+            box-shadow: 0 14px 36px rgba(22,163,74,0.24) !important;
+          }
+          .submit-button:hover { box-shadow: 0 18px 44px rgba(22,163,74,0.30) !important; }
+          .summary-card { padding: 24px !important; }
+          .summary-title { color: #102326 !important; font-size: 20px !important; }
+          .plan-details {
+            background: #102326 !important;
+            color: #ffffff !important;
+            border-radius: 22px !important;
+            padding: 20px !important;
+          }
+          .plan-name { font-size: 15px !important; color: rgba(255,255,255,0.72) !important; }
+          .plan-price { font-size: 34px !important; letter-spacing: -0.05em; color: #ffffff !important; }
+          .plan-features li {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 13px !important;
+            padding: 8px 0 !important;
+            border-top: 1px solid rgba(255,255,255,0.08);
+          }
+          .plan-features li::before {
+            content: "✓";
+            color: #4ade80;
+            margin-right: 8px;
+            font-weight: 900;
+          }
+          .summary-row, .summary-total {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            color: #334044;
+            border-bottom: 1px solid rgba(16,35,38,0.08);
+            padding: 14px 0;
+            font-size: 14px;
+          }
+          .summary-total {
+            border-bottom: 0;
+            font-weight: 800;
+            color: #102326;
+          }
+          .summary-next {
+            margin-top: 18px;
+            display: grid;
+            gap: 10px;
+          }
+          .summary-next div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 16px;
+            background: rgba(16,35,38,0.04);
+            color: #334044;
+            font-size: 13px;
+          }
+          .summary-next span {
+            display: grid;
+            place-items: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: #16a34a;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 900;
+          }
+          @media (max-width: 980px) {
+            #i84ba { padding: 112px 16px 48px !important; }
+            #i1lwz { grid-template-columns: 1fr !important; }
+            .checkout-summary-wrapper { position: static !important; order: -1; }
+            .request-benefits { grid-template-columns: 1fr !important; }
+            .form-row, .card-row, .payment-methods { grid-template-columns: 1fr !important; }
+            .form-section, .summary-card { padding: 22px !important; border-radius: 22px !important; }
+          }
+
         </style>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
@@ -811,28 +1083,6 @@
               });
             });
             
-            // Card number formatting
-            const cardNumberInput = document.getElementById('card-number');
-            if (cardNumberInput) {
-              cardNumberInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\s/g, '');
-                let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
-                e.target.value = formattedValue;
-              });
-            }
-            
-            // Expiry date formatting
-            const expiryInput = document.getElementById('card-expiry');
-            if (expiryInput) {
-              expiryInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length >= 2) {
-                  value = value.slice(0, 2) + '/' + value.slice(2, 4);
-                }
-                e.target.value = value;
-              });
-            }
-            
             // Tesis Sayısı validation
             const cvvInput = document.getElementById('card-cvv');
             if (cvvInput) {
@@ -872,7 +1122,7 @@
               console.log('Form Data:', formData);
               
               // Show success message
-              alert('Pilot görüşmesi talebiniz alındı. Ekibimiz uygun görüşme zamanı için sizinle iletişime geçecek.');
+              alert('Demo talebiniz alındı. Envai ekibi size özel demo akışı ve uygun görüşme zamanı için sizinle iletişime geçecek.');
               
               window.location.href = '/';
             });
@@ -910,8 +1160,16 @@
             <!-- Checkout Form -->
             <div class="checkout-form-wrapper">
               <div class="form-section">
-                <h1 class="form-title">Pilot Görüşmesi Bilgileri</h1>
-                <p class="form-subtitle">Tesis yapınızı ve veri kaynaklarınızı anlayabilmemiz için kısa bilgileri paylaşın.</p>
+                <div class="request-eyebrow">Profesyonel Demo Talebi</div>
+                <h1 class="request-heading">Envai Profesyonel paketi için net bir demo planlayalım.</h1>
+                <p class="request-lead">5 tesise kadar enerji, karbon, ESG ve CBAM veri akışınızı birlikte değerlendirip hangi modüllerle başlamanız gerektiğini netleştirelim.</p>
+                <div class="request-benefits">
+                  <div class="request-benefit"><span>01</span><strong>Veri kapsamı</strong><small>SCADA, ERP, sayaç ve dosya kaynakları incelenir.</small></div>
+                  <div class="request-benefit"><span>02</span><strong>Uyumluluk planı</strong><small>CBAM, Scope 1/2/3 ve ESG öncelikleri belirlenir.</small></div>
+                  <div class="request-benefit"><span>03</span><strong>Demo akışı</strong><small>Size özel ekranlar ve rapor çıktıları gösterilir.</small></div>
+                </div>
+                <h2 class="form-title">Demo Talep Bilgileri</h2>
+                <p class="form-subtitle">Ekibimizin doğru hazırlıkla dönüş yapabilmesi için temel bilgileri paylaşın.</p>
                 
                 <form id="checkout-form">
                   <div class="form-group">
@@ -997,23 +1255,23 @@
                   <div id="card-payment-fields">
                     <div class="form-group">
                       <label class="form-label" for="card-number">Mevcut Veri Kaynakları</label>
-                      <input type="text" class="form-input" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                      <input type="text" class="form-input" id="card-number" placeholder="SCADA, ERP, sayaç, Excel, manuel formlar..." required />
                     </div>
                     
                     <div class="form-group">
                       <label class="form-label" for="card-name">Görüşmede Katılacak Yetkili</label>
-                      <input type="text" class="form-input" id="card-name" placeholder="AD SOYAD" required />
+                      <input type="text" class="form-input" id="card-name" placeholder="Toplantıya katılacak kişi / ekip" required />
                     </div>
                     
                     <div class="card-row">
                       <div class="form-group">
                         <label class="form-label" for="card-expiry">Hedeflenen Başlangıç</label>
-                        <input type="text" class="form-input" id="card-expiry" placeholder="AA/YY" maxlength="5" required />
+                        <input type="text" class="form-input" id="card-expiry" placeholder="Örn. 2026 Q3 / 2 hafta içinde" required />
                       </div>
                       
                       <div class="form-group">
                         <label class="form-label" for="card-cvv">Tesis Sayısı</label>
-                        <input type="text" class="form-input" id="card-cvv" placeholder="123" maxlength="3" required />
+                        <input type="text" class="form-input" id="card-cvv" placeholder="Örn. 3" maxlength="3" required />
                       </div>
                       
                       <div class="form-group">
@@ -1041,7 +1299,7 @@
                     </div>
                   </div>
                   
-                  <button type="submit" class="submit-button">Pilot Görüşmesi Talep Et</button>
+                  <button type="submit" class="submit-button">Demo Talebini Gönder</button>
                 </form>
               </div>
             </div>
@@ -1077,6 +1335,11 @@
                 <div class="summary-total">
                   <span>Sonraki Adım:</span>
                   <span id="summary-total-price">$8.000 - $15.000</span>
+                </div>
+                <div class="summary-next">
+                  <div><span>1</span> Talebiniz ENVAI satış ve ürün ekibine düşer.</div>
+                  <div><span>2</span> Veri kaynaklarınıza uygun demo senaryosu hazırlanır.</div>
+                  <div><span>3</span> Profesyonel paket kapsamı ve kurulum planı netleşir.</div>
                 </div>
               </div>
             </div>
