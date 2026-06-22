@@ -14,16 +14,16 @@ export default function DataTable({ rows = [], title = 'Operasyon Kayıtları' }
       <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
           <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500 dark:bg-white/[0.03] dark:text-slate-400">
-            <tr><th className="px-5 py-4">ID</th><th className="px-5 py-4">Kayıt</th><th className="px-5 py-4">Sahip</th><th className="px-5 py-4">Durum</th><th className="px-5 py-4">Tarih</th></tr>
+            <tr><th className="px-3 py-3 sm:px-5 sm:py-4">ID</th><th className="px-3 py-3 sm:px-5 sm:py-4">Kayıt</th><th className="hidden px-3 py-3 sm:table-cell sm:px-5 sm:py-4">Sahip</th><th className="px-3 py-3 sm:px-5 sm:py-4">Durum</th><th className="hidden px-3 py-3 sm:table-cell sm:px-5 sm:py-4">Tarih</th></tr>
           </thead>
           <tbody className="divide-y divide-black/5 dark:divide-white/10">
             {rows.map((row) => (
               <tr key={row.id} className="text-slate-700 dark:text-slate-200">
-                <td className="px-5 py-4 font-semibold">{row.id}</td>
-                <td className="px-5 py-4">{row.name}</td>
-                <td className="px-5 py-4">{row.owner}</td>
-                <td className="px-5 py-4"><span className={`rounded-full px-3 py-1 text-xs font-bold ${statusClass[row.status]}`}>{row.status}</span></td>
-                <td className="px-5 py-4 text-slate-500">{row.date}</td>
+                <td className="px-3 py-3 font-semibold sm:px-5 sm:py-4">{row.id}</td>
+                <td className="px-3 py-3 sm:px-5 sm:py-4">{row.name}</td>
+                <td className="hidden px-3 py-3 sm:table-cell sm:px-5 sm:py-4">{row.owner}</td>
+                <td className="px-3 py-3 sm:px-5 sm:py-4"><span className={`rounded-full px-3 py-1 text-xs font-bold ${statusClass[row.status]}`}>{row.status}</span></td>
+                <td className="hidden px-3 py-3 text-slate-500 sm:table-cell sm:px-5 sm:py-4">{row.date}</td>
               </tr>
             ))}
           </tbody>
