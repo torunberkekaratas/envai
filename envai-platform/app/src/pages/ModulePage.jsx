@@ -88,13 +88,13 @@ function VariantPanel({ config, variant }) {
   if (variant === 'assistant') {
     return (
       <ShellCard className="p-5">
-        <h3 className="mb-4 text-base font-bold">AI Çalışma Alanı</h3>
+        <h3 className="mb-4 text-base font-bold">Yapay Zeka Çalışma Alanı</h3>
         <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
           <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/[0.04]">
             <div className="flex gap-3"><div className="grid h-10 w-10 place-items-center rounded-full bg-emerald-100 text-emerald-700"><TbRobot /></div><p className="rounded-2xl bg-white p-3 text-sm shadow-sm dark:bg-white/10">Bu modül için riskli veri noktalarını ve aksiyon önerilerini analiz edebilirim.</p></div>
             <div className="mt-4 flex flex-wrap gap-2">{['Rapor üret', 'Anomali bul', 'ESG önerisi', 'Veri kalitesi'].map((item) => <button key={item} className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold">{item}</button>)}</div>
           </div>
-          <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10"><p className="text-sm font-bold">AI Sonuç Kalitesi</p><p className="mt-3 text-3xl font-bold" style={{ color: config.accent }}>%91</p><p className="text-xs text-slate-500">Doğrulanmış veri seti kapsama oranı</p></div>
+          <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10"><p className="text-sm font-bold">Yapay Zeka Sonuç Kalitesi</p><p className="mt-3 text-3xl font-bold" style={{ color: config.accent }}>%91</p><p className="text-xs text-slate-500">Doğrulanmış veri seti kapsama oranı</p></div>
         </div>
       </ShellCard>
     )

@@ -17,9 +17,9 @@ export const kpiTrend = [
 ]
 
 export const mixData = [
-  { name: 'Scope 1', value: 28, color: '#16A34A' },
-  { name: 'Scope 2', value: 34, color: '#3B82F6' },
-  { name: 'Scope 3', value: 38, color: '#F59E0B' }
+  { name: 'Kapsam 1', value: 28, color: '#16A34A' },
+  { name: 'Kapsam 2', value: 34, color: '#3B82F6' },
+  { name: 'Kapsam 3', value: 38, color: '#F59E0B' }
 ]
 
 export const sites = ['Türkiye', 'Almanya', 'Hollanda', 'İtalya', 'Fransa']
@@ -58,25 +58,82 @@ export const modules = [
   { title: 'Master Data Management', path: '/master-data-management', file: 'MasterDataManagementPage.jsx', icon: FiSliders, group: 'Data Platform', accent: '#475569' }
 ]
 
+const moduleLabels = {
+  Dashboard: 'Gösterge Paneli',
+  'Company Management': 'Şirket Yönetimi',
+  'User & Role Management': 'Kullanıcı ve Rol Yönetimi',
+  'Subscription Management': 'Abonelik Yönetimi',
+  'Module Marketplace': 'Modül Pazarı',
+  'Billing & Invoicing': 'Faturalama ve Tahsilat',
+  'Carbon Footprint': 'Karbon Ayak İzi',
+  'ESG Management': 'ESG Yönetimi',
+  'CSRD Compliance': 'CSRD Uyumu',
+  'CBAM Compliance': 'CBAM Uyumu',
+  'Scope 1 Management': 'Kapsam 1 Yönetimi',
+  'Scope 2 Management': 'Kapsam 2 Yönetimi',
+  'Scope 3 Management': 'Kapsam 3 Yönetimi',
+  'Supplier Portal': 'Tedarikçi Portalı',
+  'Energy Monitoring': 'Enerji İzleme',
+  'Water Monitoring': 'Su İzleme',
+  'Waste Monitoring': 'Atık İzleme',
+  'IoT Device Management': 'IoT Cihaz Yönetimi',
+  'AI Sustainability Assistant': 'Yapay Zeka Sürdürülebilirlik Asistanı',
+  'Digital Twin': 'Dijital İkiz',
+  'Audit Management': 'Denetim Yönetimi',
+  'LCA Management': 'Yaşam Döngüsü Analizi Yönetimi',
+  'Sustainability Projects': 'Sürdürülebilirlik Projeleri',
+  'Reporting Center': 'Raporlama Merkezi',
+  'Document Management': 'Doküman Yönetimi',
+  'Notification Center': 'Bildirim Merkezi',
+  'Workflow Engine': 'İş Akışı Motoru',
+  'API Management': 'API Yönetimi',
+  'Integration Center': 'Entegrasyon Merkezi',
+  'Data Lake': 'Veri Gölü',
+  'Master Data Management': 'Ana Veri Yönetimi'
+}
+
+const groupLabels = {
+  'Command Center': 'Kontrol Merkezi',
+  Admin: 'Yönetim',
+  Carbon: 'Karbon',
+  Compliance: 'Uyum',
+  'Value Chain': 'Değer Zinciri',
+  Operations: 'Operasyonlar',
+  Intelligence: 'Akıllı Araçlar',
+  Governance: 'Yönetişim',
+  Product: 'Ürün',
+  Execution: 'Yürütme',
+  Reporting: 'Raporlama',
+  'Data Platform': 'Veri Platformu'
+}
+
+export function getModuleLabel(title) {
+  return moduleLabels[title] || title
+}
+
+export function getGroupLabel(group) {
+  return groupLabels[group] || group
+}
+
 const details = {
-  'Carbon Footprint': ['Emisyon KPI kartları', 'Scope 1/2/3 dağılımı', 'Karbon trend grafikleri', 'Emisyon kaynakları tablosu', 'Lokasyon filtreleri', 'Karbon yoğunluğu analizleri'],
+  'Carbon Footprint': ['Emisyon KPI kartları', 'Kapsam 1/2/3 dağılımı', 'Karbon trend grafikleri', 'Emisyon kaynakları tablosu', 'Lokasyon filtreleri', 'Karbon yoğunluğu analizleri'],
   'ESG Management': ['ESG skorları', 'Hedef takibi', 'Risk panelleri', 'Performans grafikleri', 'Aksiyon planları'],
   'CSRD Compliance': ['Uyum matrisi', 'Gereklilik listesi', 'Eksik veri ekranı', 'Görev takip ekranı', 'Uyum yüzdesi göstergeleri'],
   'CBAM Compliance': ['CBAM ürün ekranı', 'Gömülü emisyon analizleri', 'CBAM raporlama', 'İhracat uyumluluk analizi'],
-  'Supplier Portal': ['Tedarikçi listesi', 'Scope 3 veri toplama', 'Performans kartları', 'ESG skor ekranları'],
+  'Supplier Portal': ['Tedarikçi listesi', 'Kapsam 3 veri toplama', 'Performans kartları', 'ESG skor ekranları'],
   'Energy Monitoring': ['Enerji dashboardu', 'Tesis görünümü', 'Elektrik sayaçları', 'Tüketim trendleri', 'Maliyet analizleri'],
   'Water Monitoring': ['Su tüketim ekranları', 'Kaçak analizi', 'Tesis bazlı kullanım', 'Trend analizleri'],
   'Waste Monitoring': ['Atık yönetimi', 'Geri dönüşüm oranları', 'Atık KPI ekranları', 'Bertaraf kayıtları'],
   'IoT Device Management': ['ENVAI EDGE POWER', 'ENVAI FLOW', 'ENVAI GAS NODE', 'Sensör ekranları', 'Harita görünümü', 'Alarm merkezi'],
-  'AI Sustainability Assistant': ['AI sohbet ekranı', 'ESG tavsiyeleri', 'Rapor üretimi', 'Veri analizi'],
+  'AI Sustainability Assistant': ['Yapay zeka sohbet ekranı', 'ESG tavsiyeleri', 'Rapor üretimi', 'Veri analizi'],
   'Digital Twin': ['Dijital tesis görünümü', 'Sensör katmanları', 'Canlı veri panelleri', 'Varlık yönetimi'],
   'Audit Management': ['Denetim planları', 'Denetim bulguları', 'Düzeltici faaliyetler', 'Takvim görünümü'],
   'LCA Management': ['Ürün yaşam döngüsü', 'LCA sonuç ekranları', 'Karşılaştırma ekranları'],
   'Sustainability Projects': ['Proje kartları', 'Gantt görünümü', 'KPI takibi', 'Bütçe ekranları'],
-  'Reporting Center': ['ESG raporları', 'CSRD raporları', 'CBAM raporları', 'PDF export', 'Excel export'],
+  'Reporting Center': ['ESG raporları', 'CSRD raporları', 'CBAM raporları', 'PDF dışa aktarım', 'Excel dışa aktarım'],
   'Document Management': ['Dosya yöneticisi', 'Doküman önizleme', 'Klasör yapısı', 'Versiyon takibi'],
-  'Workflow Engine': ['Drag & Drop workflow builder', 'Süreç tasarım ekranı', 'Onay mekanizmaları'],
-  'API Management': ['API Key yönetimi', 'Endpoint listeleri', 'API kullanım ekranları'],
+  'Workflow Engine': ['Sürükle bırak iş akışı tasarımı', 'Süreç tasarım ekranı', 'Onay mekanizmaları'],
+  'API Management': ['API anahtarı yönetimi', 'Uç nokta listeleri', 'API kullanım ekranları'],
   'Integration Center': ['SAP', 'Logo ERP', 'Netsis', 'Microsoft', 'Oracle', 'REST API'],
   'Data Lake': ['Veri kaynakları', 'ETL ekranları', 'Veri kalite analizleri'],
   'Master Data Management': ['Veri sözlüğü', 'Veri kalite ekranları', 'Ana veri yönetimi']
@@ -85,9 +142,15 @@ const details = {
 export function getModuleConfig(title) {
   const module = modules.find((item) => item.title === title)
   const workflows = details[title] || ['Operasyon görünümü', 'Yetki ve görev yönetimi', 'Kurumsal kayıtlar', 'Performans takibi']
+  const displayTitle = getModuleLabel(title)
+  const displayGroup = getGroupLabel(module?.group)
   return {
     ...module,
-    description: `${title} modülü ENVAI kurumsal sürdürülebilirlik platformunda uçtan uca iş süreci, kontrol, analiz ve karar destek deneyimi sunar.`,
+    title: displayTitle,
+    sourceTitle: title,
+    group: displayGroup,
+    sourceGroup: module?.group,
+    description: `${displayTitle} modülü ENVAI kurumsal sürdürülebilirlik platformunda uçtan uca iş süreci, kontrol, analiz ve karar destek deneyimi sunar.`,
     workflows,
     kpis: workflows.slice(0, 4).map((item, index) => ({
       label: item,
@@ -107,7 +170,7 @@ export function getModuleConfig(title) {
 
 export const activities = [
   'CBAM ürün verisi doğrulandı',
-  'Scope 2 elektrik faturası işlendi',
+  'Kapsam 2 elektrik faturası işlendi',
   'Tedarikçi ESG skoru güncellendi',
   'CSRD ESRS E1 görevi tamamlandı',
   'Enerji anomalisi operasyon ekibine atandı'

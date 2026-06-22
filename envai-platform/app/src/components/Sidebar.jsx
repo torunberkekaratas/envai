@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import { FiChevronDown, FiGrid, FiX } from 'react-icons/fi'
-import { modules } from '../data/platformData.jsx'
+import { getGroupLabel, getModuleLabel, modules } from '../data/platformData.jsx'
 import { useUIStore } from '../store/useUIStore'
 import logo from '../assets/envai-logo-white.svg'
 
 const groupedModules = modules.reduce((acc, module) => {
-  acc[module.group] = acc[module.group] || []
-  acc[module.group].push(module)
+  if (module.title === 'Dashboard') return acc
+  const group = getGroupLabel(module.group)
+  acc[group] = acc[group] || []
+  acc[group].push(module)
   return acc
 }, {})
 
@@ -23,20 +25,19 @@ export default function Sidebar() {
         </div>
         <div className="flex-1 space-y-3 overflow-y-auto px-3 pb-4">
           <NavLink to="/" onClick={closeSidebar} className={({ isActive }) => `mb-2 flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold transition ${isActive ? 'bg-gradient-to-r from-emerald-600 to-emerald-500 text-white shadow-lg shadow-emerald-950/30' : 'text-white/75 hover:bg-white/10 hover:text-white'}`}>
-            <FiGrid size={18} /><span>Dashboard</span>
+            <FiGrid size={18} /><span>{getModuleLabel('Dashboard')}</span>
           </NavLink>
           {Object.entries(groupedModules).map(([group, items]) => (
-            <details key={group} open={['Admin', 'Carbon', 'Compliance', 'Operations'].includes(group)} className="group rounded-xl">
+            <details key={group} open={['Yönetim', 'Karbon', 'Uyum', 'Operasyonlar'].includes(group)} className="group rounded-xl">
               <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-white/70 hover:bg-white/10 hover:text-white">
                 {group}<FiChevronDown className="transition group-open:rotate-180" />
               </summary>
               <nav className="mt-1 space-y-1 pl-2">
                 {items.map((module) => {
                   const Icon = module.icon
-                  if (module.title === 'Dashboard') return null
                   return (
                     <NavLink key={module.path} to={module.path} onClick={closeSidebar} className={({ isActive }) => `flex items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] font-semibold transition ${isActive ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-950/30' : 'text-white/62 hover:bg-white/10 hover:text-white'}`}>
-                      <Icon size={17} /><span>{module.title}</span>
+                      <Icon size={17} /><span>{getModuleLabel(module.title)}</span>
                     </NavLink>
                   )
                 })}
@@ -47,7 +48,7 @@ export default function Sidebar() {
         <div className="m-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
           <p className="text-xs text-white/50">Aktif Şirket</p>
           <p className="mt-1 text-sm font-semibold">Envai Demo A.Ş.</p>
-          <p className="mt-1 text-xs leading-5 text-white/55">Enterprise sürdürülebilirlik çalışma alanı</p>
+          <p className="mt-1 text-xs leading-5 text-white/55">Kurumsal sürdürülebilirlik çalışma alanı</p>
         </div>
       </aside>
     </>

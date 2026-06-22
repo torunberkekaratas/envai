@@ -16,9 +16,9 @@ const spark = [
   { m: 'Mar', a: 41, b: 30, c: 68 }, { m: 'Nis', a: 31, b: 24, c: 56 }, { m: 'May', a: 32, b: 24, c: 56 }
 ]
 const scopeMix = [
-  { name: 'Scope 1', value: 18.8, amount: '2.345,60 tCO₂e', color: '#14b8a6' },
-  { name: 'Scope 2', value: 25.8, amount: '3.210,30 tCO₂e', color: '#f59e0b' },
-  { name: 'Scope 3', value: 55.4, amount: '6.894,85 tCO₂e', color: '#7c3aed' }
+  { name: 'Kapsam 1', value: 18.8, amount: '2.345,60 tCO₂e', color: '#14b8a6' },
+  { name: 'Kapsam 2', value: 25.8, amount: '3.210,30 tCO₂e', color: '#f59e0b' },
+  { name: 'Kapsam 3', value: 55.4, amount: '6.894,85 tCO₂e', color: '#7c3aed' }
 ]
 const radar = [
   { subject: 'Çevresel', score: 82 }, { subject: 'Sosyal', score: 75 }, { subject: 'Yönetişim', score: 77 }
@@ -35,7 +35,7 @@ const iotCards = [
   ['Sıcaklık (°C)', '22,4', 'Normal', FiShield, '#22c55e'], ['Nem (%)', '45,2', 'Normal', FiCloud, '#0ea5e9'], ['Hava Kalitesi (AQI)', '28', 'İyi', TbLeaf, '#16a34a']
 ]
 const quick = [
-  ['Veri Yükle', FiUpload], ['Rapor Oluştur', FiFileText], ['Dashboardlar', FiBarChart2], ['Workflowlar', FiSliders], ['Dokümanlar', FiFolder], ['Ayarlar', FiCpu]
+  ['Veri Yükle', FiUpload], ['Rapor Oluştur', FiFileText], ['Gösterge Panelleri', FiBarChart2], ['İş Akışları', FiSliders], ['Dokümanlar', FiFolder], ['Ayarlar', FiCpu]
 ]
 
 function Card({ children, className = '' }) {
@@ -73,7 +73,7 @@ function IotPanel() {
 }
 
 function AiPanel() {
-  return <Card className="p-5"><h3 className="mb-4 text-base font-bold">AI Asistan</h3><div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><div className="flex gap-3"><div className="grid h-10 w-10 place-items-center rounded-full bg-emerald-100 text-emerald-700"><TbRobot /></div><p className="text-sm text-slate-700 dark:text-slate-200">Merhaba! Size nasıl yardımcı olabilirim?</p></div><div className="mt-4 flex flex-wrap gap-2">{['Emisyon Analizi Yap', 'Rapor Önerisi Ver', 'Veri Anomali Kontrolü', 'Soru Sor'].map((item) => <button key={item} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold">{item}</button>)}</div><div className="mt-3 flex gap-2"><input className="soft-input" placeholder="Mesajınızı yazın..." /><button className="rounded-xl bg-emerald-600 p-3 text-white"><FiArrowUp /></button></div></div></Card>
+  return <Card className="p-5"><h3 className="mb-4 text-base font-bold">Yapay Zeka Asistanı</h3><div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><div className="flex gap-3"><div className="grid h-10 w-10 place-items-center rounded-full bg-emerald-100 text-emerald-700"><TbRobot /></div><p className="text-sm text-slate-700 dark:text-slate-200">Merhaba! Size nasıl yardımcı olabilirim?</p></div><div className="mt-4 flex flex-wrap gap-2">{['Emisyon Analizi Yap', 'Rapor Önerisi Ver', 'Veri Anomali Kontrolü', 'Soru Sor'].map((item) => <button key={item} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold">{item}</button>)}</div><div className="mt-3 flex gap-2"><input className="soft-input" placeholder="Mesajınızı yazın..." /><button className="rounded-xl bg-emerald-600 p-3 text-white"><FiArrowUp /></button></div></div></Card>
 }
 
 export default function DashboardPage() {
@@ -81,16 +81,16 @@ export default function DashboardPage() {
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
         <Kpi title="Toplam Emisyon (tCO₂e)" value="12.450,75" delta="-8,2%" icon={FiCloud} color="#16a34a" dataKey="a" />
-        <Kpi title="Scope 1 (tCO₂e)" value="2.345,60" delta="-5,1%" icon={FiBarChart2} color="#14b8a6" dataKey="b" />
-        <Kpi title="Scope 2 (tCO₂e)" value="3.210,30" delta="-6,3%" icon={FiZap} color="#f59e0b" dataKey="c" />
-        <Kpi title="Scope 3 (tCO₂e)" value="6.894,85" delta="-10,4%" icon={FiTruck} color="#7c3aed" dataKey="c" />
+        <Kpi title="Kapsam 1 (tCO₂e)" value="2.345,60" delta="-5,1%" icon={FiBarChart2} color="#14b8a6" dataKey="b" />
+        <Kpi title="Kapsam 2 (tCO₂e)" value="3.210,30" delta="-6,3%" icon={FiZap} color="#f59e0b" dataKey="c" />
+        <Kpi title="Kapsam 3 (tCO₂e)" value="6.894,85" delta="-10,4%" icon={FiTruck} color="#7c3aed" dataKey="c" />
         <Kpi title="ESG Skoru" value="78 / 100" delta="+4,5%" icon={TbLeaf} color="#22c55e" dataKey="a" />
         <Kpi title="Uyumluluk Skoru" value="92%" delta="+6%" icon={FiShield} color="#2563eb" dataKey="b" />
       </div>
 
       <div className="grid gap-4 xl:grid-cols-12">
-        <Card className="p-5 xl:col-span-3"><h3 className="mb-4 text-base font-bold">Emisyon Dağılımı (Scope)</h3><div className="grid items-center gap-4 sm:grid-cols-[1fr_180px] xl:grid-cols-1"><div className="relative h-56"><ResponsiveContainer><PieChart><Pie data={scopeMix} innerRadius={58} outerRadius={92} dataKey="value" paddingAngle={2}>{scopeMix.map((s) => <Cell key={s.name} fill={s.color} />)}</Pie><Tooltip /></PieChart></ResponsiveContainer><div className="absolute inset-0 grid place-items-center text-center"><p className="text-2xl font-bold">12.450,75</p><p className="text-xs font-semibold">tCO₂e<br/>Toplam</p></div></div><div className="space-y-4">{scopeMix.map((item) => <div key={item.name} className="flex items-center justify-between gap-3 text-sm"><span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />{item.name}<br/><small className="ml-5 text-slate-500">{item.amount}</small></span><b>{item.value}%</b></div>)}</div></div></Card>
-        <Card className="p-5 xl:col-span-5"><div className="mb-4 flex items-center justify-between"><h3 className="text-base font-bold">Aylık Emisyon Trendi (tCO₂e)</h3><button className="rounded-xl border border-slate-200 px-3 py-2 text-xs font-bold">Son 12 Ay</button></div><div className="h-64"><ResponsiveContainer><LineChart data={spark}><CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" /><XAxis dataKey="m" /><YAxis /><Tooltip /><Line dataKey="a" name="Scope 1" stroke="#14b8a6" strokeWidth={2} /><Line dataKey="b" name="Scope 2" stroke="#f59e0b" strokeWidth={2} /><Line dataKey="c" name="Scope 3" stroke="#7c3aed" strokeWidth={2} /></LineChart></ResponsiveContainer></div></Card>
+        <Card className="p-5 xl:col-span-3"><h3 className="mb-4 text-base font-bold">Emisyon Dağılımı (Kapsam)</h3><div className="grid items-center gap-4 sm:grid-cols-[1fr_180px] xl:grid-cols-1"><div className="relative h-56"><ResponsiveContainer><PieChart><Pie data={scopeMix} innerRadius={58} outerRadius={92} dataKey="value" paddingAngle={2}>{scopeMix.map((s) => <Cell key={s.name} fill={s.color} />)}</Pie><Tooltip /></PieChart></ResponsiveContainer><div className="absolute inset-0 grid place-items-center text-center"><p className="text-2xl font-bold">12.450,75</p><p className="text-xs font-semibold">tCO₂e<br/>Toplam</p></div></div><div className="space-y-4">{scopeMix.map((item) => <div key={item.name} className="flex items-center justify-between gap-3 text-sm"><span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />{item.name}<br/><small className="ml-5 text-slate-500">{item.amount}</small></span><b>{item.value}%</b></div>)}</div></div></Card>
+        <Card className="p-5 xl:col-span-5"><div className="mb-4 flex items-center justify-between"><h3 className="text-base font-bold">Aylık Emisyon Trendi (tCO₂e)</h3><button className="rounded-xl border border-slate-200 px-3 py-2 text-xs font-bold">Son 12 Ay</button></div><div className="h-64"><ResponsiveContainer><LineChart data={spark}><CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" /><XAxis dataKey="m" /><YAxis /><Tooltip /><Line dataKey="a" name="Kapsam 1" stroke="#14b8a6" strokeWidth={2} /><Line dataKey="b" name="Kapsam 2" stroke="#f59e0b" strokeWidth={2} /><Line dataKey="c" name="Kapsam 3" stroke="#7c3aed" strokeWidth={2} /></LineChart></ResponsiveContainer></div></Card>
         <Card className="p-5 xl:col-span-4"><div className="mb-4 flex items-center justify-between"><h3 className="text-base font-bold">ESG Performansı</h3><button className="rounded-xl border border-slate-200 px-3 py-2 text-xs font-bold">2024</button></div><div className="h-64"><ResponsiveContainer><RadarChart data={radar}><PolarGrid /><PolarAngleAxis dataKey="subject" /><Radar dataKey="score" stroke="#0f766e" fill="#14b8a6" fillOpacity={0.18} /></RadarChart></ResponsiveContainer></div><p className="-mt-10 text-center text-3xl font-bold">78</p><p className="text-center text-xs text-slate-500">ESG Skoru</p></Card>
       </div>
 
