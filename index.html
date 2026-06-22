@@ -85,6 +85,20 @@
         opacity: 1 !important;
       }
 
+      @media (min-width: 769px) {
+        #imob0j-3-3-2-3 {
+          width: min(1120px, calc(100vw - 80px)) !important;
+          height: auto !important;
+          aspect-ratio: 1582 / 994;
+          bottom: -352px !important;
+        }
+
+        #i2adke-3 {
+          object-fit: contain !important;
+          background: #ffffff;
+        }
+      }
+
           #i3owk-2-4{scroll-margin-top:-200px;}
           /* Header butonları için cursor */
           #ispyh-2-3-2-3-2-2-2, #ispyh-2-3-2-3-2-2-2-2, #ispyh-2-3-2-3-2-2-2-3, #i1lwz-2-2-2-4-2-2,
@@ -887,6 +901,28 @@
                 section.scrollIntoView({ behavior: 'smooth' });
               }
             }
+
+            function goToDemo(plan) {
+              window.location.href = '/satin-al.html?plan=' + plan;
+            }
+
+            function bindInteractiveButton(element, handler) {
+              if (!element) return;
+              element.onclick = function(e) {
+                if (e) e.preventDefault();
+                if (e) e.stopPropagation();
+                handler();
+              };
+              element.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  element.click();
+                }
+              });
+              element.style.cursor = 'pointer';
+              element.setAttribute('role', 'button');
+              element.setAttribute('tabindex', '0');
+            }
             
             // Desktop header butonları
             var kullanımAlanlari = document.getElementById('ispyh-2-3-2-3-2-2-2');
@@ -896,6 +932,8 @@
             var hakkimizda = document.getElementById('ispyh-2-3-2-3-2-2-2-3');
             var satinAl = document.getElementById('ispyh-2-3-2-3-2-2-2-5');
             var girisYap = document.getElementById('i1lwz-2-2-2-4-2-2');
+            var heroDemo = document.getElementById('i1lwz-2-2-2');
+            var heroNasilCalisir = document.getElementById('i1lwz-2-2-2-4');
             
             // Mobil header butonları (Özellikler artık ilk sırada)
             var ozelliklerMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-4');
@@ -938,6 +976,8 @@
             if (hakkimizda) hakkimizda.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3-3'); };
             if (satinAl) satinAl.onclick = function(e) { e.stopPropagation(); scrollToSection('ihccyr-2-3'); };
             if (girisYap) girisYap.onclick = openLogin;
+            bindInteractiveButton(heroDemo, function() { goToDemo('professional'); });
+            bindInteractiveButton(heroNasilCalisir, function() { scrollToSection('ilwyn'); });
             
             // Mobil click handlers
             if (kullanımAlanlariMobil) kullanımAlanlariMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3'); };
@@ -1006,7 +1046,7 @@
               if (element) {
                 element.onclick = function(e) {
                   e.stopPropagation();
-                  window.location.href = '/satin-al.html?plan=' + btn.plan;
+                  goToDemo(btn.plan);
                 };
                 element.style.cursor = 'pointer';
               }
