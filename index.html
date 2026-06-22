@@ -1,0 +1,874 @@
+<!doctype html>
+    <html lang="tr">
+      <head>
+        
+        
+        <title>CBAM Uyumu &amp; Enerji Optimizasyonu Yazılımı | Envai</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#f5f5f7" />
+        <meta name="description" content="Fabrika SCADA verinizi otomatik CBAM raporuna ve enerji tasarrufuna çeviren platform. 30 günde devrede, ilk rapor ilk hafta. Ücretsiz demo alın." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="keywords" content="CBAM uyumu, CBAM raporu, CBAM yazılımı, SCADA enerji yönetimi, endüstriyel sürdürülebilirlik, enerji optimizasyonu, Scope 1 Scope 2 hesaplama, karbon sertifikası" />
+        <link rel="canonical" href="https://www.envai.com/" />
+        <meta property="og:title" content="Envai — Fabrika Zekanızı Sürdürülebilirliğe Dönüştürün"/>
+        <meta property="og:description" content="SCADA verinizi otomatik CBAM raporuna ve %10-20 enerji tasarrufuna çeviren platform. 30 günde devrede." />
+        <meta property="og:image" content="/social.png" />
+        <meta property="og:url" content="https://www.envai.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Envai" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Envai — CBAM Uyumu &amp; Enerji Optimizasyonu" />
+        <meta name="twitter:description" content="SCADA verinizi otomatik CBAM raporuna ve enerji tasarrufuna çeviren platform. 30 günde devrede." />
+        <meta name="twitter:image" content="/social.png" />
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://www.envai.com/#organization",
+              "name": "Envai Teknoloji A.Ş.",
+              "url": "https://www.envai.com/",
+              "logo": "https://www.envai.com/social.png",
+              "description": "Fabrika SCADA verisini CBAM uyumuna, Scope-1/2 hesaplamasına ve AI destekli enerji optimizasyonuna dönüştüren endüstriyel sürdürülebilirlik zekası platformu.",
+              "sameAs": ["https://www.linkedin.com/company/envai"]
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Envai",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "url": "https://www.envai.com/",
+              "publisher": { "@id": "https://www.envai.com/#organization" },
+              "description": "SCADA/ERP verinizi 30 günde CBAM raporuna ve %10-20 enerji tasarrufuna çeviren endüstriyel sürdürülebilirlik platformu.",
+              "offers": [
+                { "@type": "Offer", "name": "Başlangıç", "price": "10000", "priceCurrency": "USD" },
+                { "@type": "Offer", "name": "Profesyonel", "price": "30000", "priceCurrency": "USD" },
+                { "@type": "Offer", "name": "Kurumsal", "priceCurrency": "USD", "description": "Özel fiyatlandırma" }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "name": "Envai",
+              "url": "https://www.envai.com/",
+              "inLanguage": "tr-TR",
+              "publisher": { "@id": "https://www.envai.com/#organization" }
+            }
+          ]
+        }
+        </script>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link href="/website-base.css" rel="stylesheet" />
+        <link href="/styles.css" rel="stylesheet" />
+        
+    <link href="/fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link href="/fonts.googleapis.com" rel="preconnect" />
+    <link href="/fonts.googleapis.com/css.css" rel="stylesheet" /><link href="/fonts.googleapis.com/css-ef078a62fcd2c.css" rel="stylesheet" />
+  
+        <script>        window._pwInitialPath = "/";
+</script>
+        <script defer="defer" fetchpriority="high"src="/script.js"></script>
+        
+        <meta name="pw:has-visual-script" content="false" />
+        <link rel="preload"  href="/scene-state/640fb4fb-14fd-49df-b65d-aadfa98f5dd5.json" as="fetch" crossorigin="anonymous"/>
+<link rel="preload"  href="/files.peachworlds.com/website/475c0f2b-a06e-41c7-847d-34a4feee431b/model.glb" as="fetch" crossorigin="anonymous"/>
+<link rel="preload"  href="/files.peachworlds.com/website/a35fc4e7-44e3-47ff-b9e8-4e8c5304a406/alpha-map.png" as="image" crossorigin="anonymous"/><link rel="preload"  href="/ui-state.json" as="fetch" crossorigin="anonymous"/>
+        
+        <style>
+          * { box-sizing: border-box; } body {margin: 0;}*{scrollbar-width:none;}::-webkit-scrollbar{display:none;}.pwb-scene > canvas{display:block;width:100%;height:100%;user-select:none;}#pwb-loading-wrap{background-color:#06040A;}#im3p5{top:0px;width:100%;height:100dvh;display:flex;position:fixed;align-items:center;justify-content:center;}#iw9p8{display:flex;position:relative;align-items:center;justify-content:center;}#ijg95{color:#FFFFFF;display:none;position:absolute;font-size:18px;text-align:center;font-family:Inter;font-weight:bold;}#iwpyv7{width:100px;position:absolute;}#igqob3{width:250px;position:static;}#ieupsz{width:100%;bottom:0px;display:flex;position:fixed;align-items:center;flex-direction:row;padding-bottom:40px;justify-content:center;}@font-face{src:url("/files.peachworlds.com/website/b6d3f455-58ef-489e-879c-5b84494c7afd/neuehaasdisplayroman.ttf");font-family:neuehaasdisplayroman;}@font-face{src:url("/files.peachworlds.com/website/450219d0-2f48-4cf0-a5eb-d79c4c3f4d6a/geistmono-bold.ttf");font-family:geistmono-bold;}@font-face{src:url("/files.peachworlds.com/website/5928e5a0-84fc-4822-af4a-dad178f9686e/geistmono-regular.ttf");font-family:geistmono-regular;}@media (max-width: 480px){#iwpyv7{width:80px;}#igqob3{width:175px;}}
+          #i3owk-2-4{scroll-margin-top:-200px;}
+          /* Header butonları için cursor */
+          #ispyh-2-3-2-3-2-2-2, #ispyh-2-3-2-3-2-2-2-2, #ispyh-2-3-2-3-2-2-2-3, #i1lwz-2-2-2-4-2-2,
+          #ispyh-2-3-2-3-2-2-2-4, #ispyh-2-3-2-3-2-2-2-2-2, #ispyh-2-3-2-3-2-2-2-3-2, #i1lwz-2-2-2-4-2-2-2 {
+            cursor: pointer;
+          }
+
+          /* Desktop header reset (bring back nav bar) */
+          @media (min-width: 769px) {
+            /* Hero layout tune for desktop: bring cards up and align with nav */
+            #i84ba {
+              padding-top: 96px;
+              justify-content: flex-start;
+              align-items: center;
+              min-height: 100vh;
+            }
+
+            /* Allow hero content to flow naturally instead of sticking to bottom */
+            #i1lwz {
+              position: relative;
+              bottom: auto;
+              top: auto;
+            }
+
+            /* Stack the 3 stat cards vertically (99.99%, 621 MWp+, 24/7) */
+            #i1lwz-5-2-2-2 {
+              flex-direction: column !important;
+              align-items: flex-start !important;
+              justify-content: flex-start !important;
+              gap: 18px !important;
+            }
+
+            #imob0j-3-3-2-2,
+            #imob0j-3-3-2-2-2,
+            #imob0j-3-3-2-2-3 {
+              width: 100% !important;
+              max-width: 520px !important;
+              flex: 0 0 auto !important;
+              margin: 0 !important;
+            }
+
+            /* In case an intermediate wrapper forces row layout */
+            #iuswwj {
+              align-items: center;
+            }
+
+            #i1lwz-5-2-2-2 > * {
+              margin: 0 !important;
+            }
+
+            #ihkww7 {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              z-index: 1000;
+              background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0) 100%);
+              padding: 18px 0;
+              pointer-events: auto;
+            }
+
+            #i1lwz-3 {
+              max-width: 1240px;
+              width: 100%;
+              margin: 0 auto;
+              padding: 0 32px;
+              display: flex !important;
+              align-items: center;
+              justify-content: space-between;
+              height: 72px;
+            }
+
+            /* Main logo + nav visible on desktop */
+            #i1lwz-2-3 {
+              display: flex !important;
+              align-items: center;
+              gap: 20px;
+            }
+            #imob0j-3-3-2 {
+              display: flex !important;
+            }
+
+            /* Hide mobile logo + hamburger on desktop */
+            #i1lwz-2-3-2,
+            #i1lwz-2-3-4 {
+              display: none !important;
+            }
+
+            /* Keep content tight to top on desktop */
+            #pwb-body-wrap {
+              padding-top: 0;
+            }
+          }
+          
+          /* Mobile Header Fixes */
+          @media (max-width: 480px) {
+            body, html {
+              overflow: auto !important;
+              height: auto;
+            }
+            
+            #ihkww7 {
+              padding: 12px 16px !important;
+              position: fixed !important;
+              top: 0;
+              width: 100%;
+              left: 0;
+              z-index: 1000;
+            }
+            
+            /* Side by side layout for Logo and Hamburger */
+            #i1lwz-3 {
+              background: rgba(0, 0, 0, 0.85) !important;
+              backdrop-filter: blur(10px) !important;
+              border: 1px solid rgba(255, 255, 255, 0.08) !important;
+              border-radius: 12px !important;
+              height: 56px !important;
+              padding: 0 16px !important;
+              margin: 0 !important;
+              width: 100% !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
+              pointer-events: auto !important;
+              position: relative !important;
+              gap: 8px;
+            }
+
+            #i1lwz-2-3-2 {
+              display: flex !important;
+              opacity: 1 !important;
+              width: auto !important;
+              pointer-events: auto;
+            }
+
+            #iet44-2 {
+              width: 90px !important;
+            }
+
+            #i1lwz-2-3-4 {
+              display: flex !important;
+              width: 36px !important;
+              height: 36px !important;
+              background: transparent !important;
+              border-radius: 50% !important;
+              align-items: center !important;
+              justify-content: center !important;
+              margin-left: auto;
+              pointer-events: auto;
+            }
+
+            /* Show a mini login button next to hamburger for easy access */
+            #imob0j-3-3-2 {
+              display: none !important;
+            }
+            
+            #i1lwz-2-3-3-2 {
+              display: none !important;
+            }
+
+            #ispyh-2-3-2-3-2-2-2, #ispyh-2-3-2-3-2-2-2-2, #ispyh-2-3-2-3-2-2-2-3, #ispyh-2-3-2-3-2-2-2-5 {
+              display: none !important;
+            }
+
+            #i1lwz-2-2-2-4-2-2 {
+              display: none !important;
+            }
+
+            #iet44-4 {
+              width: 20px !important;
+              filter: brightness(0) invert(1) !important;
+              pointer-events: auto;
+              cursor: pointer;
+            }
+
+            /* Hide original desktop elements */
+            #i1lwz-2-3 {
+              display: none !important;
+            }
+            
+            /* Main content starts below fixed header */
+            #pwb-body-wrap {
+              padding-top: 88px !important;
+            }
+            /* Mobile Overlay Styling - Full screen dark background */
+            #iy2h61 {
+              background: #06040A !important;
+              height: 100vh !important;
+              height: 100dvh !important;
+              width: 100vw !important;
+              position: fixed !important;
+              top: 0 !important;
+              left: 0 !important;
+              right: 0 !important;
+              bottom: 0 !important;
+              padding: 32px 24px 36px !important;
+              z-index: 9999 !important;
+              box-sizing: border-box !important;
+              display: none !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+              transition: opacity 0.25s ease !important;
+              overflow-y: auto !important;
+              overscroll-behavior: contain !important;
+            }
+
+            body.menu-open {
+              overflow: hidden !important;
+            }
+
+            body.menu-open #iy2h61 {
+              display: block !important;
+              opacity: 1 !important;
+              pointer-events: auto !important;
+            }
+
+            /* Overlay header with logo and close */
+            #i1lwz-3-2 {
+              background: none !important;
+              padding: 0 !important;
+              margin: 0 auto 48px auto !important;
+              position: relative !important;
+              display: flex !important;
+              justify-content: space-between !important;
+              align-items: center !important;
+              width: 100% !important;
+              max-width: 420px !important;
+            }
+
+            #i1lwz-2-3-5 {
+              display: flex !important;
+            }
+
+            #iet44-5 {
+              width: 120px !important;
+            }
+
+            #i1lwz-2-3-4-2 {
+              display: flex !important;
+              width: 44px !important;
+              height: 44px !important;
+              background: rgba(255, 255, 255, 0.1) !important;
+              border-radius: 50% !important;
+              align-items: center !important;
+              justify-content: center !important;
+              cursor: pointer;
+            }
+
+            #iet44-4-2 {
+              width: 24px !important;
+              filter: brightness(0) invert(1) !important;
+            }
+
+            /* Menu items container */
+            #i1lwz-2-3-3-2-2 {
+              display: flex !important;
+              flex-direction: column !important;
+              gap: 10px !important;
+              padding: 0 !important;
+              align-items: flex-start !important;
+              width: 100% !important;
+              max-width: 420px !important;
+              margin: 0 auto !important;
+            }
+
+            /* Individual menu items */
+            #ispyh-2-3-2-3-2-2-2-4, 
+            #ispyh-2-3-2-3-2-2-2-2-2, 
+            #ispyh-2-3-2-3-2-2-2-3-2, 
+            #ispyh-2-3-2-3-2-2-2-5-2 {
+              font-size: 22px !important;
+              font-weight: 600 !important;
+              line-height: 1.25 !important;
+              color: rgba(255, 255, 255, 0.75) !important;
+              font-family: 'DM Sans', sans-serif !important;
+              padding: 14px 0 !important;
+              border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+              width: 100% !important;
+              cursor: pointer;
+              transition: color 0.2s ease, border-color 0.2s ease;
+            }
+
+            #ispyh-2-3-2-3-2-2-2-4:hover, 
+            #ispyh-2-3-2-3-2-2-2-2-2:hover, 
+            #ispyh-2-3-2-3-2-2-2-3-2:hover, 
+            #ispyh-2-3-2-3-2-2-2-5-2:hover {
+              color: #ffffff !important;
+            }
+
+            /* Login button at bottom */
+            #i1lwz-2-2-2-4-2-2-2 {
+              background: #ffffff !important;
+              color: #000000 !important;
+              border-radius: 999px !important;
+              padding: 16px 28px !important;
+              margin: 32px auto 8px auto !important;
+              width: 100% !important;
+              max-width: 420px !important;
+              justify-content: center !important;
+              display: flex !important;
+              align-items: center !important;
+              box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
+              gap: 10px !important;
+            }
+
+            #ispyh-2-3-2-5-2-2-2 {
+              color: #000000 !important;
+              font-size: 16px !important;
+              font-weight: 600 !important;
+              letter-spacing: 0.5px !important;
+            }
+
+            #iet44-3-2-3-4-2-2 {
+              filter: brightness(0) !important;
+              margin-left: 8px !important;
+              width: 16px !important;
+            }
+          }
+          
+          /* Footer sosyal medya ikonları için cursor */
+          #ie9ue-6, #ie9ue-2-4, #ie9ue-3-4 {
+            cursor: pointer;
+          }
+
+          /* ===== BEYAZ TEMA OVERRIDE'LARI ===== */
+
+          /* Semantik başlıklar (SEO) → sadece tarayıcı varsayılan margin'ini sıfırla.
+             ID stilleri (font-size/weight vb.) styles.css'ten aynen korunur. */
+          h1#ispyh-2-2,
+          h2#ispyh-2-2-5-3-2,
+          h2#ispyh-2-2-5-3-2-3,
+          h2#ispyh-2-2-5-3-2-3-2,
+          h2#ispyh-2-2-5-3-2-3-2-2,
+          h2#ispyh-2-2-5-3-2-4,
+          h2#ispyh-2-2-3 {
+            margin: 0 !important;
+          }
+
+          /* Loading ekranı */
+          #pwb-loading-wrap { background-color: #ffffff !important; }
+          #igqob3 { filter: brightness(0) !important; }
+
+          /* Logo → header'da koyu */
+          #iet44, #iet44-2 { filter: brightness(0) !important; }
+          /* Hamburger ikonu → koyu tut (invert kaldır) */
+          #iet44-4 { filter: none !important; }
+
+          /* ===== HEADER (Apple tarzı buzlu cam) ===== */
+          /* Nav pill → temiz beyaz frosted, içeriğe göre genişler (buton kırpılmasın) */
+          #imob0j-3-3-2 {
+            background-color: rgba(255,255,255,0.72) !important;
+            -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+            backdrop-filter: saturate(180%) blur(20px) !important;
+            border: 1px solid rgba(0,0,0,0.08) !important;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.06) !important;
+            width: -webkit-fit-content !important;
+            width: fit-content !important;
+            max-width: none !important;
+            overflow: visible !important;
+          }
+          #i1lwz-2-3-3-2 { width: auto !important; }
+          /* Nav linkleri → koyu */
+          #ispyh-2-3-2-3-2-2-2,
+          #ispyh-2-3-2-3-2-2-2-2,
+          #ispyh-2-3-2-3-2-2-2-3,
+          #ispyh-2-3-2-3-2-2-2-5 { color: #1d1d1f !important; }
+          /* "Giriş Yap" → temiz koyu pill (tek satır, garip beyaz daire yok) */
+          #i1lwz-2-2-2-4-2-2 {
+            background-color: #1d1d1f !important;
+            padding: 10px 20px !important;
+            white-space: nowrap !important;
+            align-items: center !important;
+            flex-shrink: 0 !important;
+          }
+          #ispyh-2-3-2-5-2-2 {
+            color: #ffffff !important;
+            white-space: nowrap !important;
+            font-weight: 500 !important;
+          }
+          /* arrow.png aslında daire+ok; beyaza çevrilince boş daire oluyordu → gizle */
+          #iet44-3-2-3-4-2 { display: none !important; }
+
+          /* Desktop header → çok hafif beyaz fade (gri blok yok) */
+          @media (min-width: 769px) {
+            #ihkww7 {
+              background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 100%) !important;
+            }
+            /* Nav pill sağda kalıyordu → yatayda tam ortala (logo solda kalır) */
+            #i1lwz-3 { position: relative !important; }
+            #imob0j-3-3-2 {
+              position: absolute !important;
+              left: 50% !important;
+              transform: translateX(-50%) !important;
+            }
+          }
+
+          /* Mobile header → frosted beyaz */
+          @media (max-width: 480px) {
+            #i1lwz-3 {
+              background: rgba(255,255,255,0.8) !important;
+              -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+              backdrop-filter: saturate(180%) blur(20px) !important;
+              border: 1px solid rgba(0,0,0,0.08) !important;
+              box-shadow: 0 6px 24px rgba(0,0,0,0.06) !important;
+            }
+          }
+
+          /* Hero bölüm metinleri (açık 3D canvas üzerinde) */
+          /* Duyuru badge → Apple tarzı açık yeşil tonlu hap */
+          #i1lwz-2 {
+            background-color: rgba(22,163,74,0.1) !important;
+            border: 1px solid rgba(22,163,74,0.25) !important;
+          }
+          #ispyh-2 { color: #16a34a !important; font-weight: 600 !important; }
+          #i2adke { filter: brightness(0) saturate(100%) invert(45%) sepia(85%) saturate(450%) hue-rotate(96deg) brightness(92%) contrast(88%) !important; }
+          #ispyh-2-2 { color: #1d1d1f !important; }
+          #ispyh-2-3 { color: #6e6e73 !important; }
+          #ispyh-2-3-3 { color: #86868b !important; opacity: 1 !important; }
+
+          /* Hero birincil CTA düğmesi → koyu kalsın */
+          #i1lwz-2-2-2 { background-color: #1d1d1f !important; }
+          #ispyh-2-3-2 { color: #ffffff !important; }
+          /* Hero ikincil CTA düğmesi → yeşil */
+          #i1lwz-2-2-2-4 { background-color: #16a34a !important; border: none !important; }
+          #ispyh-2-3-2-5 { color: #ffffff !important; }
+
+          /* Globe/overview kart → açık */
+          #imob0j-3-3-2-3 {
+            background-color: rgba(255,255,255,0.55) !important;
+            border: 1px solid rgba(0,0,0,0.07) !important;
+          }
+
+          /* Özellikler bölüm 1 başlıkları */
+          #ispyh-2-2-5-3-2 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2 { color: #6e6e73 !important; }
+
+          /* Özellik kartları 1 → koyu lacivert (#1c1e2e) */
+          #imob0j-3-3-2-2-2-7-4,
+          #imob0j-3-3-2-2-2-7-4-2,
+          #imob0j-3-3-2-2-2-7-4-3 {
+            background-color: #1c1e2e !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+          }
+          #ia0ath-7-2-2-3-4,
+          #ia0ath-7-2-2-3-4-2,
+          #ia0ath-7-2-2-3-4-3 { border-color: rgba(255,255,255,0.06) !important; }
+          #ispyh-2-2-5-3-2-2,
+          #ispyh-2-2-5-3-2-2-2,
+          #ispyh-2-2-5-3-2-2-3 { color: #ffffff !important; }
+          #ispyh-2-2-5-2-2-2-2,
+          #ispyh-2-2-5-2-2-2-2-2,
+          #ispyh-2-2-5-2-2-2-2-3 { color: #a1a1a6 !important; }
+          /* Özellik kart ikonları → beyaz (koyu kart üzerinde) */
+          #i2adke-4, #i2adke-4-6, #i2adke-4-7 { filter: brightness(0) invert(1) !important; }
+
+          /* ===== TÜM BÖLÜMLER ŞEFFAF (sabit 3D sahne arkadan görünsün) =====
+             3D sahne #ip1j: position:fixed, beyaz zemin + yeşil obje.
+             Bölümler şeffaf olunca 3D görsel tüm sayfa boyunca kaydırdıkça görünür. */
+          #ilwyn-2,                 /* Envai AI */
+          #ihccyr,                  /* Referanslar */
+          #ihccyr-2-3 {             /* Fiyatlandırma */
+            background-color: transparent !important;
+          }
+          /* İç sarmalayıcı siyahtı → şeffaf yap */
+          #i1lwz-2-4-2 { background-color: transparent !important; }
+          #ispyh-2-2-5-3-2-2-4,
+          #ispyh-2-2-5-3-2-2-4-2,
+          #ispyh-2-2-5-3-2-2-4-3 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2-2-4,
+          #ispyh-2-2-5-2-2-2-2-4-2,
+          #ispyh-2-2-5-2-2-2-2-4-3 { color: #6e6e73 !important; }
+          /* #ilwyn-2 CTA düğmeleri → yeşil */
+          #i1lwz-2-2-2-4-7,
+          #i1lwz-2-2-2-4-5,
+          #i1lwz-2-2-2-4-2 { background-color: #16a34a !important; }
+          #ispyh-2-3-2-5-7,
+          #ispyh-2-3-2-5-5,
+          #ispyh-2-3-2-5-2 { color: #ffffff !important; }
+
+          /* Müşteri logo bölümü başlıkları */
+          #ispyh-2-2-5-3-2-3-2 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2-3-2 { color: #6e6e73 !important; }
+
+          /* Güvenlik bölümü başlıkları */
+          #ispyh-2-2-5-3-2-3 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2-3 { color: #6e6e73 !important; }
+
+          /* Güvenlik özellik kartları → koyu lacivert (#1c1e2e) */
+          #imob0j-3-3-2-2-2-7-4-4,
+          #imob0j-3-3-2-2-2-7-4-2-2,
+          #imob0j-3-3-2-2-2-7-4-2-2-2,
+          #imob0j-3-3-2-2-2-7-4-4-2 {
+            background-color: #1c1e2e !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+          }
+          #ia0ath-7-2-2-3-4-4,
+          #ia0ath-7-2-2-3-4-2-2,
+          #ia0ath-7-2-2-3-4-2-2-2,
+          #ia0ath-7-2-2-3-4-4-2 { border-color: rgba(255,255,255,0.06) !important; }
+          #ispyh-2-2-5-3-2-2-5,
+          #ispyh-2-2-5-3-2-2-2-2,
+          #ispyh-2-2-5-3-2-2-2-2-2,
+          #ispyh-2-2-5-3-2-2-5-2 { color: #ffffff !important; }
+          #ispyh-2-2-5-2-2-2-2-5,
+          #ispyh-2-2-5-2-2-2-2-2-2,
+          #ispyh-2-2-5-2-2-2-2-2-2-2,
+          #ispyh-2-2-5-2-2-2-2-5-2 { color: #a1a1a6 !important; }
+
+          /* Referanslar bölümü başlıkları */
+          #ispyh-2-2-5-3-2-3-2-2 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2-3-2-2 { color: #6e6e73 !important; }
+
+          /* Referans kartları → koyu lacivert (#1c1e2e) */
+          #imob0j-3-3-2-2-2-7-4-5,
+          #imob0j-3-3-2-2-2-7-4-5-2,
+          #imob0j-3-3-2-2-2-7-4-5-3 {
+            background-color: #1c1e2e !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+          }
+          #ia0ath-7-2-2-3-4-5,
+          #ia0ath-7-2-2-3-4-5-2,
+          #ia0ath-7-2-2-3-4-5-3 { border-color: rgba(255,255,255,0.06) !important; }
+          /* Alıntı metni → açık | isim → beyaz | ünvan → açık gri */
+          #ispyh-2-2-5-2-2-2-2-6,
+          #ispyh-2-2-5-2-2-2-2-6-3,
+          #ispyh-2-2-5-2-2-2-2-6-4 { color: #d2d2d7 !important; }
+          #ispyh-2-2-5-3-2-2-6-2,
+          #ispyh-2-2-5-3-2-2-6-2-2,
+          #ispyh-2-2-5-3-2-2-6-2-3 { color: #ffffff !important; }
+          #ispyh-2-2-5-2-2-2-2-6-2,
+          #ispyh-2-2-5-2-2-2-2-6-2-2,
+          #ispyh-2-2-5-2-2-2-2-6-2-3 { color: #a1a1a6 !important; }
+
+          /* İstatistik kartları → koyu lacivert (#1c1e2e) */
+          #imob0j-3-3-2-2,
+          #imob0j-3-3-2-2-2,
+          #imob0j-3-3-2-2-3 {
+            background-color: #1c1e2e !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+          }
+          /* İstatistik satırı geniş ekranda dikey yığılıyordu → 3'lü yatay satır */
+          @media (min-width: 769px) {
+            #i1lwz-5-2-2-2 {
+              flex-direction: row !important;
+              justify-content: center !important;
+              align-items: stretch !important;
+            }
+            #imob0j-3-3-2-2,
+            #imob0j-3-3-2-2-2,
+            #imob0j-3-3-2-2-3 { flex: 1 1 0 !important; }
+          }
+          #ispyh-2-2-2-2-2-8-2-2-2,
+          #ispyh-2-2-2-2-2-8-2-2-2-2-2,
+          #ispyh-2-2-2-2-2-8-2-2-2-3-3 { color: #ffffff !important; }
+          #ispyh-2-2-2-2-2-5-7-2-2-2,
+          #ispyh-2-2-2-2-2-5-7-2-2-2-2-2,
+          #ispyh-2-2-2-2-2-5-7-2-2-2-3-3 { color: #a1a1a6 !important; }
+
+          /* Fiyatlandırma bölümü başlıkları */
+          #ispyh-2-2-5-3-2-4 { color: #1d1d1f !important; }
+          #ispyh-2-2-5-2-2-2-4 { color: #6e6e73 !important; }
+
+          /* Fiyatlandırma kartları → koyu lacivert (#1c1e2e) */
+          #imob0j-3-3-2-2-2-7-4-6,
+          #imob0j-3-3-2-2-2-7-4-6-2,
+          #imob0j-3-3-2-2-2-7-4-6-3 {
+            background-color: #1c1e2e !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+          }
+          #ia0ath-7-2-2-3-4-6,
+          #ia0ath-7-2-2-3-4-6-2,
+          #ia0ath-7-2-2-3-4-6-3 { border-color: rgba(255,255,255,0.06) !important; }
+          #ispyh-2-2-5-3-2-2-6,
+          #ispyh-2-2-5-3-2-2-6-7-2,
+          #ispyh-2-2-5-3-2-2-6-7-3 { color: #ffffff !important; }
+          #ispyh-2-2-5-2-2-2-2-7,
+          #ispyh-2-2-5-2-2-2-2-7-6-2,
+          #ispyh-2-2-5-2-2-2-2-7-6-3 { color: #a1a1a6 !important; }
+          #ispyh-2-2-5-3-2-2-6-3,
+          #ispyh-2-2-5-3-2-2-6-3-4,
+          #ispyh-2-2-5-3-2-2-6-3-4-2 { color: #ffffff !important; }
+          #isulig, #isulig-2 { color: #6e6e73 !important; }
+          #ispyh-2-2-5-2-2-2-2-7-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-3,
+          #ispyh-2-2-5-2-2-2-2-7-2-4,
+          #ispyh-2-2-5-2-2-2-2-7-2-5,
+          #ispyh-2-2-5-2-2-2-2-7-2-9,
+          #ispyh-2-2-5-2-2-2-2-7-2-2-5,
+          #ispyh-2-2-5-2-2-2-2-7-2-3-5,
+          #ispyh-2-2-5-2-2-2-2-7-2-4-5,
+          #ispyh-2-2-5-2-2-2-2-7-2-5-5,
+          #ispyh-2-2-5-2-2-2-2-7-2-9-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-2-5-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-3-5-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-4-5-2,
+          #ispyh-2-2-5-2-2-2-2-7-2-5-5-2 { color: #d2d2d7 !important; opacity: 1 !important; }
+
+          /* Fiyatlandırma CTA düğmeleri → yeşil */
+          #i1lwz-2-2-2-4-6,
+          #i1lwz-2-2-2-4-8,
+          #i1lwz-2-2-2-4-9 { background-color: #16a34a !important; }
+          #ispyh-2-3-2-5-6,
+          #ispyh-2-3-2-5-8,
+          #ispyh-2-3-2-5-9 { color: #ffffff !important; }
+
+          /* Mavi parlama efekti → yeşil */
+          #i1kewg-6-6 { background-color: #34c759 !important; }
+          /* Fiyatlandırma liste tik ikonları (mavi) → yeşil */
+          img[id^="i2adke-4-2-2-2"] {
+            filter: brightness(0) saturate(100%) invert(45%) sepia(85%) saturate(450%) hue-rotate(96deg) brightness(92%) contrast(88%) !important;
+          }
+
+          /* Son CTA bölümü */
+          #ispyh-2-2-3 { color: #1d1d1f !important; }
+          #ispyh-2-3-2-6 { color: #ffffff !important; }
+          /* İkincil CTA → yeşil */
+          #i1lwz-2-2-2-4-10 { background-color: #16a34a !important; }
+          #ispyh-2-3-2-5-10 { color: #ffffff !important; }
+          /* Telif hakkı metni */
+          #ispyh-2-3-3 { color: #86868b !important; opacity: 1 !important; }
+          /* Sosyal medya ikonları → koyu */
+          #ie9ue-6, #ie9ue-2-4, #ie9ue-3-4 { filter: brightness(0) !important; }
+
+          /* Referans kartları → 3 eşit kart, esnek sarmalama (her ekranda uyumlu).
+             Artık 3 kart da grid'in doğrudan kardeşi (HTML yapısı düzeltildi) */
+          #i1lwz-2-4-2-3-2-2-2-3 {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            gap: 24px !important;
+            align-items: stretch !important;
+          }
+          #imob0j-3-3-2-2-2-7-4-5,
+          #imob0j-3-3-2-2-2-7-4-5-2,
+          #imob0j-3-3-2-2-2-7-4-5-3 {
+            flex: 1 1 280px !important;
+            width: auto !important;
+            margin: 0 !important;
+          }
+
+          /* ===== BÖLÜMLER ARASI BOŞLUK DÜZENİ ===== */
+          /* İstatistik bölümü 300px+300px ile aşırı boşluktu → dengeli */
+          #iuswwj { padding-top: 140px !important; padding-bottom: 140px !important; }
+          /* Özellikler ve Envai AI arası fazla boşluğu hafiflet */
+          #ilwyn { padding-bottom: 80px !important; }
+          #ilwyn-2 { padding-top: 80px !important; }
+
+          /* Mobil menü → koyu kalsın */
+          #iy2h61 { background: #1d1d1f !important; }
+          #iy2h61 * { color: #ffffff !important; }
+          /* Mobil menüdeki beyaz "Giriş Yap" hap → metin koyu, ikon koyu */
+          #i1lwz-2-2-2-4-2-2-2 #ispyh-2-3-2-5-2-2-2 { color: #1d1d1f !important; }
+          #iet44-3-2-3-4-2-2 { filter: brightness(0) !important; }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Scroll fonksiyonu
+            function scrollToSection(sectionId) {
+              var section = document.getElementById(sectionId);
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+            
+            // Desktop header butonları
+            var kullanımAlanlari = document.getElementById('ispyh-2-3-2-3-2-2-2');
+            // Desktop header butonları (Özellikler artık ilk sırada)
+            var ozellikler = document.getElementById('ispyh-2-3-2-3-2-2-2');
+            var kullanımAlanlari = document.getElementById('ispyh-2-3-2-3-2-2-2-2');
+            var hakkimizda = document.getElementById('ispyh-2-3-2-3-2-2-2-3');
+            var satinAl = document.getElementById('ispyh-2-3-2-3-2-2-2-5');
+            var girisYap = document.getElementById('i1lwz-2-2-2-4-2-2');
+            
+            // Mobil header butonları (Özellikler artık ilk sırada)
+            var ozelliklerMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-4');
+            var kullanımAlanlariMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-2-2');
+            var hakkimizdaMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-3-2');
+            var satinAlMobil = document.getElementById('ispyh-2-3-2-3-2-2-2-5-2');
+            var girisYapMobil = document.getElementById('i1lwz-2-2-2-4-2-2-2');
+            
+            // Desktop click handlers
+            if (kullanımAlanlari) kullanımAlanlari.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3'); };
+            if (ozellikler) ozellikler.onclick = function(e) { e.stopPropagation(); scrollToSection('i3owk-2-4'); };
+            if (hakkimizda) hakkimizda.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3-3'); };
+            if (satinAl) satinAl.onclick = function(e) { e.stopPropagation(); scrollToSection('ihccyr-2-3'); };
+            if (girisYap) girisYap.onclick = function(e) { e.stopPropagation(); window.location.href = '#login'; };
+            
+            // Mobil click handlers
+            if (kullanımAlanlariMobil) kullanımAlanlariMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3'); };
+            if (ozelliklerMobil) ozelliklerMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i3owk-2-4'); };
+            if (hakkimizdaMobil) hakkimizdaMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('i1lwz-2-6-2-3-3'); };
+            if (satinAlMobil) satinAlMobil.onclick = function(e) { e.stopPropagation(); scrollToSection('ihccyr-2-3'); };
+            if (girisYapMobil) girisYapMobil.onclick = function(e) { e.stopPropagation(); window.location.href = '#login'; };
+
+            // Mobile menu toggle
+            var bodyEl = document.body;
+            var overlay = document.getElementById('iy2h61');
+            var openBtn = document.getElementById('iet44-4') || document.getElementById('i1lwz-2-3-4');
+            var closeBtn = document.getElementById('iet44-4-2');
+
+            function openMenu(e) {
+              if (e) e.stopPropagation();
+              bodyEl.classList.add('menu-open');
+            }
+
+            function closeMenu(e) {
+              if (e) e.stopPropagation();
+              bodyEl.classList.remove('menu-open');
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+            // Close when tapping any menu item in overlay
+            var overlayLinks = [ozelliklerMobil, kullanımAlanlariMobil, hakkimizdaMobil, satinAlMobil, girisYapMobil];
+            overlayLinks.forEach(function(el){ if (el) el.addEventListener('click', closeMenu); });
+
+            // Close on Escape
+            document.addEventListener('keydown', function(e){ if (e.key === 'Escape') { closeMenu(); } });
+            
+            // Fiyatlandırma butonları
+            var satinAlButtons = [
+              { id: 'i1lwz-2-2-2-4-6', plan: 'starter' },      // Başlangıç - Ücretsiz Başla
+              { id: 'i1lwz-2-2-2-4-8', plan: 'professional' }, // Profesyonel - Hemen Fiyatlandırma
+              { id: 'i1lwz-2-2-2-4-9', plan: 'enterprise' }    // Kurumsal - Kurumsal Teklif Al
+            ];
+            
+            satinAlButtons.forEach(function(btn) {
+              var element = document.getElementById(btn.id);
+              if (element) {
+                element.onclick = function(e) {
+                  e.stopPropagation();
+                  window.location.href = '/satin-al.html?plan=' + btn.plan;
+                };
+                element.style.cursor = 'pointer';
+              }
+            });
+            
+            // Footer sosyal medya ikonları
+            var linkedInIcon = document.getElementById('ie9ue-6');
+            if (linkedInIcon) linkedInIcon.onclick = function(e) { 
+              e.stopPropagation(); 
+              window.open('https://www.linkedin.com/company/royal-enerji-inc/', '_blank');
+            };
+            
+            var middleIcon = document.getElementById('ie9ue-2-4');
+            if (middleIcon) middleIcon.onclick = function(e) { 
+              e.stopPropagation(); 
+              window.open('https://royalenerji.com/', '_blank');
+            };
+          });
+        </script>
+      </head>
+      <body id="i6mb">
+        
+        
+
+        <div id="pwb-body-wrap">
+          <div id="ip1j" class="pwb-background pwb-flex-grid-wrap"><div id="ijsk" class="pwb-scene"></div></div><div id="ihkww7" class="pwb-flex-grid-wrap"><div id="i1lwz-3" class="pwb-flex-grid-wrap"><div id="i1lwz-2-3" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iet44"/></div><div id="imob0j-3-3-2" class="framer-1cc0f02"><div id="i1lwz-2-3-3-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-3-2-2-2">Özellikler</div><div id="ispyh-2-3-2-3-2-2-2-2">Referanslarımız</div><div id="ispyh-2-3-2-3-2-2-2-3">Hakkımızda</div><div id="ispyh-2-3-2-3-2-2-2-5">Fiyatlandırma</div><div id="i1lwz-2-2-2-4-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-2-2">Giriş Yap</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-4-2"/></div></div></div><div id="i1lwz-2-3-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iet44-2"/></div><div id="i1lwz-2-3-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/b0894abd-1fef-465f-a07f-c4e33bcc6e54/menu-24dp-000000-fill0-wght400-grad0-opsz24.png" loading="lazy" id="iet44-4"/></div><div id="iy2h61" class="pwb-relative-overlay"><div id="i1lwz-3-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-3-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iet44-5"/></div><div id="i1lwz-2-3-4-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/e1f5be70-dcfc-45f0-8c1f-745cea1bcf93/close-24dp-000000-fill0-wght400-grad0-opsz24.png" loading="lazy" id="iet44-4-2"/></div></div><div id="i1lwz-2-3-3-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-3-2-2-2-4">Özellikler</div><div id="ispyh-2-3-2-3-2-2-2-2-2">Referanslarımız</div><div id="ispyh-2-3-2-3-2-2-2-3-2">Hakkımızda</div><div id="ispyh-2-3-2-3-2-2-2-5-2">Fiyatlandırma</div><div id="i1lwz-2-2-2-4-2-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-2-2-2">Giriş Yap</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-4-2-2"/></div></div></div></div></div><div id="iou1yh" class="pwb-flex-grid-wrap"></div><div id="i3owk" class="pwb-anchor"></div><div id="i84ba" class="pwb-flex-grid-wrap"><div id="i1lwz" class="pwb-flex-grid-wrap"><div id="i1lwz-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/74e2b8a6-9e4e-47c4-a198-910a61f5a139/group-1597882151.svg" loading="lazy" id="i2adke"/><div id="ispyh-2">CBAM Yürürlükte — Geç Kalan Pazarını Kaybeder</div></div><div id="i1lwz-2-2" class="pwb-flex-grid-wrap"><h1 id="ispyh-2-2">Fabrika Zekanızı<br id="iw66h"/>Sürdürülebilirliğe Dönüştürün.</h1><div id="ispyh-2-3">Fabrikanızın SCADA verisini CBAM raporuna ve enerji tasarrufuna çeviren tek platform. 30 günde devrede, ilk rapor ilk hafta. Manuel hesaplamaya son.</div><div id="i4rmo3" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2">Ücretsiz Demo Alın</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-2"/></div><div id="i1lwz-2-2-2-4" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5">Nasıl Çalışır?</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3"/></div></div></div></div><div id="imob0j-3-3-2-3" class="framer-1cc0f02"><img src="/files.peachworlds.com/website/26c2016d-1199-4d08-b170-52cd3765e47c/-dark-theme-circle-overview.png" loading="lazy" id="i2adke-3"/></div></div><div id="ilwyn" class="pwb-flex-grid-wrap"><div id="ihccyr-2" class="pwb-flex-grid-wrap"><div id="i1lwz-6-2-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-7-2-2" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-5-3-2">Fabrika Verisi Konuşur. Biz Karara Çeviririz.</h2><div id="ispyh-2-2-5-2-2-2">SCADA'dan gelen ham veriyi regülasyon uyumuna ve somut tasarrufa dönüştürürüz. Danışman ordusu yok, aylarca süren entegrasyon yok.</div></div></div><div id="i1lwz-2-4-2-3-2-2-2" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2-2-7-4" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4" class="pwb-flex-grid-wrap"><div id="ikdqvz" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/d7a503c1-1505-4d6a-91d1-14339f385f5e/svg-832538129-670.svg" loading="lazy" id="i2adke-4"/></div><div id="i1kewg" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2">30 Günde Sistemlerinize Bağlanır</div><div id="ispyh-2-2-5-2-2-2-2">SCADA, ERP ve IoT sensörleriniz tek platformda buluşur. Mevcut altyapınızı değiştirmeden gerçek zamanlı veri akışını ilk haftada başlatın.</div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-2" class="pwb-flex-grid-wrap"><div id="ikdqvz-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/1f3f43ce-7be8-47fa-aed6-a628c81b0d8a/div-framer-jhlbn-.svg" loading="lazy" id="i2adke-4-6"/></div><div id="i1kewg-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-2">CBAM Raporu: 3 Gün Değil, 8 Dakika</div><div id="ispyh-2-2-5-2-2-2-2-2">Avrupalı alıcınızın istediği karbon sertifikasını tek tıkla üretin. Audit-ready, ISO uyumlu. Excel tablolarıyla geçen geceler bitti.</div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-3" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-3" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-3" class="pwb-flex-grid-wrap"><div id="ikdqvz-3" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/237f3fb3-c18b-4659-850b-f536e6fd3e3e/svg-925144430-988.svg" loading="lazy" id="i2adke-4-7"/></div><div id="i1kewg-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-3">Enerji Faturanızı AI ile Düşürün</div><div id="ispyh-2-2-5-2-2-2-2-3">Envai AI hattınızdaki gizli enerji kaybını bulur, %10-20 tasarruf fırsatını önünüze koyar. Anomaliyi haftalar sonra değil anında yakalarsınız.</div></div></div></div></div></div></div></div><div id="ilwyn-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-4-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-4-2-2" class="pwb-flex-grid-wrap"><div id="ia0ath" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-4">Envai AI: Veriyi Karara Çeviren Motor</div><div id="ispyh-2-2-5-2-2-2-2-4">Raporlamak yetmez, aksiyona geçmek gerekir. Envai AI ham SCADA verisinden enerji anomalisini, CBAM hesabını ve tasarruf fırsatını çıkarır — kararı siz verirsiniz, veriyi biz hazırlarız.</div><div id="i1lwz-2-2-2-4-7" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-7">AI'yı İş Başında Görün</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-8"/></div></div><img src="/files.peachworlds.com/website/eaa6c1a2-2bed-45fd-9c6f-aa4fd0083d8a/frame-1707479347.png" loading="lazy" id="izjyh"/></div><div id="i1lwz-2-4-2-2-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/d37bd39f-8985-4fc2-a8db-34643a6a4f3b/frame-170747934722.png" loading="lazy" id="izjyh-2"/><div id="ia0ath-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-4-2">CBAM'a Hazır mısınız?</div><div id="ispyh-2-2-5-2-2-2-2-4-2">Avrupalı alıcılar Ocak 2026'dan beri karbon sertifikası istiyor. Hazır olmayan tedarikçi siparişi kaybediyor. Scope-1/2 hesabınızı gerçek veriden yapın, denetimden ilk seferde geçin.</div><div id="i1lwz-2-2-2-4-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-5">CBAM Hazırlık Testini Çözün</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-3"/></div></div><img src="/files.peachworlds.com/website/d37bd39f-8985-4fc2-a8db-34643a6a4f3b/frame-170747934722.png" loading="lazy" id="izjyh-2-2"/></div><div id="i1lwz-2-4-2-2-3" class="pwb-flex-grid-wrap"><div id="ia0ath-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-4-3">Tüm Tesisleriniz, Tek Ekran</div><div id="ispyh-2-2-5-2-2-2-2-4-3">2 tesis ya da 20 — hepsini tek komuta merkezinden yönetin. Farklı SCADA, farklı ERP fark etmez. Grup bazlı sürdürülebilirlik raporu artık dakikalar meselesi.</div><div id="i1lwz-2-2-2-4-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-2">Platformu Keşfedin</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-4"/></div></div><img src="/files.peachworlds.com/website/0ec8a55d-4b44-4719-a5d7-2aec723b0eb4/22-95.png" loading="lazy" id="izjyh-3"/></div></div></div><div id="i3owk-2-4" class="pwb-anchor"></div><div id="iiqw8" class="pwb-flex-grid-wrap"><div id="iiqw8-2" class="pwb-flex-grid-wrap"></div><div id="ihccyr-2-2" class="pwb-flex-grid-wrap"><div id="i1lwz-6-2-2-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-7-2-2-2" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-5-3-2-3">Verinizin Güvenliği, Pazarlık Konusu Değil.</h2><div id="ispyh-2-2-5-2-2-2-3">Banka düzeyinde şifreleme ve değiştirilemez kayıtlarla, denetime de siber tehdide de hazırsınız.</div></div></div><div id="i1lwz-2-4-2-3-2-2-2-2" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2-2-7-4-4" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-4" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-4" class="pwb-flex-grid-wrap"><div id="i1kewg-4" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-5">Denetime Her An Hazır</div><div id="ispyh-2-2-5-2-2-2-2-5">Her enerji ve emisyon ölçümü değiştirilemez kayıt altında. CBAM ve CSRD denetiminde aranan iz, izlenebilirlik ve güven — hepsi hazır.</div></div><img src="/files.peachworlds.com/website/41df2e48-2860-444c-b3c1-707b91d66e2d/frame-427321724.png" loading="lazy" id="i2adke-4-4"/></div></div></div><div id="imob0j-3-3-2-2-2-7-4-2-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-2-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-2-2" class="pwb-flex-grid-wrap"><div id="i1kewg-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-2-2">Holding'ler İçin Tek Komuta Merkezi</div><div id="ispyh-2-2-5-2-2-2-2-2-2">Çok tesisli gruplar için merkezi kontrol. Her tesis bağımsız izlenir, grup raporu tek tıkla çıkar.</div></div><img src="/files.peachworlds.com/website/f5b0cf8b-38e3-4008-a77f-c54d7bf8ee0a/frame-427321723.png" loading="lazy" id="i2adke-4-4-2"/></div></div></div></div><div id="i1lwz-2-4-2-3-2-2-2-2-2" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2-2-7-4-2-2-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-2-2-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-2-2-2" class="pwb-flex-grid-wrap"><div id="i1kewg-2-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-2-2-2">Scope-1 & Scope-2 Otomatik Hesap</div><div id="ispyh-2-2-5-2-2-2-2-2-2-2">Emisyonlarınızı gerçek SCADA verisinden otomatik hesaplayın. Avrupalı alıcının istediği formatta CBAM belgesi anında hazır.</div></div><img src="/files.peachworlds.com/website/701be763-51a8-4aec-97d5-17952f90ab8f/frame-427321725.png" loading="lazy" id="i2adke-4-4-2-2"/></div></div></div><div id="imob0j-3-3-2-2-2-7-4-4-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-4-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-4-2" class="pwb-flex-grid-wrap"><div id="i1kewg-4-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-5-2">30 Günde Devrede — Sözümüz Söz</div><div id="ispyh-2-2-5-2-2-2-2-5-2">Kurulumdan ilk rapora 30 gün. Entegrasyon ekibimiz sistem bağlantısından kullanıcı eğitimine kadar yanınızda.</div></div><img src="/files.peachworlds.com/website/7d982cf5-b229-4516-af79-2718c1e3e266/frame-427321726.png" loading="lazy" id="i2adke-4-4-3"/></div></div></div></div></div></div><div id="i3owk-2-3" class="pwb-anchor"></div><div id="i1lwz-5-2-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-6-2-3" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-5-3-2-3-2">Türk Sanayicisinin Tercihi.</h2><div id="ispyh-2-2-5-2-2-2-3-2">Çimento, çelik, kimya, tekstil ve otomotivde Avrupa'ya ihracat yapan üreticiler CBAM uyumunu ve enerji tasarrufunu Envai'den yönetiyor.</div></div><div id="i1lwz-2-6-2-2-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/906f3c0a-6109-498e-8e61-d5aead25e11e/div-framer-1lv732o-.png" loading="lazy" id="izjyh-7-2-2-2"/><img src="/files.peachworlds.com/website/1bceed5c-b9f1-4ff5-bd5a-413e68acece5/div-framer-1lv732o-2.png" loading="lazy" id="izjyh-7-2-2-2-2-2"/><img src="/files.peachworlds.com/website/f20c7409-da7b-403a-b284-897a87b4d325/div-framer-1lv732o-3.png" loading="lazy" id="izjyh-7-2-2-2-2-4"/><img src="/files.peachworlds.com/website/8478723a-a4ac-47c1-b382-1433581fdf2e/div-framer-1lv732o-5.png" loading="lazy" id="izjyh-7-2-2-2-2-5"/><img src="/files.peachworlds.com/website/a95a9bee-145d-417d-905f-ce3449096aa8/div-framer-1lv732o-4.png" loading="lazy" id="izjyh-7-2-2-2-2-3"/><img src="/files.peachworlds.com/website/b396a935-afa4-440e-aa3f-76a19456ccd8/div-framer-1lv732o-1.png" loading="lazy" id="izjyh-7-2-2-2-2"/></div></div><div id="ihccyr" class="pwb-flex-grid-wrap"><div id="i1lwz-6-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-6-2-3-3" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-5-3-2-3-2-2">Sanayiciler Ne Diyor?</h2><div id="ispyh-2-2-5-2-2-2-3-2-2">Avrupa'ya ihracat yapan, CBAM baskısını ilk elden yaşayan üreticilerden gerçek sonuçlar.</div></div></div><div id="i1lwz-2-4-2-3-2-2-2-3" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2-2-7-4-5" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-5" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-5" class="pwb-flex-grid-wrap"><div id="i1kewg-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-2-2-2-2-6">"Avrupalı müşterimiz karbon sertifikası talep etmeye başlayınca Excel'imiz yetersiz kaldı. Envai ile 3 haftada CBAM altyapımızı kurduk, ilk raporu 48 saatte Alman ortağımıza gönderdik."</div></div><div id="i1kewg-5-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/08a73718-7e9d-4610-9f13-ee44f6dfd644/aaaa.png" loading="lazy" id="i2adke-4-5"/><div id="iblv9l" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-2">Mert Aksoy</div><div id="ispyh-2-2-5-2-2-2-2-6-2">Sürdürülebilirlik Direktörü, Eksen Çimento</div></div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-5-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-5-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-5-2" class="pwb-flex-grid-wrap"><div id="i1kewg-5-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-2-2-2-2-6-3">"Enerji faturamızın %18’ini önlenebilir kayıptan kurtardık. Envai’nin anomali alarmı, eskiden haftalar sonra fark ettiğimiz sorunları anlık söylüyor. ROI altı ayda çıktı."</div></div><div id="i1kewg-5-2-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/e88dafa2-2058-4c11-ae22-5da0f944e490/pexels-emmy-e-1252107-2381069.jpg" loading="lazy" id="i2adke-4-5-2"/><div id="iblv9l-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-2-2">Selin Demir</div><div id="ispyh-2-2-5-2-2-2-2-6-2-2">Fabrika Müdürü, Kartal Plastik</div></div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-5-3" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-5-3" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-5-3" class="pwb-flex-grid-wrap"><div id="i1kewg-5-4" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-2-2-2-2-6-4">"Üç farklı ESG aracı denedik — hiçbiri SCADA'mıza bağlanamadı. Envai 2 haftada bağlandı, CBAM raporu otomatik geldi. Artık Excel'den bahsetmiyoruz."</div></div><div id="i1kewg-5-2-3" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/9554b8bf-57b0-467c-bd7a-a435b55919ce/pexels-pranavdigwal-32976.jpg" loading="lazy" id="i2adke-4-5-3"/><div id="iblv9l-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-2-3">Mert Çelik</div><div id="ispyh-2-2-5-2-2-2-2-6-2-3">EPC Proje Müdürü, Alp Enerji</div></div></div></div></div></div></div></div><div id="i3owk-2-2" class="pwb-anchor"></div><div id="iuswwj" class="pwb-flex-grid-wrap"><div id="i1lwz-5-2-2-2" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2" class="framer-1cc0f02"><div id="ia0ath-7-2-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-2-2-2-8-2-2-2">%10-20</div><div id="ispyh-2-2-2-2-2-5-7-2-2-2">Hedeflenen Enerji Tasarrufu (AI Optimizasyonu ile)</div></div></div><div id="imob0j-3-3-2-2-2" class="framer-1cc0f02"><div id="ia0ath-7-2-2-2-2-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-2-2-2-8-2-2-2-2-2">50.000+</div><div id="ispyh-2-2-2-2-2-5-7-2-2-2-2-2">CBAM Kapsamındaki Türk İhracatçısı</div></div></div><div id="imob0j-3-3-2-2-3" class="framer-1cc0f02"><div id="ia0ath-7-2-2-2-3-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-2-2-2-8-2-2-2-3-3">30 Gün</div><div id="ispyh-2-2-2-2-2-5-7-2-2-2-3-3">SCADA'dan İlk CBAM Raporuna</div></div></div><!--StartFragment--><!--StartFragment--><!--EndFragment--><!--StartFragment--><!--EndFragment--><!--StartFragment--><!--EndFragment--><!--StartFragment--><!--EndFragment--><!--StartFragment--><!--EndFragment--></div></div><div id="ihccyr-2-3" class="pwb-flex-grid-wrap"><div id="i1lwz-6-2-2-3" class="pwb-flex-grid-wrap"><div id="i1lwz-2-7-2-2-3" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-5-3-2-4">KOBİ'ye Erişilebilir, Kurumsala Ölçeklenir.</h2><div id="ispyh-2-2-5-2-2-2-4">Watershed $30K+, SAP $100K+ ister. Envai aynı endüstriyel veri gücünü erişilebilir fiyata sunar. İhtiyacınız büyüdükçe paketiniz büyür.</div></div></div><div id="i1lwz-2-4-2-3-2-2-2-4" class="pwb-flex-grid-wrap"><div id="imob0j-3-3-2-2-2-7-4-6" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-6" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-6" class="pwb-flex-grid-wrap"><div id="i1kewg-6" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6">Başlangıç</div><div id="ispyh-2-2-5-2-2-2-2-7">Avrupa'ya ihracat yapan, 1-2 tesisli üreticiler için.</div></div><div id="i1kewg-6-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-3">$10.000/yıl</div><div id="irysbl" class="pwb-flex-grid-wrap"><div id="in92i7" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2">2 Üretim Tesisi</div></div><div id="in92i7-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-2">CBAM Otomatik Rapor</div></div><div id="in92i7-3" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-3"/><div id="ispyh-2-2-5-2-2-2-2-7-2-3">Scope-1 & Scope-2 Hesaplama</div></div><div id="in92i7-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-4"/><div id="ispyh-2-2-5-2-2-2-2-7-2-4">Gerçek Zamanlı Emisyon Dashboard</div></div><div id="in92i7-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-5"/><div id="ispyh-2-2-5-2-2-2-2-7-2-5">PDF/Excel Rapor Export</div></div></div><div id="i1lwz-2-2-2-4-6" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-6">Pilota Başvurun</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-5"/></div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-6-2" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-6-2" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-6-2" class="pwb-flex-grid-wrap"><div id="i1kewg-6-6" class="pwb-flex-grid-wrap"></div><div id="i1kewg-6-6-3" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-7-3">Profesyonel</div><div id="ispyh-2-2-5-2-2-2-2-7-6-3">5 tesise kadar, AI optimizasyon dahil, büyüyen üreticiler için.</div></div><div id="i1kewg-6-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-3-4">$30.000<span id="isulig">/yıl</span></div><div id="irysbl-3" class="pwb-flex-grid-wrap"><div id="in92i7-9" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-9"/><div id="ispyh-2-2-5-2-2-2-2-7-2-9">5 Üretim Tesisi</div></div><div id="in92i7-2-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-2-5"/><div id="ispyh-2-2-5-2-2-2-2-7-2-2-5">Starter'daki her şey</div></div><div id="in92i7-3-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-3-5"/><div id="ispyh-2-2-5-2-2-2-2-7-2-3-5">AI Enerji Optimizasyon Önerileri</div></div><div id="in92i7-4-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-4-5"/><div id="ispyh-2-2-5-2-2-2-2-7-2-4-5">Anomali Alarmı & Erken Uyarı</div></div><div id="in92i7-5-5" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-5-5"/><div id="ispyh-2-2-5-2-2-2-2-7-2-5-5">CSRD/ESRS Raporlama Şablonları</div></div></div><div id="i1lwz-2-2-2-4-8" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-8">Demo Alın</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-9"/></div></div></div></div></div><div id="imob0j-3-3-2-2-2-7-4-6-3" class="framer-1cc0f02"><div id="i1lwz-2-4-2-2-7-2-2-2-4-6-3" class="pwb-flex-grid-wrap"><div id="ia0ath-7-2-2-3-4-6-3" class="pwb-flex-grid-wrap"><div id="i1kewg-6-6-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-7-2">Kurumsal</div><div id="ispyh-2-2-5-2-2-2-2-7-6-2">Sınırsız tesis, büyük sanayi grupları ve çok tesisli EPC firmaları.</div></div><div id="i1kewg-6-2-5-2" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-5-3-2-2-6-3-4-2">Özel Fiyat<span id="isulig-2"></span></div><div id="irysbl-3-2" class="pwb-flex-grid-wrap"><div id="in92i7-9-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-9-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-9-2">Sınırsız Tesis & Kullanıcı</div></div><div id="in92i7-2-5-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-2-5-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-2-5-2">SCADA + ERP Köprüsü</div></div><div id="in92i7-3-5-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-3-5-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-3-5-2">Scope-3 Tedarikçi Portalı</div></div><div id="in92i7-4-5-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-4-5-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-4-5-2">7/24 Özel Hesap Yöneticisi</div></div><div id="in92i7-5-5-2" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4ad4093f-a3c6-47ee-a58d-1d48050acf86/volume-base.svg" loading="lazy" id="i2adke-4-2-2-2-5-5-2"/><div id="ispyh-2-2-5-2-2-2-2-7-2-5-5-2">1 TB Değiştirilemez Veri Arşivi</div></div></div><div id="i1lwz-2-2-2-4-9" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-9">Teklif Alın</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-10"/></div></div></div></div></div></div></div><div id="i3owk-2-2-2-3" class="pwb-anchor"></div><div id="i3owk-2-2-2-3-2" class="pwb-anchor"></div><div id="injpw" class="pwb-flex-grid-wrap"><div id="i1lwz-4" class="pwb-flex-grid-wrap"><div id="i1lwz-2-5" class="pwb-flex-grid-wrap"><h2 id="ispyh-2-2-3">Avrupa Kapıyı Kapatmadan Harekete Geçin.</h2><div id="i4rmo3-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-6">Ücretsiz Demo Alın</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-2-3"/></div><div id="i1lwz-2-2-2-4-10" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-10">Pilota Başvurun</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-11"/></div></div><div id="i1lwz-2-2-2-2-2-5" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-2-2-2-6" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/2004587a-8320-48ec-a9c3-2b71186eb235/image-41.png" loading="lazy" id="ie9ue-6"/></div><div id="i1lwz-2-2-2-2-2-2-2-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/134c0519-e92d-4399-9bcf-d86b692cd2fd/image-42.png" loading="lazy" id="ie9ue-2-4"/></div><div id="i1lwz-2-2-2-2-2-2-3-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4b0b44b1-bb29-4927-89c5-61b748650bc9/image-43.png" loading="lazy" id="ie9ue-3-4"/></div></div><div id="ispyh-2-3-3">© 2026 — Envai Teknoloji A.Ş. Tüm Hakları Saklıdır.</div>
+              </div>
+            </div>
+          </div>
+          <div id="i3owk-2-2-2-2" class="pwb-anchor"></div>
+        </div>
+        <div id="pwb-loading-wrap"><div id="im3p5" class="pwb-flex-grid-wrap"><div id="iw9p8" size="80" progressColor="#FFFFFF" progressWidth="2" backgroundColor="#565656" backgroundWidth="1" class="pwb-loading-bar"><svg id="i1g4c" width="164" xmlns="http://www.w3.org/2000/svg" height="164" version="1.1" viewPort="0 0 164 164"><circle r="80" cx="82" cy="82" id="i8t08" fill="transparent" stroke="#565656" stroke-width="1" stroke-dasharray="502.6548245743669" stroke-dashoffset="0"></circle><circle r="80" cx="82" cy="82" id="ihfw6" fill="transparent" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="502.6548245743669" stroke-dashoffset="502.6548245743669" class="pwb-loading-bar-circle"></circle></svg><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iwpyv7"/><div id="ijg95" class="pwb-loading-bar-text">0%</div></div></div><div id="ieupsz" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/1d564515-32a6-4676-83ed-a8985447b8e3/pw-badge-dark.svg" loading="lazy" id="igqob3"/></div></div>
+
+       <!-- Waterfall optimization -->
+        <script type="text/javascript">
+          window._pwPreviewResourceUrls = [];
+          (function waterfallOptimizationScript(){window._pwPreviewResourceUrls=window._pwPreviewResourceUrls||[];if(!window._pwLoadFileRequestsCache)window._pwLoadFileRequestsCache=new Map;if(!window._pwLoadFileResolveFnCache)window._pwLoadFileResolveFnCache=new Map;window._pwSetFileCache=(fileUrl,blob)=>{if(!window._pwLoadFileResolveFnCache)throw new Error(`Variable "_pwLoadFileResolveFnCache" is undefined.`);const blobUrl=(window.URL||window.webkitURL).createObjectURL(blob);const resolveFn=window._pwLoadFileResolveFnCache.get(fileUrl);if(!resolveFn)throw new Error(`Resolve function for file "${fileUrl}" not found.`);resolveFn(blobUrl)};window._pwWaitForExplicitFileResolve=fileUrl=>{if(!window._pwLoadFileResolveFnCache)throw new Error(`Variable "_pwLoadFileResolveFnCache" is undefined.`);if(!window._pwLoadFileRequestsCache)throw new Error(`Variable "_pwLoadFileRequestsCache" is undefined.`);if(window._pwLoadFileResolveFnCache.has(fileUrl)&&window._pwLoadFileRequestsCache.has(fileUrl))return;let resolveFn=void 0;const explicitWaitPromise=new Promise(resolve=>{resolveFn=resolve});window._pwLoadFileResolveFnCache.set(fileUrl,resolveFn);window._pwLoadFileRequestsCache.set(fileUrl,explicitWaitPromise)};window._pwLoadFileFromCacheHelper=async fileUrl=>{if(!fileUrl)return void 0;try{const response=await fetch(fileUrl);if(!response.ok)return void 0;const blob=await response.blob();const blobUrl=(window.URL||window.webkitURL).createObjectURL(blob);return blobUrl}catch(error){return void 0}};window._pwLoadFileFromCache=async fileUrl=>{if(!fileUrl)return void 0;if(!window._pwLoadFileRequestsCache)throw new Error(`Variable "_pwLoadFileRequestsCache" is undefined.`);let requestPromise=window._pwLoadFileRequestsCache.get(fileUrl);if(!requestPromise){if(!window._pwLoadFileFromCacheHelper)throw new Error(`Function "_pwLoadFileFromCacheHelper" is undefined.`);requestPromise=window._pwLoadFileFromCacheHelper(fileUrl);window._pwLoadFileRequestsCache.set(fileUrl,requestPromise)}return await requestPromise};for(const explicitResourceUrl of window._pwPreviewResourceUrls)window._pwWaitForExplicitFileResolve(explicitResourceUrl)})();
+        </script>
+
+        <script type="text/javascript">
+          window._pwExecLoadingPageJavascript = () => {
+            var items = document.querySelectorAll('#iw9p8');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+const _this=this;if(!_this||_this.dataset.gjsType)return;const loadingDuration=6e3;const loadingStopAtTime=4500;if(!window._pwLoadingProgressEasing){window._pwLoadingProgressEasing=x=>{return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}}if(!window._pwSetLoadingProgress){window._pwSetLoadingProgress=(timeMilliseconds,progressText,circle)=>{const progress=Math.round(window._pwLoadingProgressEasing((timeMilliseconds+50)/loadingDuration)*100);if(progressText){progressText.dataset.time=`${timeMilliseconds}`;progressText.textContent=`${progress}%`}if(!circle)return;const radius=circle?parseInt(circle.getAttribute("r")||"0"):40;const c=Math.PI*(radius*2);const circleProgress=(100-progress)/100*c;circle.style.strokeDashoffset=`${circleProgress}`}}const timeId=setInterval(()=>{const progressText=Array.from(_this.children).find(el=>el.classList.contains("pwb-loading-bar-text"));const circle=_this.querySelector(`.pwb-loading-bar-circle`);const currentProgress=parseInt(progressText.dataset.time||"0");window._pwSetLoadingProgress(currentProgress+50,progressText,circle);if(currentProgress>=loadingStopAtTime){clearInterval(timeId)}},50)
+}.bind(items[i]))();
+          }
+          };
+          window._pwExecLoadingPageJavascript();
+        </script>
+
+        
+        
+      </body>
+    </html>

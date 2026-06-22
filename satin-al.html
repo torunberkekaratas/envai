@@ -1,0 +1,1112 @@
+<!doctype html>
+    <html lang="tr">
+      <head>
+        
+        
+        <title>Satın Al - Royal Takip</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Royal Takip, enerji santrallerinizi tek merkezden yönetmenizi sağlayan akıllı operasyon platformudur." />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link href="/website-base.css" rel="stylesheet" />
+        <link href="/styles.css" rel="stylesheet" />
+        
+    <link href="/fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link href="/fonts.googleapis.com" rel="preconnect" />
+    <link href="/fonts.googleapis.com/css.css" rel="stylesheet" /><link href="/fonts.googleapis.com/css-ef078a62fcd2c.css" rel="stylesheet" />
+  
+        <script>        window._pwInitialPath = "/";
+</script>
+        <script defer="defer" fetchpriority="high"src="/script.js"></script>
+        
+        <meta name="pw:has-visual-script" content="false" />
+        <link rel="preload"  href="/scene-state/640fb4fb-14fd-49df-b65d-aadfa98f5dd5.json" as="fetch" crossorigin="anonymous"/>
+<link rel="preload"  href="/files.peachworlds.com/website/475c0f2b-a06e-41c7-847d-34a4feee431b/model.glb" as="fetch" crossorigin="anonymous"/>
+<link rel="preload"  href="/files.peachworlds.com/website/a35fc4e7-44e3-47ff-b9e8-4e8c5304a406/alpha-map.png" as="image" crossorigin="anonymous"/><link rel="preload"  href="/ui-state.json" as="fetch" crossorigin="anonymous"/>
+        
+        <style>
+          * { box-sizing: border-box; } body {margin: 0;}*{scrollbar-width:none;}::-webkit-scrollbar{display:none;}.pwb-scene > canvas{display:block;width:100%;height:100%;user-select:none;}#pwb-loading-wrap{background-color:#06040A;}#im3p5{top:0px;width:100%;height:100dvh;display:flex;position:fixed;align-items:center;justify-content:center;}#iw9p8{display:flex;position:relative;align-items:center;justify-content:center;}#ijg95{color:#FFFFFF;display:none;position:absolute;font-size:18px;text-align:center;font-family:Inter;font-weight:bold;}#iwpyv7{width:100px;position:absolute;}#igqob3{width:250px;position:static;}#ieupsz{width:100%;bottom:0px;display:flex;position:fixed;align-items:center;flex-direction:row;padding-bottom:40px;justify-content:center;}@font-face{src:url("/files.peachworlds.com/website/b6d3f455-58ef-489e-879c-5b84494c7afd/neuehaasdisplayroman.ttf");font-family:neuehaasdisplayroman;}@font-face{src:url("/files.peachworlds.com/website/450219d0-2f48-4cf0-a5eb-d79c4c3f4d6a/geistmono-bold.ttf");font-family:geistmono-bold;}@font-face{src:url("/files.peachworlds.com/website/5928e5a0-84fc-4822-af4a-dad178f9686e/geistmono-regular.ttf");font-family:geistmono-regular;}@media (max-width: 480px){#iwpyv7{width:80px;}#igqob3{width:175px;}}
+          
+          /* Checkout Page Specific Styles */
+          body, html {
+            height: 100%;
+            overflow: auto;
+          }
+          
+          #pwb-body-wrap {
+            overflow: auto !important;
+            min-height: 100vh;
+          }
+          
+          #i84ba {
+            min-height: 100vh !important;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+          }
+          
+          #i1lwz {
+            flex-direction: column !important;
+            gap: 20px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px 20px;
+          }
+          
+          .checkout-form-wrapper {
+            width: 100%;
+            max-width: 600px;
+            overflow: visible;
+            padding: 0;
+          }
+          
+          .checkout-form-wrapper::-webkit-scrollbar {
+            display: none;
+          }
+          
+          .checkout-summary-wrapper {
+            display: none;
+          }
+          
+          .checkout-summary-wrapper::-webkit-scrollbar {
+            display: none;
+          }
+          
+          #injpw {
+            display: none !important;
+          }
+          
+          .form-section, .summary-card {
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px 24px;
+            color: #ffffff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+          }
+          
+          .summary-card {
+            padding: 20px 24px;
+          }
+          
+          .form-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-family: "DM Sans", sans-serif;
+          }
+          
+          .form-subtitle {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 12px;
+          }
+          
+          .form-group {
+            margin-bottom: 8px;
+          }
+          
+          .form-label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            font-weight: 500;
+          }
+          
+          .form-input, .form-select {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            font-family: "DM Sans", sans-serif;
+          }
+          
+          .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+          }
+          
+          .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+          }
+          
+          .form-select option {
+            background: #1a1a1a;
+            color: #ffffff;
+          }
+          
+          .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+          }
+          
+          .submit-button {
+            width: 100%;
+            padding: 12px;
+            background: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            font-family: "DM Sans", sans-serif;
+          }
+          
+          .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+          }
+          
+          .summary-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: "DM Sans", sans-serif;
+          }
+          
+          .plan-details {
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 16px;
+          }
+          
+          .plan-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+          
+          .plan-price {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 10px 0;
+          }
+          
+          .price-period {
+            font-size: 14px;
+            opacity: 0.7;
+          }
+          
+          .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+          }
+          
+          .plan-features li {
+            padding: 4px 0;
+            font-size: 12px;
+            opacity: 0.9;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+          }
+          
+          .plan-features li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 1px;
+          }
+          
+          .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+          }
+          
+          .summary-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 16px;
+            font-weight: 700;
+          }
+          
+          .form-section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 16px 0 12px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: "DM Sans", sans-serif;
+          }
+          
+          .form-section-title:first-of-type {
+            margin-top: 12px;
+            padding-top: 0;
+            border-top: none;
+          }
+          
+          .card-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+          }
+          
+          .payment-methods {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+          }
+          
+          .payment-method {
+            flex: 1;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 12px;
+            font-weight: 500;
+          }
+          
+          .payment-method:hover {
+            background: rgba(255, 255, 255, 0.08);
+          }
+          
+          .payment-method.active {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+          }
+          
+          .card-icons {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-top: 4px;
+          }
+          
+          .card-icon {
+            width: 26px;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: bold;
+          }
+          
+          .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 11px;
+            color: #4CAF50;
+          }
+          
+          .security-icon {
+            font-size: 12px;
+          }
+          
+          @media (max-width: 992px) {
+            body, html {
+              overflow: auto !important;
+              height: auto;
+            }
+            
+            #pwb-body-wrap {
+              height: auto;
+              overflow: auto !important;
+            }
+            
+            #i84ba {
+              height: auto !important;
+              min-height: 100vh !important;
+              padding: 120px 20px 60px;
+            }
+            
+            #i1lwz {
+              flex-direction: column !important;
+              align-items: stretch !important;
+              padding: 0 20px;
+            }
+            
+            .checkout-form-wrapper {
+              max-height: none;
+              padding-right: 0;
+            }
+            
+            .checkout-summary-wrapper {
+              width: 100%;
+              max-height: none;
+            }
+            
+            .form-section {
+              padding: 28px 20px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            #i84ba {
+              padding: 100px 15px 40px;
+            }
+            
+            #i1lwz {
+              padding: 0 15px;
+            }
+            
+            .form-row {
+              grid-template-columns: 1fr;
+            }
+            
+            .card-row {
+              grid-template-columns: 1fr;
+            }
+            
+            .payment-methods {
+              flex-direction: column;
+            }
+            
+            .form-title {
+              font-size: 22px;
+            }
+            
+            .form-section-title {
+              font-size: 16px;
+            }
+            
+            .form-section {
+              padding: 24px 16px;
+            }
+            
+            .summary-card {
+              padding: 20px 16px;
+            }
+          }
+          
+          /* Header Fixes */
+          #ihkww7 {
+            pointer-events: none;
+            background: none !important;
+            z-index: 1000;
+          }
+          
+          #i1lwz-3 {
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+            pointer-events: auto;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+          
+          #imob0j-3-3-2 {
+            max-width: none !important;
+            width: auto !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            padding: 4px !important;
+            height: 48px !important;
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(15px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 999px !important;
+          }
+          
+          #i1lwz-2-3-3-2 {
+            width: auto !important;
+            height: 100% !important;
+            padding: 0 8px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px !important;
+          }
+          
+          .header-nav-link {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 16px !important;
+            height: 100% !important;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            border-radius: 99px;
+            color: #ffffff !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            font-family: 'DM Sans', sans-serif;
+            white-space: nowrap;
+          }
+          
+          .header-nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          .header-nav-divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 4px;
+          }
+
+          @media (max-width: 480px) {
+            /* Fixed mobile header bar */
+            #ihkww7 {
+              padding: 12px 16px !important;
+              position: fixed !important;
+              top: 0;
+              left: 0;
+              right: 0;
+              width: 100%;
+              z-index: 10000;
+              background: transparent !important;
+              backdrop-filter: none !important;
+              border: none !important;
+              pointer-events: auto;
+            }
+            
+            #i1lwz-3 {
+              padding: 0 !important;
+              height: 56px !important;
+              background: rgba(0, 0, 0, 0.85) !important;
+              backdrop-filter: blur(10px) !important;
+              border: 1px solid rgba(255, 255, 255, 0.08) !important;
+              border-radius: 12px !important;
+              width: 100% !important;
+              margin: 0 !important;
+              justify-content: space-between !important;
+              align-items: center !important;
+              padding: 0 16px !important;
+              gap: 12px !important;
+            }
+            
+            #i1lwz-2-3 {
+              width: auto !important;
+              display: flex !important;
+              pointer-events: auto;
+            }
+            
+            #iet44 {
+              width: 90px !important;
+              pointer-events: auto;
+            }
+            
+            #imob0j-3-3-2 {
+              background: none !important;
+              border: none !important;
+              backdrop-filter: none !important;
+              height: 40px !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              width: 36px !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+            }
+            
+            #i1lwz-2-3-3-2 {
+              display: none !important;
+            }
+            
+            #iet44-4 {
+              width: 24px !important;
+              cursor: pointer;
+            }
+            
+            .logo-placeholder {
+              display: none !important;
+            }
+            
+            /* Main content area shifts down for fixed header */
+            #i84ba {
+              padding-top: 100px !important;
+            }
+            
+            #i1lwz {
+              width: 100%;
+              max-width: 100%;
+              padding: 30px 16px;
+            }
+            
+            .form-section, .summary-card {
+              width: 100%;
+            }
+          }
+
+          .logo-placeholder {
+            width: 100px;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #iet44-2 {
+            opacity: 0;
+            pointer-events: none;
+            width: 100px;
+          }
+
+          @media (max-width: 480px) {
+            #i1lwz-3 {
+              padding: 10px 15px !important;
+              height: 70px;
+              justify-content: space-between;
+            }
+            #imob0j-3-3-2 {
+              height: 44px !important;
+              padding: 3px !important;
+            }
+            .header-nav-link {
+              padding: 0 12px !important;
+              font-size: 13px !important;
+            }
+            #iet44 {
+              width: 70px !important;
+            }
+            .logo-placeholder {
+              width: 70px;
+            }
+          }
+          
+          #i1lwz {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+          }
+          
+          #i1lwz:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const countrySelect = document.getElementById('country');
+            const citySelect = document.getElementById('city');
+            const districtSelect = document.getElementById('district');
+            const districtGroup = document.getElementById('district-group');
+            
+            let allGeoData = [];
+
+            // Load data from all_geo.json
+            fetch('all_geo.json')
+              .then(response => response.json())
+              .then(data => {
+                allGeoData = data;
+                populateCountries();
+              })
+              .catch(err => console.error('Error loading geo data:', err));
+
+            function populateCountries() {
+              countrySelect.innerHTML = '<option value="">Ülke seçiniz</option>';
+              allGeoData.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country.n;
+                option.textContent = country.n;
+                countrySelect.appendChild(option);
+              });
+              
+              // Set Turkey as default
+              const trIndex = allGeoData.findIndex(c => c.n === "Türkiye");
+              if (trIndex !== -1) {
+                countrySelect.value = "Türkiye";
+                countrySelect.dispatchEvent(new Event('change'));
+              }
+            }
+
+            // Country change handler
+            countrySelect.addEventListener('change', function() {
+              const selectedCountryName = this.value;
+              citySelect.innerHTML = '<option value="">Şehir seçiniz</option>';
+              districtSelect.innerHTML = '<option value="">Önce şehir seçiniz</option>';
+              citySelect.disabled = true;
+              districtSelect.disabled = true;
+              
+              if (selectedCountryName) {
+                const country = allGeoData.find(c => c.n === selectedCountryName);
+                if (country && country.c) {
+                  country.c.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.n;
+                    option.textContent = city.n;
+                    citySelect.appendChild(option);
+                  });
+                  citySelect.disabled = false;
+                }
+              }
+            });
+
+            // City change handler
+            citySelect.addEventListener('change', function() {
+              const selectedCountryName = countrySelect.value;
+              const selectedCityName = this.value;
+              
+              districtSelect.innerHTML = '<option value="">İlçe seçiniz</option>';
+              
+              const country = allGeoData.find(c => c.n === selectedCountryName);
+              if (country && country.c) {
+                const city = country.c.find(s => s.n === selectedCityName);
+                if (city && city.d) {
+                  city.d.forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                  });
+                  districtSelect.disabled = false;
+                } else {
+                  districtSelect.disabled = true;
+                }
+              }
+            });
+            
+            // Get plan from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedPlan = urlParams.get('plan') || 'starter';
+            
+            // Plan details
+            const plans = {
+              starter: {
+                name: 'Başlangıç',
+                price: 'Ücretsiz',
+                priceNum: 0,
+                period: '',
+                vatRate: 0,
+                features: [
+                  '2 Kullanıcıya Kadar',
+                  '1 Aktif Santral',
+                  'Temel Arıza & Bakım Kaydı',
+                  'Topluluk Desteği',
+                  '1 GB Güvenli Arşiv'
+                ]
+              },
+              professional: {
+                name: 'Profesyonel',
+                price: '14.999₺',
+                priceNum: 14999,
+                period: '/ay',
+                vatRate: 0.20,
+                features: [
+                  '10 Kullanıcıya Kadar',
+                  '5 Aktif Santral',
+                  'Royal AI Analizleri',
+                  'Öncelikli Teknik Destek',
+                  '50 GB Teknik Döküman Alanı'
+                ]
+              },
+              enterprise: {
+                name: 'Kurumsal',
+                price: '39.000₺',
+                priceNum: 39000,
+                period: '/ay',
+                vatRate: 0.01,
+                features: [
+                  'Sınırsız Kullanıcı',
+                  'Çoklu Bölge ve EPC Projeleri',
+                  'SCADA & ERP Köprüsü',
+                  '7/24 Özel Hesap Yöneticisi',
+                  '1 TB Değiştirilemez Veri Arşivi'
+                ]
+              }
+            };
+            
+            // Update summary
+            const plan = plans[selectedPlan];
+            if (plan) {
+              document.getElementById('selected-plan-name').textContent = plan.name;
+              document.getElementById('selected-plan-price').innerHTML = plan.price + '<span class="price-period">' + plan.period + '</span>';
+              
+              const featuresList = document.getElementById('selected-plan-features');
+              featuresList.innerHTML = '';
+              plan.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresList.appendChild(li);
+              });
+              
+              // Calculate totals (Price includes VAT)
+              const total = plan.priceNum;
+              const vatRate = plan.vatRate;
+              
+              let subtotal = 0;
+              let vatAmount = 0;
+              
+              if (total > 0) {
+                // Total = Subtotal * (1 + vatRate) => Subtotal = Total / (1 + vatRate)
+                subtotal = total / (1 + vatRate);
+                vatAmount = total - subtotal;
+              }
+              
+              // Update labels
+              const vatLabel = document.querySelector('.summary-row:nth-last-of-type(2) span:first-child');
+              if (vatLabel) {
+                vatLabel.textContent = `KDV (%${vatRate * 100}):`;
+              }
+              
+              document.getElementById('summary-price').textContent = subtotal === 0 ? 'Ücretsiz' : Math.round(subtotal).toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-kdv').textContent = subtotal === 0 ? '-' : Math.round(vatAmount).toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-total-price').textContent = subtotal === 0 ? 'Ücretsiz' : total.toLocaleString('tr-TR') + '₺';
+            }
+            
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            paymentMethods.forEach(method => {
+              method.addEventListener('click', function() {
+                paymentMethods.forEach(m => m.classList.remove('active'));
+                this.classList.add('active');
+                const methodType = this.dataset.method;
+                
+                // Show/hide payment fields based on method
+                const cardFields = document.getElementById('card-payment-fields');
+                const transferNote = document.getElementById('transfer-note');
+                
+                if (methodType === 'card') {
+                  cardFields.style.display = 'block';
+                  if (transferNote) transferNote.style.display = 'none';
+                } else {
+                  cardFields.style.display = 'none';
+                  if (transferNote) transferNote.style.display = 'block';
+                }
+              });
+            });
+            
+            // Card number formatting
+            const cardNumberInput = document.getElementById('card-number');
+            if (cardNumberInput) {
+              cardNumberInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s/g, '');
+                let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+                e.target.value = formattedValue;
+              });
+            }
+            
+            // Expiry date formatting
+            const expiryInput = document.getElementById('card-expiry');
+            if (expiryInput) {
+              expiryInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                  value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                }
+                e.target.value = value;
+              });
+            }
+            
+            // CVV validation
+            const cvvInput = document.getElementById('card-cvv');
+            if (cvvInput) {
+              cvvInput.addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 3);
+              });
+            }
+            
+            // Form submission
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              const selectedMethod = document.querySelector('.payment-method.active');
+              const paymentMethod = selectedMethod ? selectedMethod.dataset.method : 'card';
+              
+              const formData = {
+                plan: selectedPlan,
+                companyName: document.getElementById('company-name').value,
+                fullName: document.getElementById('full-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                district: document.getElementById('district').value,
+                taxNumber: document.getElementById('tax-number').value,
+                taxOffice: document.getElementById('tax-office').value,
+                paymentMethod: paymentMethod
+              };
+              
+              if (paymentMethod === 'card') {
+                formData.cardNumber = document.getElementById('card-number').value;
+                formData.cardName = document.getElementById('card-name').value;
+                formData.cardExpiry = document.getElementById('card-expiry').value;
+                formData.cardCvv = document.getElementById('card-cvv').value;
+              }
+              
+              console.log('Form Data:', formData);
+              
+              // Show success message
+              if (plan.priceNum === 0) {
+                alert('Ücretsiz planınız aktif edildi! Kısa süre içinde giriş bilgileriniz e-posta adresinize gönderilecek.');
+              } else if (paymentMethod === 'card') {
+                alert('Ödemeniz başarıyla alındı! Hesabınız aktifleştirildi. Giriş bilgileriniz e-posta adresinize gönderildi.');
+              } else {
+                alert('Siparişiniz alındı! Ödeme talimatları e-posta adresinize gönderildi. Ödemeniz onaylandıktan sonra hesabınız aktifleştirilecektir.');
+              }
+              
+              window.location.href = '/';
+            });
+          });
+        </script>
+      </head>
+      <body id="i6mb">
+        
+
+        <div id="pwb-body-wrap">
+          <div id="ip1j" class="pwb-background pwb-flex-grid-wrap"><div id="ijsk" class="pwb-scene"></div></div>          <div id="ihkww7">
+            <div id="i1lwz-3">
+              <div id="i1lwz-2-3">
+                <a href="/">
+                  <img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iet44"/>
+                </a>
+              </div>
+              <div id="imob0j-3-3-2" class="framer-1cc0f02">
+                <div id="i1lwz-2-3-3-2">
+                  <a href="/" class="header-nav-link">
+                    <div>Ana Sayfa</div>
+                  </a>
+                  <div class="header-nav-divider"></div>
+                  <a href="/#login" class="header-nav-link">
+                    <div>Giriş Yap</div>
+                  </a>
+                </div>
+              </div>
+              <div id="i1lwz-2-3-2" class="logo-placeholder">
+                <img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iet44-2"/>
+              </div>
+            </div>
+          </div><div id="iou1yh" class="pwb-flex-grid-wrap"></div><div id="i3owk" class="pwb-anchor"></div><div id="i84ba" class="pwb-flex-grid-wrap"><div id="i1lwz" class="pwb-flex-grid-wrap">
+            
+            <!-- Checkout Form -->
+            <div class="checkout-form-wrapper">
+              <div class="form-section">
+                <h1 class="form-title">Sipariş Bilgileri</h1>
+                <p class="form-subtitle">Lütfen aşağıdaki bilgileri eksiksiz doldurunuz.</p>
+                
+                <form id="checkout-form">
+                  <div class="form-group">
+                    <label class="form-label" for="company-name">Şirket Adı</label>
+                    <input type="text" class="form-input" id="company-name" placeholder="Şirket adınız" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label" for="full-name">Yetkili Adı Soyadı</label>
+                    <input type="text" class="form-input" id="full-name" placeholder="Ad ve soyadınız" required />
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="email">E-posta</label>
+                      <input type="email" class="form-input" id="email" placeholder="ornek@email.com" required />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label" for="phone">Telefon</label>
+                      <input type="tel" class="form-input" id="phone" placeholder="+90 555 123 4567" required />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label" for="address">Adres</label>
+                    <input type="text" class="form-input" id="address" placeholder="Şirket adresi" required />
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="country">Ülke</label>
+                      <select class="form-select" id="country" required>
+                        <option value="">Ülke seçiniz</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label" for="city">Şehir</label>
+                      <select class="form-select" id="city" required disabled>
+                        <option value="">Önce ülke seçiniz</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group" id="district-group">
+                      <label class="form-label" for="district">İlçe</label>
+                      <select class="form-select" id="district" required disabled>
+                        <option value="">Önce şehir seçiniz</option>
+                      </select>
+                    </div>
+                  </div>
+                    
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="tax-number">Vergi Numarası</label>
+                      <input type="text" class="form-input" id="tax-number" placeholder="1234567890" required />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label" for="tax-office">Vergi Dairesi</label>
+                      <input type="text" class="form-input" id="tax-office" placeholder="Vergi dairesi adı" required />
+                    </div>
+                  </div>
+                  
+                  <!-- Payment Information -->
+                  <h3 class="form-section-title">Ödeme Bilgileri</h3>
+                  
+                  <div class="payment-methods">
+                    <div class="payment-method active" data-method="card">
+                      <div>💳 Kredi/Banka Kartı</div>
+                      <div class="card-icons">
+                        <div class="card-icon">VISA</div>
+                        <div class="card-icon">MC</div>
+                        <div class="card-icon">AMEX</div>
+                      </div>
+                    </div>
+                    <div class="payment-method" data-method="transfer">
+                      <div>🏦 Havale/EFT</div>
+                      <div style="font-size: 12px; opacity: 0.7; margin-top: 4px;">Banka Transferi</div>
+                    </div>
+                  </div>
+                  
+                  <div id="card-payment-fields">
+                    <div class="form-group">
+                      <label class="form-label" for="card-number">Kart Numarası</label>
+                      <input type="text" class="form-input" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label" for="card-name">Kart Üzerindeki İsim</label>
+                      <input type="text" class="form-input" id="card-name" placeholder="AD SOYAD" required />
+                    </div>
+                    
+                    <div class="card-row">
+                      <div class="form-group">
+                        <label class="form-label" for="card-expiry">Son Kullanma Tarihi</label>
+                        <input type="text" class="form-input" id="card-expiry" placeholder="AA/YY" maxlength="5" required />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="form-label" for="card-cvv">CVV</label>
+                        <input type="text" class="form-input" id="card-cvv" placeholder="123" maxlength="3" required />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="form-label" for="card-installment">Taksit</label>
+                        <select class="form-select" id="card-installment">
+                          <option value="1">Tek Çekim</option>
+                          <option value="3">3 Taksit</option>
+                          <option value="6">6 Taksit</option>
+                          <option value="9">9 Taksit</option>
+                          <option value="12">12 Taksit</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="security-badge">
+                      <span class="security-icon">🔒</span>
+                      <span>256-bit SSL şifreleme ile güvenli ödeme</span>
+                    </div>
+                  </div>
+                  
+                  <div id="transfer-note" style="display: none;">
+                    <div style="padding: 16px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; font-size: 14px; line-height: 1.6;">
+                      <strong>Havale/EFT Bilgileri:</strong><br/>
+                      Sipariş onaylandıktan sonra banka hesap bilgilerimiz e-posta adresinize gönderilecektir.
+                    </div>
+                  </div>
+                  
+                  <button type="submit" class="submit-button">Siparişi Tamamla ve Öde</button>
+                </form>
+              </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="checkout-summary-wrapper">
+              <div class="summary-card">
+                <h2 class="summary-title">Sipariş Özeti</h2>
+                
+                <div class="plan-details">
+                  <div class="plan-name" id="selected-plan-name">Başlangıç</div>
+                  <div class="plan-price" id="selected-plan-price">Ücretsiz</div>
+                  
+                  <ul class="plan-features" id="selected-plan-features">
+                    <li>2 Kullanıcıya Kadar</li>
+                    <li>1 Aktif Santral</li>
+                    <li>Temel Arıza & Bakım Kaydı</li>
+                    <li>Topluluk Desteği</li>
+                    <li>1 GB Güvenli Arşiv</li>
+                  </ul>
+                </div>
+                
+                <div class="summary-row">
+                  <span>Plan Ücreti:</span>
+                  <span id="summary-price">Ücretsiz</span>
+                </div>
+                
+                <div class="summary-row">
+                  <span>KDV (%20):</span>
+                  <span id="summary-kdv">-</span>
+                </div>
+                
+                <div class="summary-total">
+                  <span>Toplam:</span>
+                  <span id="summary-total-price">Ücretsiz</span>
+                </div>
+              </div>
+            </div>
+            
+          </div></div><div id="injpw" class="pwb-flex-grid-wrap"><div id="i1lwz-4" class="pwb-flex-grid-wrap"><div id="i1lwz-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-3">Royal Takip ile Çalışın.</div><div id="i4rmo3-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-3-2-3-2-2-2-5">Hemen Başla</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-2-3"/></div><div id="i1lwz-2-2-2-4-10" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-10">Daha Fazla Bilgi</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-11"/></div></div><div id="i1lwz-2-2-2-2-2-5" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-2-2-2-6" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/2004587a-8320-48ec-a9c3-2b71186eb235/image-41.png" loading="lazy" id="ie9ue-6"/></div><div id="i1lwz-2-2-2-2-2-2-2-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/134c0519-e92d-4399-9bcf-d86b692cd2fd/image-42.png" loading="lazy" id="ie9ue-2-4"/></div><div id="i1lwz-2-2-2-2-2-2-3-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4b0b44b1-bb29-4927-89c5-61b748650bc9/image-43.png" loading="lazy" id="ie9ue-3-4"/></div></div><div id="ispyh-2-3-3">© 2025 —  Royal Enerji A.Ş. Tüm Hakları Saklıdır.</div>
+              </div>
+            </div>
+          </div>
+          <div id="i3owk-2-2-2-2" class="pwb-anchor"></div>
+        </div>
+        <div id="pwb-loading-wrap"><div id="im3p5" class="pwb-flex-grid-wrap"><div id="iw9p8" size="80" progressColor="#FFFFFF" progressWidth="2" backgroundColor="#565656" backgroundWidth="1" class="pwb-loading-bar"><svg id="i1g4c" width="164" xmlns="http://www.w3.org/2000/svg" height="164" version="1.1" viewPort="0 0 164 164"><circle r="80" cx="82" cy="82" id="i8t08" fill="transparent" stroke="#565656" stroke-width="1" stroke-dasharray="502.6548245743669" stroke-dashoffset="0"></circle><circle r="80" cx="82" cy="82" id="ihfw6" fill="transparent" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="502.6548245743669" stroke-dashoffset="502.6548245743669" class="pwb-loading-bar-circle"></circle></svg><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg" loading="lazy" id="iwpyv7"/><div id="ijg95" class="pwb-loading-bar-text">0%</div></div></div><div id="ieupsz" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/1d564515-32a6-4676-83ed-a8985447b8e3/pw-badge-dark.svg" loading="lazy" id="igqob3"/></div></div>
+
+       <!-- Waterfall optimization -->
+        <script type="text/javascript">
+          window._pwPreviewResourceUrls = [];
+          (function waterfallOptimizationScript(){window._pwPreviewResourceUrls=window._pwPreviewResourceUrls||[];if(!window._pwLoadFileRequestsCache)window._pwLoadFileRequestsCache=new Map;if(!window._pwLoadFileResolveFnCache)window._pwLoadFileResolveFnCache=new Map;window._pwSetFileCache=(fileUrl,blob)=>{if(!window._pwLoadFileResolveFnCache)throw new Error(`Variable "_pwLoadFileResolveFnCache" is undefined.`);const blobUrl=(window.URL||window.webkitURL).createObjectURL(blob);const resolveFn=window._pwLoadFileResolveFnCache.get(fileUrl);if(!resolveFn)throw new Error(`Resolve function for file "${fileUrl}" not found.`);resolveFn(blobUrl)};window._pwWaitForExplicitFileResolve=fileUrl=>{if(!window._pwLoadFileResolveFnCache)throw new Error(`Variable "_pwLoadFileResolveFnCache" is undefined.`);if(!window._pwLoadFileRequestsCache)throw new Error(`Variable "_pwLoadFileRequestsCache" is undefined.`);if(window._pwLoadFileResolveFnCache.has(fileUrl)&&window._pwLoadFileRequestsCache.has(fileUrl))return;let resolveFn=void 0;const explicitWaitPromise=new Promise(resolve=>{resolveFn=resolve});window._pwLoadFileResolveFnCache.set(fileUrl,resolveFn);window._pwLoadFileRequestsCache.set(fileUrl,explicitWaitPromise)};window._pwLoadFileFromCacheHelper=async fileUrl=>{if(!fileUrl)return void 0;try{const response=await fetch(fileUrl);if(!response.ok)return void 0;const blob=await response.blob();const blobUrl=(window.URL||window.webkitURL).createObjectURL(blob);return blobUrl}catch(error){return void 0}};window._pwLoadFileFromCache=async fileUrl=>{if(!fileUrl)return void 0;if(!window._pwLoadFileRequestsCache)throw new Error(`Variable "_pwLoadFileRequestsCache" is undefined.`);let requestPromise=window._pwLoadFileRequestsCache.get(fileUrl);if(!requestPromise){if(!window._pwLoadFileFromCacheHelper)throw new Error(`Function "_pwLoadFileFromCacheHelper" is undefined.`);requestPromise=window._pwLoadFileFromCacheHelper(fileUrl);window._pwLoadFileRequestsCache.set(fileUrl,requestPromise)}return await requestPromise};for(const explicitResourceUrl of window._pwPreviewResourceUrls)window._pwWaitForExplicitFileResolve(explicitResourceUrl)})();
+        </script>
+
+        <script type="text/javascript">
+          window._pwExecLoadingPageJavascript = () => {
+            var items = document.querySelectorAll('#iw9p8');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+const _this=this;if(!_this||_this.dataset.gjsType)return;const loadingDuration=6e3;const loadingStopAtTime=4500;if(!window._pwLoadingProgressEasing){window._pwLoadingProgressEasing=x=>{return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}}if(!window._pwSetLoadingProgress){window._pwSetLoadingProgress=(timeMilliseconds,progressText,circle)=>{const progress=Math.round(window._pwLoadingProgressEasing((timeMilliseconds+50)/loadingDuration)*100);if(progressText){progressText.dataset.time=`${timeMilliseconds}`;progressText.textContent=`${progress}%`}if(!circle)return;const radius=circle?parseInt(circle.getAttribute("r")||"0"):40;const c=Math.PI*(radius*2);const circleProgress=(100-progress)/100*c;circle.style.strokeDashoffset=`${circleProgress}`}}const timeId=setInterval(()=>{const progressText=Array.from(_this.children).find(el=>el.classList.contains("pwb-loading-bar-text"));const circle=_this.querySelector(`.pwb-loading-bar-circle`);const currentProgress=parseInt(progressText.dataset.time||"0");window._pwSetLoadingProgress(currentProgress+50,progressText,circle);if(currentProgress>=loadingStopAtTime){clearInterval(timeId)}},50)
+}.bind(items[i]))();
+          }
+          };
+          window._pwExecLoadingPageJavascript();
+        </script>
+
+        
+        
+      </body>
+    </html>
