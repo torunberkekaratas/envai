@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Envai App</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link href="/fonts.googleapis.com/css.css" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: #1d1d1f;
+        font-family: DM Sans, Inter, Arial, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(88, 129, 87, 0.22), transparent 34rem),
+          linear-gradient(180deg, #f7f8f5 0%, #eef2ec 100%);
+      }
+      .app-shell {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        min-height: 100vh;
+      }
+      .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 28px;
+        border-right: 1px solid rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.72);
+        backdrop-filter: blur(18px) saturate(160%);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      .brand img { width: 104px; height: auto; }
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: #166534;
+        background: rgba(22,163,74,0.1);
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .status-pill::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #16a34a;
+      }
+      .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .nav a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 16px;
+        padding: 14px 16px;
+        color: #424245;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .nav a.active,
+      .nav a:hover {
+        color: #ffffff;
+        background: #1c1e2e;
+      }
+      .sidebar-foot {
+        position: absolute;
+        left: 28px;
+        right: 28px;
+        bottom: 28px;
+        color: #86868b;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .main {
+        padding: 32px;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+      .topbar h1 {
+        margin: 0;
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 0.95;
+        letter-spacing: -0.07em;
+        font-weight: 500;
+      }
+      .topbar p {
+        margin: 10px 0 0;
+        max-width: 680px;
+        color: #6e6e73;
+        font-size: 16px;
+        line-height: 1.45;
+      }
+      .account {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 999px;
+        padding: 8px 12px 8px 8px;
+        background: rgba(255,255,255,0.72);
+        white-space: nowrap;
+      }
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: #ffffff;
+        background: #588157;
+        font-weight: 700;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .card {
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 24px;
+        padding: 24px;
+        background: rgba(255,255,255,0.78);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.06);
+      }
+      .card.dark {
+        color: #ffffff;
+        background: #1c1e2e;
+      }
+      .card.wide { grid-column: span 2; }
+      .label {
+        margin: 0 0 16px;
+        color: inherit;
+        opacity: 0.66;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .metric {
+        margin: 0;
+        font-size: 36px;
+        line-height: 1;
+        letter-spacing: -0.06em;
+        font-weight: 500;
+      }
+      .muted {
+        margin: 12px 0 0;
+        color: #6e6e73;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .dark .muted { color: #d2d2d7; }
+      .progress {
+        overflow: hidden;
+        height: 10px;
+        border-radius: 999px;
+        margin-top: 22px;
+        background: rgba(255,255,255,0.16);
+      }
+      .progress span {
+        display: block;
+        width: 58%;
+        height: 100%;
+        border-radius: inherit;
+        background: #16a34a;
+      }
+      .task-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .task-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        border-radius: 16px;
+        padding: 14px;
+        background: rgba(0,0,0,0.04);
+        color: #424245;
+        font-size: 14px;
+      }
+      .task-list strong { color: #1d1d1f; }
+      .action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        border-radius: 999px;
+        padding: 0 18px;
+        color: #ffffff;
+        background: #16a34a;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .app-shell { grid-template-columns: 1fr; }
+        .sidebar {
+          position: static;
+          height: auto;
+          padding: 18px;
+          border-right: 0;
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .brand { margin-bottom: 16px; }
+        .nav {
+          flex-direction: row;
+          overflow-x: auto;
+          padding-bottom: 4px;
+        }
+        .nav a { flex: 0 0 auto; }
+        .sidebar-foot { display: none; }
+        .main { padding: 22px; }
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .grid { grid-template-columns: 1fr; }
+        .card.wide { grid-column: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <a href="/"><img src="/files.peachworlds.com/website/c1e0b103-ecbd-4aba-a874-1afd96ef7bbf/logo-white.svg?v=2" alt="Envai" /></a>
+          <span class="status-pill">Demo</span>
+        </div>
+        <nav class="nav" aria-label="Envai uygulama menüsü">
+          <a class="active" href="/app.html">Genel Bakış</a>
+          <a href="/app.html#veri">Veri Kaynakları</a>
+          <a href="/app.html#cbam">CBAM</a>
+          <a href="/app.html#rapor">Raporlar</a>
+          <a href="/">Siteye Dön</a>
+        </nav>
+        <p class="sidebar-foot">Bu ekran Envai paneli için demo başlangıç alanıdır. Canlı veri bağlantıları entegrasyon aşamasında bağlanır.</p>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>Envai Panel</h1>
+            <p>Sanayi verisi, CBAM hazırlığı ve enerji performansı takibi için operasyonel görünüm.</p>
+          </div>
+          <div class="account">
+            <span class="avatar">E</span>
+            <span>demo@envai.com</span>
+          </div>
+        </header>
+        <section class="grid">
+          <article class="card dark wide">
+            <p class="label">CBAM Hazırlık Durumu</p>
+            <p class="metric">%58</p>
+            <p class="muted">Veri kaynakları ve raporlama çıktıları pilot kapsamda yapılandırılıyor.</p>
+            <div class="progress"><span></span></div>
+          </article>
+          <article class="card">
+            <p class="label">Bağlı Tesis</p>
+            <p class="metric">2</p>
+            <p class="muted">Pilot izleme kapsamındaki tesis sayısı.</p>
+          </article>
+          <article class="card">
+            <p class="label">Veri Kaynağı</p>
+            <p class="metric">7</p>
+            <p class="muted">SCADA, sayaç ve üretim dosyaları.</p>
+          </article>
+          <article class="card">
+            <p class="label">Rapor Taslağı</p>
+            <p class="metric">3</p>
+            <p class="muted">CBAM ve enerji performansı çıktıları.</p>
+          </article>
+          <article class="card wide">
+            <p class="label">Sıradaki Adımlar</p>
+            <ul class="task-list">
+              <li><strong>Veri kaynaklarını doğrula</strong><span>Devam ediyor</span></li>
+              <li><strong>Scope 1/2 hesaplama şablonunu tamamla</strong><span>Planlandı</span></li>
+              <li><strong>İlk rapor çıktısını incele</strong><span>Bekliyor</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="label">Destek</p>
+            <p class="muted">Panel erişimi ve entegrasyon için Envai ekibiyle görüşme planlayın.</p>
+            <p><a class="action" href="/satin-al.html?plan=enterprise">Görüşme Talep Et</a></p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
