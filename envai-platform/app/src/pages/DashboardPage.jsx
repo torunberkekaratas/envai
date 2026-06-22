@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -12,6 +12,7 @@ import {
 import { TbLeaf, TbRecycle, TbRobot } from 'react-icons/tb'
 import { useUIStore } from '../store/useUIStore'
 import { dashboardWidgetPool } from '../data/platformData.jsx'
+import ReportGeneratorModal from '../components/ReportGeneratorModal'
 
 const spark = [
   { m: 'Haz', a: 15, b: 8, c: 30 }, { m: 'Tem', a: 22, b: 12, c: 38 }, { m: 'Ağu', a: 19, b: 12, c: 35 },
@@ -51,7 +52,7 @@ function upcomingDate(daysFromNow) {
 }
 
 const quick = [
-  ['Veri Yükle', FiUpload, '/data-lake'], ['Rapor Oluştur', FiFileText, '/reporting-center'], ['Gösterge Panelleri', FiBarChart2, '/'],
+  ['Veri Yükle', FiUpload, 'upload'], ['Rapor Oluştur', FiFileText, 'report'], ['Gösterge Panelleri', FiBarChart2, '/'],
   ['İş Akışları', FiSliders, '/workflow-engine'], ['Dokümanlar', FiFolder, '/document-management'], ['Ayarlar', FiCpu, '/company-management']
 ]
 
@@ -139,7 +140,31 @@ function AiPanel() {
 export default function DashboardPage() {
   const navigate = useNavigate()
   const extraWidgetCount = useUIStore((state) => state.extraWidgetCount)
+  const addToast = useUIStore((state) => state.addToast)
   const extraWidgets = dashboardWidgetPool.slice(0, extraWidgetCount)
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false)
+  const fileInputRef = useRef(null)
+
+  function handleQuickAction(action) {
+    if (action === 'upload') {
+      fileInputRef.current?.click()
+      return
+    }
+    if (action === 'report') {
+      setIsReportModalOpen(true)
+      return
+    }
+    navigate(action)
+  }
+
+  function handleFileSelected(event) {
+    const files = [...(event.target.files || [])]
+    event.target.value = ''
+    if (files.length === 0) return
+    const names = files.map((file) => file.name).join(', ')
+    addToast(`${files.length} dosya yüklendi: ${names}`)
+  }
+
   return (
     <div className="space-y-3 sm:space-y-4">
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
@@ -168,8 +193,12 @@ export default function DashboardPage() {
         <Card className="min-w-0 p-4 sm:p-5 xl:col-span-3"><h3 className="mb-4 text-sm sm:text-base font-bold">Yaklaşan Görevler</h3><div className="space-y-3">{['CSRD Veri Toplama', 'CBAM Beyan Teslimi', 'ESG Rapor Onayı', 'SBTi Hedef Güncelleme'].map((item, i) => <div key={item} className="flex justify-between text-sm"><span className="flex items-center gap-2"><FiFileText className="text-emerald-600" />{item}</span><b className="text-slate-500">{upcomingDate([4, 9, 14, 21][i])}</b></div>)}</div></Card>
         <Card className="min-w-0 p-4 sm:p-5 xl:col-span-3"><h3 className="mb-4 text-sm sm:text-base font-bold">Bildirimler</h3><div className="space-y-3">{['Elektrik tüketiminiz geçen aya göre %8 arttı.', 'Yeni IoT cihazı bağlandı: İstanbul Fabrika 2', 'CSRD raporunuz %85 tamamlandı.'].map((item, i) => <div key={item} className="flex gap-3 text-sm"><FiBell className={i === 1 ? 'text-red-500' : 'text-amber-500'} /><span>{item}<br/><small className="text-slate-500">{i + 1} saat önce</small></span></div>)}</div></Card>
         <div className="min-w-0 xl:col-span-4"><AiPanel /></div>
-        <Card className="min-w-0 p-4 sm:p-5 xl:col-span-2"><h3 className="mb-4 text-sm sm:text-base font-bold">Hızlı Erişim</h3><div className="grid grid-cols-2 gap-3">{quick.map(([name, Icon, path]) => <button key={name} onClick={() => navigate(path)} className="rounded-xl border border-slate-200 p-4 text-center text-xs font-semibold hover:bg-emerald-50"><Icon className="mx-auto mb-2 text-2xl text-emerald-600" />{name}</button>)}</div></Card>
+        <Card className="min-w-0 p-4 sm:p-5 xl:col-span-2"><h3 className="mb-4 text-sm sm:text-base font-bold">Hızlı Erişim</h3><div className="grid grid-cols-2 gap-3">{quick.map(([name, Icon, action]) => <button key={name} onClick={() => handleQuickAction(action)} className="rounded-xl border border-slate-200 p-4 text-center text-xs font-semibold hover:bg-emerald-50"><Icon className="mx-auto mb-2 text-2xl text-emerald-600" />{name}</button>)}</div></Card>
       </div>
+      <input ref={fileInputRef} type="file" multiple className="hidden" onChange={handleFileSelected} />
+      {isReportModalOpen && (
+        <ReportGeneratorModal onClose={() => setIsReportModalOpen(false)} onGenerated={addToast} />
+      )}
     </div>
   )
 }

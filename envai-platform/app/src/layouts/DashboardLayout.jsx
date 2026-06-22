@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
 import DashboardAssistant from '../components/DashboardAssistant'
+import ToastContainer from '../components/ToastContainer'
 import { useTheme } from '../hooks/useTheme'
 
 export default function DashboardLayout() {
@@ -19,6 +20,7 @@ export default function DashboardLayout() {
         </div>
       </div>
       <DashboardAssistant />
+      <ToastContainer />
     </div>
   )
 }
