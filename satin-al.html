@@ -709,7 +709,7 @@
             const plans = {
               starter: {
                 name: 'Başlangıç',
-                price: 'Pilot değerlendirme',
+                price: '$8.000 - $15.000',
                 priceNum: 0,
                 period: '',
                 vatRate: 0,
@@ -723,10 +723,10 @@
               },
               professional: {
                 name: 'Profesyonel',
-                price: '14.999₺',
-                priceNum: 14999,
-                period: '/ay',
-                vatRate: 0.20,
+                price: '$20.000 - $45.000',
+                priceNum: 0,
+                period: '',
+                vatRate: 0,
                 features: [
                   'Çok kullanıcılı ekip erişimi',
                   '5 tesise kadar değerlendirme',
@@ -737,10 +737,10 @@
               },
               enterprise: {
                 name: 'Kurumsal',
-                price: '39.000₺',
-                priceNum: 39000,
-                period: '/ay',
-                vatRate: 0.01,
+                price: 'İletişime Geç',
+                priceNum: 0,
+                period: '',
+                vatRate: 0,
                 features: [
                   'Sınırsız Kullanıcı',
                   'Çoklu Bölge ve EPC Projeleri',
@@ -784,9 +784,9 @@
                 vatLabel.textContent = `KDV (%${vatRate * 100}):`;
               }
               
-              document.getElementById('summary-price').textContent = subtotal === 0 ? 'Pilot değerlendirme' : Math.round(subtotal).toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-price').textContent = plan.price;
               document.getElementById('summary-kdv').textContent = subtotal === 0 ? '-' : Math.round(vatAmount).toLocaleString('tr-TR') + '₺';
-              document.getElementById('summary-total-price').textContent = subtotal === 0 ? 'Pilot değerlendirme' : total.toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-total-price').textContent = plan.price;
             }
             
             // Payment method selection
@@ -1053,7 +1053,7 @@
                 
                 <div class="plan-details">
                   <div class="plan-name" id="selected-plan-name">Başlangıç</div>
-                  <div class="plan-price" id="selected-plan-price">Pilot değerlendirme</div>
+                  <div class="plan-price" id="selected-plan-price">$8.000 - $15.000</div>
                   
                   <ul class="plan-features" id="selected-plan-features">
                     <li>Veri kaynakları değerlendirmesi</li>
@@ -1066,7 +1066,7 @@
                 
                 <div class="summary-row">
                   <span>Paket:</span>
-                  <span id="summary-price">Pilot değerlendirme</span>
+                  <span id="summary-price">$8.000 - $15.000</span>
                 </div>
                 
                 <div class="summary-row">
@@ -1076,7 +1076,7 @@
                 
                 <div class="summary-total">
                   <span>Sonraki Adım:</span>
-                  <span id="summary-total-price">Pilot değerlendirme</span>
+                  <span id="summary-total-price">$8.000 - $15.000</span>
                 </div>
               </div>
             </div>
