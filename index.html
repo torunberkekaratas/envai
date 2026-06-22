@@ -1183,7 +1183,167 @@ const _this=this;if(!_this||_this.dataset.gjsType)return;const loadingDuration=6
           window._pwExecLoadingPageJavascript();
         </script>
 
-        
-        
+
+
+        <style>
+          #envai-chat-widget * { box-sizing: border-box; font-family: 'DM Sans', Inter, sans-serif; }
+          #envai-chat-toggle {
+            position: fixed; right: 24px; bottom: 24px; z-index: 9998;
+            width: 58px; height: 58px; border-radius: 50%; border: none;
+            background: #16a34a; color: #fff; cursor: pointer;
+            box-shadow: 0 12px 28px rgba(22,163,74,.35);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; transition: transform .15s ease;
+          }
+          #envai-chat-toggle:hover { transform: scale(1.06); }
+          #envai-chat-panel {
+            position: fixed; right: 24px; bottom: 92px; z-index: 9999;
+            width: 340px; max-height: 480px; background: #fff; border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(0,0,0,.18); display: none; flex-direction: column;
+            overflow: hidden; border: 1px solid #ECECEC;
+          }
+          #envai-chat-panel.is-open { display: flex; }
+          #envai-chat-header {
+            background: #1d1d1f; color: #fff; padding: 14px 16px;
+            display: flex; align-items: center; justify-content: space-between;
+          }
+          #envai-chat-header strong { font-size: 14px; }
+          #envai-chat-header span { display: block; font-size: 11px; color: #a1a1a6; margin-top: 2px; }
+          #envai-chat-close { background: none; border: none; color: #a1a1a6; font-size: 18px; cursor: pointer; line-height: 1; }
+          #envai-chat-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #fafafa; }
+          .envai-chat-msg { max-width: 85%; padding: 9px 12px; border-radius: 12px; font-size: 13px; line-height: 1.45; }
+          .envai-chat-msg.bot { align-self: flex-start; background: #fff; border: 1px solid #ECECEC; color: #1d1d1f; }
+          .envai-chat-msg.user { align-self: flex-end; background: #16a34a; color: #fff; }
+          #envai-chat-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #ECECEC; background: #fff; }
+          #envai-chat-input { flex: 1; border: 1px solid #ECECEC; border-radius: 10px; padding: 9px 11px; font-size: 13px; outline: none; }
+          #envai-chat-input:focus { border-color: #16a34a; }
+          #envai-chat-send { background: #16a34a; border: none; color: #fff; border-radius: 10px; width: 38px; cursor: pointer; font-size: 15px; }
+        </style>
+        <div id="envai-chat-widget">
+          <button id="envai-chat-toggle" type="button" aria-label="Karbon Asistanını Aç">💬</button>
+          <div id="envai-chat-panel">
+            <div id="envai-chat-header">
+              <div><strong>Envai Karbon Asistanı</strong><span>Karbon emisyonu &amp; enerji optimizasyonu</span></div>
+              <button id="envai-chat-close" type="button" aria-label="Kapat">✕</button>
+            </div>
+            <div id="envai-chat-messages"></div>
+            <form id="envai-chat-form">
+              <input id="envai-chat-input" type="text" placeholder="Emisyon veya enerji hakkında sorun..." autocomplete="off" />
+              <button id="envai-chat-send" type="submit">➤</button>
+            </form>
+          </div>
+        </div>
+        <script>
+          (function () {
+            // TODO: Gerçek bir LLM API'sine bağlanmak için apiKey ve apiEndpoint doldurulacak.
+            // apiKey boşken widget, aşağıdaki kural tabanlı (mock) yanıt motorunu kullanır.
+            var CHATBOT_CONFIG = { apiKey: '', apiEndpoint: '' };
+
+            var STORAGE_KEY = 'envai-marketing-chat-history';
+            var GREETING = 'Merhaba! Ben Envai Karbon Asistanı. Size karbon emisyonu azaltma ve enerji optimizasyonu konularında yardımcı olabilirim.';
+            var OFF_TOPIC_REPLY = 'Ben sadece karbon emisyonu ve enerji optimizasyonu konularında yardımcı olabiliyorum. Bu alanlarda bir sorunuz var mı?';
+
+            var RULES = [
+              { k: ['scope 1', 'kapsam 1'], r: 'Kapsam 1 emisyonları doğrudan yaktığınız yakıtlardan (filo araçları, kazanlar vb.) kaynaklanır. Yakıt verimliliği yüksek ekipmana geçiş ve düzenli bakım, Kapsam 1 emisyonlarını azaltmada en hızlı etkiyi sağlar.' },
+              { k: ['scope 2', 'kapsam 2'], r: 'Kapsam 2 emisyonları satın aldığınız elektrikten kaynaklanır. Yenilenebilir enerji sertifikaları (GO/REC) veya tesis bazlı güneş enerjisi yatırımı, Kapsam 2 ayak izini doğrudan düşürür.' },
+              { k: ['scope 3', 'kapsam 3', 'tedarik'], r: 'Kapsam 3 emisyonları genelde toplam ayak izinin en büyük payını oluşturur. Tedarikçilerinizden emisyon verisi toplamak ve düşük karbonlu tedarikçileri önceliklendirmek en etkili azaltım yoludur.' },
+              { k: ['enerji tasarruf', 'enerji verim', 'enerji optimizasyon'], r: 'Enerji optimizasyonu için: 1) Gerçek zamanlı tüketim izleme, 2) Yüksek tüketimli ekipmanın bakım takibi, 3) Aydınlatma ve HVAC sistemlerinde otomasyon önerilir. Bu adımlar genellikle %10-20 tasarruf sağlar.' },
+              { k: ['cbam'], r: 'CBAM hazırlığı için üretim ve enerji verinizi düzenli, izlenebilir hale getirmeniz gerekir. Envai, SCADA ve sayaç verilerinizi tek bir akışta birleştirerek gömülü emisyon hesaplamalarını kolaylaştırır.' },
+              { k: ['nasıl azalt', 'azaltabilirim', 'düşürebilirim', 'azaltma'], r: 'Emisyon azaltımı için önce ölçüm yapmalısınız: hangi kapsamda ne kadar emisyon üretiyorsunuz? Sonrasında en büyük paya sahip kaynağa öncelik vererek hedef belirlemek en hızlı sonucu verir.' },
+              { k: ['merhaba', 'selam', 'iyi günler'], r: GREETING }
+            ];
+
+            function findReply(message) {
+              var lower = message.toLocaleLowerCase('tr-TR');
+              for (var i = 0; i < RULES.length; i++) {
+                for (var j = 0; j < RULES[i].k.length; j++) {
+                  if (lower.indexOf(RULES[i].k[j]) !== -1) return RULES[i].r;
+                }
+              }
+              var carbonWords = ['karbon', 'emisyon', 'enerji', 'co2', 'sürdürülebilir', 'iklim'];
+              for (var c = 0; c < carbonWords.length; c++) {
+                if (lower.indexOf(carbonWords[c]) !== -1) {
+                  return 'Bu konuda size daha iyi yardımcı olabilmem için biraz daha detay verir misiniz? Örneğin hangi kapsamdaki (1/2/3) emisyonlarla veya hangi enerji türüyle ilgileniyorsunuz?';
+                }
+              }
+              return OFF_TOPIC_REPLY;
+            }
+
+            async function getReply(message) {
+              if (CHATBOT_CONFIG.apiKey && CHATBOT_CONFIG.apiEndpoint) {
+                // Gerçek API entegrasyonu buraya eklenecek.
+                try {
+                  var res = await fetch(CHATBOT_CONFIG.apiEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + CHATBOT_CONFIG.apiKey },
+                    body: JSON.stringify({ message: message, topic: 'carbon-energy' })
+                  });
+                  var data = await res.json();
+                  return data.reply || OFF_TOPIC_REPLY;
+                } catch (err) {
+                  return findReply(message);
+                }
+              }
+              return findReply(message);
+            }
+
+            function loadHistory() {
+              try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch (e) { return []; }
+            }
+            function saveHistory(history) {
+              try { localStorage.setItem(STORAGE_KEY, JSON.stringify(history)); } catch (e) {}
+            }
+
+            var toggleBtn = document.getElementById('envai-chat-toggle');
+            var closeBtn = document.getElementById('envai-chat-close');
+            var panel = document.getElementById('envai-chat-panel');
+            var messagesEl = document.getElementById('envai-chat-messages');
+            var form = document.getElementById('envai-chat-form');
+            var input = document.getElementById('envai-chat-input');
+
+            var history = loadHistory();
+
+            function renderMessage(role, text) {
+              var div = document.createElement('div');
+              div.className = 'envai-chat-msg ' + role;
+              div.textContent = text;
+              messagesEl.appendChild(div);
+              messagesEl.scrollTop = messagesEl.scrollHeight;
+            }
+
+            function renderHistory() {
+              messagesEl.innerHTML = '';
+              if (history.length === 0) {
+                history.push({ role: 'bot', text: GREETING });
+                saveHistory(history);
+              }
+              history.forEach(function (m) { renderMessage(m.role, m.text); });
+            }
+
+            toggleBtn.addEventListener('click', function () {
+              panel.classList.toggle('is-open');
+              if (panel.classList.contains('is-open')) {
+                renderHistory();
+                setTimeout(function () { input.focus(); }, 80);
+              }
+            });
+            closeBtn.addEventListener('click', function () { panel.classList.remove('is-open'); });
+
+            form.addEventListener('submit', async function (e) {
+              e.preventDefault();
+              var text = input.value.trim();
+              if (!text) return;
+              input.value = '';
+              history.push({ role: 'user', text: text });
+              renderMessage('user', text);
+              saveHistory(history);
+
+              var reply = await getReply(text);
+              history.push({ role: 'bot', text: reply });
+              renderMessage('bot', reply);
+              saveHistory(history);
+            });
+          })();
+        </script>
       </body>
     </html>

@@ -179,9 +179,27 @@ export function getModuleConfig(title) {
 }
 
 export const currentUser = {
+  id: 'ahmet-yilmaz',
   name: 'Ahmet Yılmaz',
   role: 'Sistem Yöneticisi',
   initials: 'A'
+}
+
+export const emissionSummary = {
+  totalEmission: '12.450,75 tCO₂e',
+  totalDelta: '-8,2%',
+  scopes: [
+    { name: 'Kapsam 1', value: '2.345,60 tCO₂e', share: 18.8, delta: '-5,1%' },
+    { name: 'Kapsam 2', value: '3.210,30 tCO₂e', share: 25.8, delta: '-6,3%' },
+    { name: 'Kapsam 3', value: '6.894,85 tCO₂e', share: 55.4, delta: '-10,4%' }
+  ],
+  topSources: [
+    ['Satın Alınan Mal & Hizmetler', 4250.3],
+    ['Elektrik Tüketimi', 2310.5],
+    ['Ulaşım & Dağıtım', 1540.2]
+  ],
+  esgScore: '78 / 100',
+  complianceScore: '92%'
 }
 
 export const activities = [
