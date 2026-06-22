@@ -882,6 +882,103 @@
             font-size: 12px;
             font-weight: 900;
           }
+          /* Polished demo request layout */
+          #i84ba {
+            padding-top: 168px !important;
+            padding-bottom: 96px !important;
+            background:
+              radial-gradient(circle at 12% 18%, rgba(34,197,94,0.12), transparent 28%),
+              radial-gradient(circle at 86% 8%, rgba(15,118,110,0.10), transparent 30%),
+              linear-gradient(180deg, #f8fafc 0%, #eef4f0 100%) !important;
+          }
+          #i1lwz {
+            grid-template-columns: minmax(0, 1fr) 390px !important;
+            gap: 28px !important;
+            max-width: 1320px !important;
+          }
+          .form-section, .summary-card {
+            background: rgba(255,255,255,0.94) !important;
+            border: 1px solid rgba(15,23,42,0.08) !important;
+            box-shadow: 0 28px 90px rgba(15,23,42,0.12) !important;
+          }
+          .form-section {
+            padding: 38px !important;
+            border-radius: 34px !important;
+          }
+          .request-eyebrow {
+            background: #e8f7ee !important;
+            color: #0f8f4d !important;
+            border: 1px solid rgba(22,163,74,0.16) !important;
+          }
+          .request-heading {
+            max-width: 760px !important;
+            font-size: clamp(42px, 4.2vw, 68px) !important;
+            line-height: 1.01 !important;
+            letter-spacing: -0.065em !important;
+          }
+          .request-lead {
+            max-width: 760px !important;
+            font-size: 17px !important;
+            color: #526063 !important;
+          }
+          .request-benefits { gap: 14px !important; margin: 28px 0 30px !important; }
+          .request-benefit {
+            background: linear-gradient(145deg, #082f2d 0%, #123f3d 100%) !important;
+            border-radius: 22px !important;
+            padding: 18px !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 18px 42px rgba(8,47,45,0.12) !important;
+          }
+          .form-title { font-size: 28px !important; letter-spacing: -0.04em !important; }
+          .form-subtitle { font-size: 15px !important; }
+          .form-row {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          }
+          .form-row:has(#country) {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          }
+          .form-input, .form-select {
+            min-height: 50px !important;
+            border-radius: 16px !important;
+            box-shadow: 0 1px 0 rgba(15,23,42,0.03) !important;
+          }
+          .payment-method {
+            min-height: 76px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+          }
+          .submit-button {
+            margin-top: 22px !important;
+            min-height: 54px !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.02em !important;
+          }
+          .summary-card {
+            padding: 28px !important;
+            border-radius: 30px !important;
+          }
+          .summary-title {
+            margin-bottom: 18px !important;
+            font-size: 24px !important;
+            letter-spacing: -0.04em !important;
+          }
+          .plan-details {
+            background:
+              radial-gradient(circle at 90% 0%, rgba(34,197,94,0.20), transparent 34%),
+              linear-gradient(145deg, #082f2d 0%, #0f292c 100%) !important;
+            border-radius: 24px !important;
+            padding: 24px !important;
+          }
+          .plan-price { font-size: 38px !important; line-height: 1 !important; margin: 10px 0 16px !important; }
+          .summary-next div {
+            background: #f1f5f3 !important;
+            border: 1px solid rgba(15,23,42,0.05) !important;
+          }
+          @media (max-width: 1180px) {
+            #i1lwz { grid-template-columns: 1fr !important; max-width: 880px !important; }
+            .checkout-summary-wrapper { position: static !important; order: -1; }
+          }
           @media (max-width: 980px) {
             #i84ba { padding: 112px 16px 48px !important; }
             #i1lwz { grid-template-columns: 1fr !important; }
