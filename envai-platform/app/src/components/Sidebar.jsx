@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { FiChevronDown, FiGrid, FiX } from 'react-icons/fi'
 import { modules } from '../data/platformData.jsx'
 import { useUIStore } from '../store/useUIStore'
-import logo from '../assets/envai-logo.svg'
+import logo from '../assets/envai-logo-white.svg'
 
 const groupedModules = modules.reduce((acc, module) => {
   acc[module.group] = acc[module.group] || []
@@ -18,7 +18,7 @@ export default function Sidebar() {
       <div onClick={closeSidebar} className={`fixed inset-0 z-40 bg-slate-950/50 lg:hidden ${sidebarOpen ? 'block' : 'hidden'}`} />
       <aside className={`fixed inset-y-0 left-0 z-50 flex w-72 transform flex-col border-r border-white/10 bg-[#062432] text-white shadow-2xl transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex items-center justify-between px-6 py-6">
-          <img src={logo} alt="ENVAI" className="h-10 w-auto brightness-0 invert" />
+          <img src={logo} alt="ENVAI" className="h-16 w-auto" />
           <button className="rounded-xl p-2 hover:bg-white/10 lg:hidden" onClick={closeSidebar}><FiX /></button>
         </div>
         <div className="flex-1 space-y-3 overflow-y-auto px-3 pb-4">
