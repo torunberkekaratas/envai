@@ -12,6 +12,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "envai-platform/app", "run", "dev"],
       "port": 5173
+    },
+    {
+      "name": "envai-platform-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "envai-platform/app/dist"],
+      "port": 4173
     }
   ]
 }
