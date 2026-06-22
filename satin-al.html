@@ -3,11 +3,11 @@
       <head>
         
         
-        <title>Satın Al - Royal Takip</title>
+        <title>Pilot Görüşmesi Talep Et | Envai</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Royal Takip, enerji santrallerinizi tek merkezden yönetmenizi sağlayan akıllı operasyon platformudur." />
+        <meta name="description" content="Envai pilot görüşmesi ile tesis verilerinizi, CBAM hazırlığı ihtiyacınızı ve enerji performansı hedeflerinizi birlikte değerlendirin." />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link href="/website-base.css" rel="stylesheet" />
         <link href="/styles.css" rel="stylesheet" />
@@ -702,16 +702,16 @@
             const plans = {
               starter: {
                 name: 'Başlangıç',
-                price: 'Ücretsiz',
+                price: 'Pilot değerlendirme',
                 priceNum: 0,
                 period: '',
                 vatRate: 0,
                 features: [
-                  '2 Kullanıcıya Kadar',
-                  '1 Aktif Santral',
-                  'Temel Arıza & Bakım Kaydı',
-                  'Topluluk Desteği',
-                  '1 GB Güvenli Arşiv'
+                  'Veri kaynakları değerlendirmesi',
+                  'Tesis kapsamı analizi',
+                  'CBAM hazırlık ihtiyacı',
+                  'Enerji performansı hedefleri',
+                  'Pilot yol haritası'
                 ]
               },
               professional: {
@@ -721,11 +721,11 @@
                 period: '/ay',
                 vatRate: 0.20,
                 features: [
-                  '10 Kullanıcıya Kadar',
-                  '5 Aktif Santral',
-                  'Royal AI Analizleri',
+                  'Çok kullanıcılı ekip erişimi',
+                  '5 tesise kadar değerlendirme',
+                  'Envai analizleri',
                   'Öncelikli Teknik Destek',
-                  '50 GB Teknik Döküman Alanı'
+                  'Genişletilmiş veri ve raporlama kapsamı'
                 ]
               },
               enterprise: {
@@ -777,9 +777,9 @@
                 vatLabel.textContent = `KDV (%${vatRate * 100}):`;
               }
               
-              document.getElementById('summary-price').textContent = subtotal === 0 ? 'Ücretsiz' : Math.round(subtotal).toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-price').textContent = subtotal === 0 ? 'Pilot değerlendirme' : Math.round(subtotal).toLocaleString('tr-TR') + '₺';
               document.getElementById('summary-kdv').textContent = subtotal === 0 ? '-' : Math.round(vatAmount).toLocaleString('tr-TR') + '₺';
-              document.getElementById('summary-total-price').textContent = subtotal === 0 ? 'Ücretsiz' : total.toLocaleString('tr-TR') + '₺';
+              document.getElementById('summary-total-price').textContent = subtotal === 0 ? 'Pilot değerlendirme' : total.toLocaleString('tr-TR') + '₺';
             }
             
             // Payment method selection
@@ -826,7 +826,7 @@
               });
             }
             
-            // CVV validation
+            // Tesis Sayısı validation
             const cvvInput = document.getElementById('card-cvv');
             if (cvvInput) {
               cvvInput.addEventListener('input', function(e) {
@@ -839,7 +839,7 @@
               e.preventDefault();
               
               const selectedMethod = document.querySelector('.payment-method.active');
-              const paymentMethod = selectedMethod ? selectedMethod.dataset.method : 'card';
+              const paymentMethod = selectedMethod ? selectedMethod.dataset.method : 'pilot';
               
               const formData = {
                 plan: selectedPlan,
@@ -856,22 +856,16 @@
               };
               
               if (paymentMethod === 'card') {
-                formData.cardNumber = document.getElementById('card-number').value;
-                formData.cardName = document.getElementById('card-name').value;
-                formData.cardExpiry = document.getElementById('card-expiry').value;
-                formData.cardCvv = document.getElementById('card-cvv').value;
+                formData.dataSources = document.getElementById('card-number').value;
+                formData.meetingParticipant = document.getElementById('card-name').value;
+                formData.targetStart = document.getElementById('card-expiry').value;
+                formData.siteCount = document.getElementById('card-cvv').value;
               }
               
               console.log('Form Data:', formData);
               
               // Show success message
-              if (plan.priceNum === 0) {
-                alert('Ücretsiz planınız aktif edildi! Kısa süre içinde giriş bilgileriniz e-posta adresinize gönderilecek.');
-              } else if (paymentMethod === 'card') {
-                alert('Ödemeniz başarıyla alındı! Hesabınız aktifleştirildi. Giriş bilgileriniz e-posta adresinize gönderildi.');
-              } else {
-                alert('Siparişiniz alındı! Ödeme talimatları e-posta adresinize gönderildi. Ödemeniz onaylandıktan sonra hesabınız aktifleştirilecektir.');
-              }
+              alert('Pilot görüşmesi talebiniz alındı. Ekibimiz uygun görüşme zamanı için sizinle iletişime geçecek.');
               
               window.location.href = '/';
             });
@@ -909,8 +903,8 @@
             <!-- Checkout Form -->
             <div class="checkout-form-wrapper">
               <div class="form-section">
-                <h1 class="form-title">Sipariş Bilgileri</h1>
-                <p class="form-subtitle">Lütfen aşağıdaki bilgileri eksiksiz doldurunuz.</p>
+                <h1 class="form-title">Pilot Görüşmesi Bilgileri</h1>
+                <p class="form-subtitle">Tesis yapınızı ve veri kaynaklarınızı anlayabilmemiz için kısa bilgileri paylaşın.</p>
                 
                 <form id="checkout-form">
                   <div class="form-group">
@@ -976,71 +970,71 @@
                   </div>
                   
                   <!-- Payment Information -->
-                  <h3 class="form-section-title">Ödeme Bilgileri</h3>
+                  <h3 class="form-section-title">Görüşme Kapsamı</h3>
                   
                   <div class="payment-methods">
                     <div class="payment-method active" data-method="card">
-                      <div>💳 Kredi/Banka Kartı</div>
+                      <div>Pilot Değerlendirme</div>
                       <div class="card-icons">
-                        <div class="card-icon">VISA</div>
-                        <div class="card-icon">MC</div>
-                        <div class="card-icon">AMEX</div>
+                        <div class="card-icon">SCADA</div>
+                        <div class="card-icon">ERP</div>
+                        <div class="card-icon">Sayaç</div>
                       </div>
                     </div>
                     <div class="payment-method" data-method="transfer">
-                      <div>🏦 Havale/EFT</div>
-                      <div style="font-size: 12px; opacity: 0.7; margin-top: 4px;">Banka Transferi</div>
+                      <div>Kurumsal Görüşme</div>
+                      <div style="font-size: 12px; opacity: 0.7; margin-top: 4px;">Detaylı ihtiyaç analizi</div>
                     </div>
                   </div>
                   
                   <div id="card-payment-fields">
                     <div class="form-group">
-                      <label class="form-label" for="card-number">Kart Numarası</label>
+                      <label class="form-label" for="card-number">Mevcut Veri Kaynakları</label>
                       <input type="text" class="form-input" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
                     </div>
                     
                     <div class="form-group">
-                      <label class="form-label" for="card-name">Kart Üzerindeki İsim</label>
+                      <label class="form-label" for="card-name">Görüşmede Katılacak Yetkili</label>
                       <input type="text" class="form-input" id="card-name" placeholder="AD SOYAD" required />
                     </div>
                     
                     <div class="card-row">
                       <div class="form-group">
-                        <label class="form-label" for="card-expiry">Son Kullanma Tarihi</label>
+                        <label class="form-label" for="card-expiry">Hedeflenen Başlangıç</label>
                         <input type="text" class="form-input" id="card-expiry" placeholder="AA/YY" maxlength="5" required />
                       </div>
                       
                       <div class="form-group">
-                        <label class="form-label" for="card-cvv">CVV</label>
+                        <label class="form-label" for="card-cvv">Tesis Sayısı</label>
                         <input type="text" class="form-input" id="card-cvv" placeholder="123" maxlength="3" required />
                       </div>
                       
                       <div class="form-group">
-                        <label class="form-label" for="card-installment">Taksit</label>
+                        <label class="form-label" for="card-installment">Öncelik</label>
                         <select class="form-select" id="card-installment">
-                          <option value="1">Tek Çekim</option>
-                          <option value="3">3 Taksit</option>
-                          <option value="6">6 Taksit</option>
-                          <option value="9">9 Taksit</option>
-                          <option value="12">12 Taksit</option>
+                          <option value="1">CBAM hazırlığı</option>
+                          <option value="3">Enerji performansı</option>
+                          <option value="6">Çok tesisli raporlama</option>
+                          <option value="9">SCADA/ERP entegrasyonu</option>
+                          <option value="12">Genel değerlendirme</option>
                         </select>
                       </div>
                     </div>
                     
                     <div class="security-badge">
                       <span class="security-icon">🔒</span>
-                      <span>256-bit SSL şifreleme ile güvenli ödeme</span>
+                      <span>Paylaştığınız bilgiler yalnızca pilot görüşmesi ve ihtiyaç analizi için kullanılır.</span>
                     </div>
                   </div>
                   
                   <div id="transfer-note" style="display: none;">
                     <div style="padding: 16px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; font-size: 14px; line-height: 1.6;">
-                      <strong>Havale/EFT Bilgileri:</strong><br/>
-                      Sipariş onaylandıktan sonra banka hesap bilgilerimiz e-posta adresinize gönderilecektir.
+                      <strong>Görüşme Notu:</strong><br/>
+                      Talebiniz sonrası ekip üyemiz uygun görüşme zamanı için sizinle iletişime geçer.
                     </div>
                   </div>
                   
-                  <button type="submit" class="submit-button">Siparişi Tamamla ve Öde</button>
+                  <button type="submit" class="submit-button">Pilot Görüşmesi Talep Et</button>
                 </form>
               </div>
             </div>
@@ -1048,39 +1042,39 @@
             <!-- Order Summary -->
             <div class="checkout-summary-wrapper">
               <div class="summary-card">
-                <h2 class="summary-title">Sipariş Özeti</h2>
+                <h2 class="summary-title">Seçilen Kapsam</h2>
                 
                 <div class="plan-details">
                   <div class="plan-name" id="selected-plan-name">Başlangıç</div>
-                  <div class="plan-price" id="selected-plan-price">Ücretsiz</div>
+                  <div class="plan-price" id="selected-plan-price">Pilot değerlendirme</div>
                   
                   <ul class="plan-features" id="selected-plan-features">
-                    <li>2 Kullanıcıya Kadar</li>
-                    <li>1 Aktif Santral</li>
-                    <li>Temel Arıza & Bakım Kaydı</li>
-                    <li>Topluluk Desteği</li>
-                    <li>1 GB Güvenli Arşiv</li>
+                    <li>Veri kaynakları değerlendirmesi</li>
+                    <li>Tesis kapsamı analizi</li>
+                    <li>CBAM hazırlık ihtiyacı</li>
+                    <li>Enerji performansı hedefleri</li>
+                    <li>Pilot yol haritası</li>
                   </ul>
                 </div>
                 
                 <div class="summary-row">
-                  <span>Plan Ücreti:</span>
-                  <span id="summary-price">Ücretsiz</span>
+                  <span>Paket:</span>
+                  <span id="summary-price">Pilot değerlendirme</span>
                 </div>
                 
                 <div class="summary-row">
-                  <span>KDV (%20):</span>
+                  <span>Durum:</span>
                   <span id="summary-kdv">-</span>
                 </div>
                 
                 <div class="summary-total">
-                  <span>Toplam:</span>
-                  <span id="summary-total-price">Ücretsiz</span>
+                  <span>Sonraki Adım:</span>
+                  <span id="summary-total-price">Pilot değerlendirme</span>
                 </div>
               </div>
             </div>
             
-          </div></div><div id="injpw" class="pwb-flex-grid-wrap"><div id="i1lwz-4" class="pwb-flex-grid-wrap"><div id="i1lwz-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-3">Royal Takip ile Çalışın.</div><div id="i4rmo3-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-3-2-3-2-2-2-5">Hemen Başla</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-2-3"/></div><div id="i1lwz-2-2-2-4-10" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-10">Daha Fazla Bilgi</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-11"/></div></div><div id="i1lwz-2-2-2-2-2-5" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-2-2-2-6" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/2004587a-8320-48ec-a9c3-2b71186eb235/image-41.png" loading="lazy" id="ie9ue-6"/></div><div id="i1lwz-2-2-2-2-2-2-2-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/134c0519-e92d-4399-9bcf-d86b692cd2fd/image-42.png" loading="lazy" id="ie9ue-2-4"/></div><div id="i1lwz-2-2-2-2-2-2-3-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4b0b44b1-bb29-4927-89c5-61b748650bc9/image-43.png" loading="lazy" id="ie9ue-3-4"/></div></div><div id="ispyh-2-3-3">© 2025 —  Royal Enerji A.Ş. Tüm Hakları Saklıdır.</div>
+          </div></div><div id="injpw" class="pwb-flex-grid-wrap"><div id="i1lwz-4" class="pwb-flex-grid-wrap"><div id="i1lwz-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-2-3">Envai ile Pilot Görüşmesi Planlayın.</div><div id="i4rmo3-2" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-5" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-3-2-3-2-2-2-5">Demo Talep Et</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-2-3"/></div><div id="i1lwz-2-2-2-4-10" class="pwb-flex-grid-wrap"><div id="ispyh-2-3-2-5-10">İhtiyacı Değerlendir</div><img src="/files.peachworlds.com/website/e7da6190-1aa3-4147-b279-3b62490e6a33/arrow.png" loading="lazy" id="iet44-3-2-3-11"/></div></div><div id="i1lwz-2-2-2-2-2-5" class="pwb-flex-grid-wrap"><div id="i1lwz-2-2-2-2-2-2-6" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/2004587a-8320-48ec-a9c3-2b71186eb235/image-41.png" loading="lazy" id="ie9ue-6"/></div><div id="i1lwz-2-2-2-2-2-2-2-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/134c0519-e92d-4399-9bcf-d86b692cd2fd/image-42.png" loading="lazy" id="ie9ue-2-4"/></div><div id="i1lwz-2-2-2-2-2-2-3-4" class="pwb-flex-grid-wrap"><img src="/files.peachworlds.com/website/4b0b44b1-bb29-4927-89c5-61b748650bc9/image-43.png" loading="lazy" id="ie9ue-3-4"/></div></div><div id="ispyh-2-3-3">© 2026 — Envai Teknoloji A.Ş. Tüm Hakları Saklıdır.</div>
               </div>
             </div>
           </div>
