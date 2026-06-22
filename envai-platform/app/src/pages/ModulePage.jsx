@@ -150,7 +150,7 @@ export default function ModulePage({ title, variant = 'standard' }) {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
       <ModuleHeader config={config} />
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
-        {kpis.map((kpi, index) => <CompactKpi key={`${kpi.label}-${index}`} item={kpi} icon={index > 3 ? (index === 4 ? FiClock : FiShield) : Icon} accent={config.accent} index={index} />)}
+        {kpis.map((kpi, index) => <CompactKpi key={`${kpi.label}-${index}`} item={kpi} icon={kpi.label.includes('Görev') ? FiClock : kpi.label.includes('Risk') ? FiShield : Icon} accent={config.accent} index={index} />)}
       </div>
       <div className="grid gap-3 lg:grid-cols-[1fr_280px]">
         <label className="relative"><FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" /><input className="h-12 w-full rounded-xl border border-slate-200 bg-white pl-11 pr-4 text-sm outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 dark:border-white/10 dark:bg-white/5" placeholder={`${config.title} içinde ara`} /></label>

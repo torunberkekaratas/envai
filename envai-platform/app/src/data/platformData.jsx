@@ -24,6 +24,13 @@ export const mixData = [
 
 export const sites = ['Türkiye', 'Almanya', 'Hollanda', 'İtalya', 'Fransa']
 
+export const dashboardWidgetPool = [
+  { id: 'su-ayak-izi', title: 'Su Ayak İzi (m³)', value: '8.420', delta: '-2,1%', icon: FiDroplet, color: '#0ea5e9', goodDirection: 'down' },
+  { id: 'atik-geri-donusum', title: 'Atık Geri Dönüşüm Oranı', value: '64%', delta: '+5,4%', icon: TbRecycle, color: '#65a30d', goodDirection: 'up' },
+  { id: 'tedarikci-esg', title: 'Tedarikçi ESG Skoru', value: '81 / 100', delta: '+2,8%', icon: FiUsers, color: '#7c3aed', goodDirection: 'up' },
+  { id: 'denetim-bulgulari', title: 'Açık Denetim Bulguları', value: '6', delta: '-12,5%', icon: FiTool, color: '#f97316', goodDirection: 'down' }
+]
+
 export const modules = [
   { title: 'Dashboard', path: '/', file: 'DashboardPage.jsx', icon: FiGrid, group: 'Command Center', accent: '#16A34A' },
   { title: 'Company Management', path: '/company-management', file: 'CompanyManagementPage.jsx', icon: FiBriefcase, group: 'Admin', accent: '#0EA5E9' },
@@ -117,6 +124,9 @@ export function getGroupLabel(group) {
 
 const details = {
   'Carbon Footprint': ['Emisyon KPI kartları', 'Kapsam 1/2/3 dağılımı', 'Karbon trend grafikleri', 'Emisyon kaynakları tablosu', 'Lokasyon filtreleri', 'Karbon yoğunluğu analizleri'],
+  'Scope 1 Management': ['Doğrudan emisyon kaynakları', 'Yakıt tüketim kayıtları', 'Filo ve sabit tesis emisyonları', 'Emisyon faktörü kütüphanesi', 'Doğrulama kanıtları'],
+  'Scope 2 Management': ['Satın alınan enerji kayıtları', 'Tesis bazlı elektrik tüketimi', 'Pazar bazlı ve konum bazlı hesaplama', 'Yenilenebilir enerji sertifikaları (GO/REC)', 'Tedarikçi emisyon faktörleri'],
+  'Scope 3 Management': ['15 kategori bazlı veri toplama', 'Tedarik zinciri emisyon haritası', 'Değer zinciri veri kalite skoru', 'Tedarikçi anket ve veri talepleri', 'Kategori bazlı materiyellik analizi'],
   'ESG Management': ['ESG skorları', 'Hedef takibi', 'Risk panelleri', 'Performans grafikleri', 'Aksiyon planları'],
   'CSRD Compliance': ['Uyum matrisi', 'Gereklilik listesi', 'Eksik veri ekranı', 'Görev takip ekranı', 'Uyum yüzdesi göstergeleri'],
   'CBAM Compliance': ['CBAM ürün ekranı', 'Gömülü emisyon analizleri', 'CBAM raporlama', 'İhracat uyumluluk analizi'],
@@ -166,6 +176,12 @@ export function getModuleConfig(title) {
       date: `2026-0${(index % 6) + 1}-15`
     }))
   }
+}
+
+export const currentUser = {
+  name: 'Ahmet Yılmaz',
+  role: 'Sistem Yöneticisi',
+  initials: 'A'
 }
 
 export const activities = [
