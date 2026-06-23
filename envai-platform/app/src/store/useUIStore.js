@@ -10,6 +10,11 @@ export const useUIStore = create(
       searchQuery: '',
       extraWidgetCount: 0,
       toasts: [],
+      language: 'tr',
+      dismissedNotifications: [],
+      setLanguage: (language) => set({ language }),
+      dismissNotification: (id) => set((state) => ({ dismissedNotifications: [...state.dismissedNotifications, id] })),
+      clearNotifications: (ids) => set((state) => ({ dismissedNotifications: [...new Set([...state.dismissedNotifications, ...ids])] })),
       toggleSidebar: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
       closeSidebar: () => set({ sidebarOpen: false }),
       toggleDarkMode: () => set((state) => ({ darkMode: !state.darkMode })),
@@ -22,6 +27,6 @@ export const useUIStore = create(
       },
       removeToast: (id) => set((state) => ({ toasts: state.toasts.filter((toast) => toast.id !== id) }))
     }),
-    { name: 'envai-ui-preferences', partialize: (state) => ({ darkMode: state.darkMode, extraWidgetCount: state.extraWidgetCount }) }
+    { name: 'envai-ui-preferences', partialize: (state) => ({ darkMode: state.darkMode, extraWidgetCount: state.extraWidgetCount, language: state.language }) }
   )
 )

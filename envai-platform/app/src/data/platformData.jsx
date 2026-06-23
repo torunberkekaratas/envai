@@ -209,3 +209,17 @@ export const activities = [
   'CSRD ESRS E1 görevi tamamlandı',
   'Enerji anomalisi operasyon ekibine atandı'
 ]
+
+export const notifications = [
+  { id: 1, title: 'Elektrik tüketiminiz geçen aya göre %8 arttı.', time: '1 saat önce', type: 'warning' },
+  { id: 2, title: 'Yeni IoT cihazı bağlandı: İstanbul Fabrika 2', time: '2 saat önce', type: 'info' },
+  { id: 3, title: 'CSRD raporunuz %85 tamamlandı.', time: '3 saat önce', type: 'success' },
+  { id: 4, title: 'SBTi doğrulama görevi onay bekliyor.', time: '5 saat önce', type: 'warning' },
+  { id: 5, title: 'Kapsam 3 tedarikçi verisi güncellendi.', time: 'Dün', type: 'info' }
+]
+
+export const languages = [
+  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
+]
